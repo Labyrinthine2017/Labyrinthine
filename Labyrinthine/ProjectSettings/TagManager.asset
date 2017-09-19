@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Notes
   - Potholes
+  - Note_Map
   - Fuel
   layers:
   - Default
