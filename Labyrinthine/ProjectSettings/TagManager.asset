@@ -4,10 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Notes
   - Potholes
   - Note_Map
   - Fuel
+  - Nodes
   layers:
   - Default
   - TransparentFX
