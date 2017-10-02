@@ -8,6 +8,10 @@ TagManager:
   - Note_Map
   - Fuel
   - Nodes
+  - Notes
+  - ScoreText
+  - ComboText
+  - EngineHeatText
   layers:
   - Default
   - TransparentFX

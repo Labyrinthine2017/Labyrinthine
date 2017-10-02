@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using XInputDotNetPure;
 
 public class Note : MonoBehaviour
 {
@@ -9,11 +10,11 @@ public class Note : MonoBehaviour
     bool controllerPresent = false;
     bool allowedToCollect = false;
     GameManager manager;
-    GameObject player;
+    PlayerMovement playerMovement;
 
     void Awake()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
         manager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
         controllerPresent = manager.controller;
     }
@@ -23,13 +24,23 @@ public class Note : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                player.gameObject.GetComponent<EngineBehaviour>().CoolEngineByAmount(coolantAmount);
+                playerMovement.gameObject.GetComponent<EngineBehaviour>().CoolEngineByAmount(coolantAmount);
                 manager.comboScore += 1;
                 manager.AddScore(10.0f);
                 Destroy(this.gameObject);
             }
+            if(controllerPresent)
+            {
+                if (playerMovement.state.Buttons.A == ButtonState.Pressed)
+                {
+                    playerMovement.gameObject.GetComponent<EngineBehaviour>().CoolEngineByAmount(coolantAmount);
+                    manager.comboScore += 1;
+                    manager.AddScore(10.0f);
+                    Destroy(this.gameObject);
+                }
+            }
         }
-        if (player.transform.position.z - 2.4f > transform.position.z && beenMissed == false)
+        if (playerMovement.transform.position.z - 2.4f > transform.position.z && beenMissed == false)
         {
             manager.ResetCombo();
             beenMissed = true;

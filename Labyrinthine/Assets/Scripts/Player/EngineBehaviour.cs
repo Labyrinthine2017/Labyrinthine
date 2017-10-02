@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class EngineBehaviour : MonoBehaviour
 {
-    float engineHeatAmount { get; set; }
+    public float engineHeatAmount { get; set; }
     [SerializeField]
-    float heatIncreaseAmount = 0.0005f;
+    float heatIncreaseAmount = 1.0f;
 	// Update is called once per frame
 	void FixedUpdate ()
     {
@@ -15,6 +15,7 @@ public class EngineBehaviour : MonoBehaviour
         if(engineHeatAmount > 100.0f)
         {
             engineHeatAmount = 100.0f;
+            gameObject.GetComponent<PlayerMovement>().enabled = false;
         }
 	}
 

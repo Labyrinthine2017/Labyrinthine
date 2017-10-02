@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     //For Xbox360 controller
     bool playerIndexSet = false;
     PlayerIndex playerIndex;
-    GamePadState state;
+    public GamePadState state { get; set; }
     GamePadState prevState;
 
     // Update is called once per frame
