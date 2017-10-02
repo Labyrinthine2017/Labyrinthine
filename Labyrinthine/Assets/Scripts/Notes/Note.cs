@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Note : MonoBehaviour
 {
-    public float fuelEffectAmount = 1.0f;
+    public float coolantAmount = 1.0f;
+    bool beenMissed = false;
+    bool controllerPresent = false;
+    bool allowedToCollect = false;
     GameManager manager;
     GameObject player;
 
@@ -12,27 +15,32 @@ public class Note : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         manager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+        controllerPresent = manager.controller;
     }
-    void FixedUpdate()
+    void Update()
     {
-        if(player.transform.position.z > transform.position.z)
+        if (allowedToCollect == true)
         {
-            manager.ResetCombo();
-        }
-    }
-
-    void OnTriggerStay(Collider col)
-    {
-        if (col.gameObject.tag == "Player")
-        {
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                col.GetComponent<EngineBehaviour>().CoolEngineByAmount(fuelEffectAmount);
+                player.gameObject.GetComponent<EngineBehaviour>().CoolEngineByAmount(coolantAmount);
                 manager.comboScore += 1;
+                manager.AddScore(10.0f);
                 Destroy(this.gameObject);
             }
-
+        }
+        if (player.transform.position.z - 2.4f > transform.position.z && beenMissed == false)
+        {
+            manager.ResetCombo();
+            beenMissed = true;
         }
     }
-
+    void OnTriggerEnter(Collider col)
+    {
+        allowedToCollect = true;
+    }
+    void OnTriggerExit(Collider col)
+    {
+        allowedToCollect = false;
+    }
 }

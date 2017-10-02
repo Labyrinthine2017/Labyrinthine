@@ -8,14 +8,26 @@ public class GameManager : MonoBehaviour
     float gameScore { get; set; }
     public int comboScore { get; set; }
     int combo { get; set; }
+    public bool controller { get; set; }
+
+    GameObject player;
 	// Use this for initialization
 	void Start ()
     {
         Application.targetFrameRate = 60;
+        combo = 1;
+        gameScore = 0;
 	}
 
-    void FixedUpdate()
+    void Awake()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        controller = player.GetComponent<PlayerMovement>().hasController;
+    }
+
+    void Update()
+    {
+        Debug.Log(gameScore);
         if(comboScore >= combo2Score)
         {
             combo = 2;

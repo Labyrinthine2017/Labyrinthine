@@ -6,7 +6,8 @@ using XInputDotNetPure;
 public class PlayerMovement : MonoBehaviour
 {
 
-    public float ForwardMovementSpeed = 0.2f, DifferenceInXBetweenPlatforms = 3.39f;
+    public float ForwardMovementSpeed = 0.2f, DifferenceInXBetweenPlatforms = 3.39f, LeftRightMovementSpeed = 0.2f;
+    public bool hasController { get; set; }
     //For PC
     /// <summary>
     /// Storage for the distance in movement
@@ -31,14 +32,8 @@ public class PlayerMovement : MonoBehaviour
         rightLanePos = playerOrignalPosition + vectorForConstantForwardMovement;
         centreLanePos = playerOrignalPosition;
     }
-    void Update()
+    void Awake()
     {
-
-        if(Debug.isDebugBuild)
-        {
-            vectorForConstantForwardMovement = new Vector3(DifferenceInXBetweenPlatforms, 0.0f, 0.0f);
-            //Debug.Log("IN DEBUG MODE");
-        }
         //Checking if a controller is connected
         if (!playerIndexSet || !prevState.IsConnected)
         {
@@ -49,13 +44,26 @@ public class PlayerMovement : MonoBehaviour
                 Debug.Log(string.Format("GamePad found {0}", testPlayerIndex));
                 playerIndex = testPlayerIndex;
                 playerIndexSet = true;
+                hasController = true;
             }
         }
+        else
+        {
+            hasController = false;
+        }
+    }
+    void Update()
+    {
 
+        if(Debug.isDebugBuild)
+        {
+            vectorForConstantForwardMovement = new Vector3(DifferenceInXBetweenPlatforms, 0.0f, 0.0f);
+            //Debug.Log("IN DEBUG MODE");
+        }
         if (!playerIndexSet)//No controller
         {
             //Left Movement
-            if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
+            if ((Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) && movingRight == false)
             {
                 //transform.position = transform.position - movement;
                 movingLeft = true;
@@ -66,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
                 movingLeft = false;
             }
             //Right Movement
-            if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
+            if ((Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) && movingLeft == false)
             {
                 //transform.position = transform.position + movement;
                 movingRight = true;
@@ -105,7 +113,11 @@ public class PlayerMovement : MonoBehaviour
         {
             if (transform.position.x > leftLanePos.x)
             {
-                transform.Translate(Vector3.left * 0.2f);
+                transform.Translate(Vector3.left * LeftRightMovementSpeed);
+                if(transform.position.x < leftLanePos.x)
+                {
+                    transform.position = new Vector3(leftLanePos.x, transform.position.y, transform.position.z);
+                }
             }
         }
         //Rightwards movement
@@ -113,7 +125,11 @@ public class PlayerMovement : MonoBehaviour
         {
             if (transform.position.x < rightLanePos.x)
             {
-                transform.Translate(Vector3.right * 0.2f);
+                transform.Translate(Vector3.right * LeftRightMovementSpeed);
+                if (transform.position.x > rightLanePos.x)
+                {
+                    transform.position = new Vector3(rightLanePos.x, transform.position.y, transform.position.z);
+                }
             }
         }
         //Returns to original position
@@ -122,12 +138,20 @@ public class PlayerMovement : MonoBehaviour
             //Moves from left to center
             if (transform.position.x < centreLanePos.x)
             {
-                transform.Translate(Vector3.right * 0.2f);
+                transform.Translate(Vector3.right * LeftRightMovementSpeed);
+                if(transform.position.x > centreLanePos.x)
+                {
+                    transform.position = new Vector3(centreLanePos.x, transform.position.y, transform.position.z);
+                }
             }
             //Moves from right to center
             if (transform.position.x > centreLanePos.x)
             {
-                transform.Translate(Vector3.left * 0.2f);
+                transform.Translate(Vector3.left * LeftRightMovementSpeed);
+                if (transform.position.x < centreLanePos.x)
+                {
+                    transform.position = new Vector3(centreLanePos.x, transform.position.y, transform.position.z);
+                }
             }
         }
     }
