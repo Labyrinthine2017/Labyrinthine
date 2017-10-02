@@ -54,7 +54,6 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-
         if(Debug.isDebugBuild)
         {
             vectorForConstantForwardMovement = new Vector3(DifferenceInXBetweenPlatforms, 0.0f, 0.0f);
@@ -139,7 +138,9 @@ public class PlayerMovement : MonoBehaviour
             if (transform.position.x < centreLanePos.x)
             {
                 transform.Translate(Vector3.right * LeftRightMovementSpeed);
-                if(transform.position.x > centreLanePos.x)
+                movingLeft = false;
+                movingRight = false;
+                if (transform.position.x > centreLanePos.x)
                 {
                     transform.position = new Vector3(centreLanePos.x, transform.position.y, transform.position.z);
                 }
@@ -148,6 +149,8 @@ public class PlayerMovement : MonoBehaviour
             if (transform.position.x > centreLanePos.x)
             {
                 transform.Translate(Vector3.left * LeftRightMovementSpeed);
+                movingLeft = false;
+                movingRight = false;
                 if (transform.position.x < centreLanePos.x)
                 {
                     transform.position = new Vector3(centreLanePos.x, transform.position.y, transform.position.z);

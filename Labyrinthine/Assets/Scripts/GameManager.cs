@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(gameScore);
+        //Debug.Log(gameScore);
         if(comboScore >= combo2Score)
         {
             combo = 2;

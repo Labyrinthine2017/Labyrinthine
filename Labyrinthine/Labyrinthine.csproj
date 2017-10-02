@@ -98,7 +98,7 @@
       <HintPath>Assets\3rdPartyAssets\ProCore\ProBuilder\Classes\ClassesLib\Poly2Tri.dll</HintPath>
     </Reference>
     <Reference Include="XInputDotNetPure">
-      <HintPath>Assets\3rdPartyAssets\XInputDotNet\Plugins\XInputDotNetPure.dll</HintPath>
+      <HintPath>Assets\XInputDotNet\Plugins\XInputDotNetPure.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -184,8 +184,6 @@
     <None Include="Assets\3rdPartyAssets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
     <None Include="Assets\3rdPartyAssets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
     <None Include="Assets\3rdPartyAssets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
-    <None Include="Assets\3rdPartyAssets\XInputDotNet\Docs.txt" />
-    <None Include="Assets\3rdPartyAssets\XInputDotNet\MITLicense.txt" />
     <None Include="Assets\Meshes\DELETE ME.txt" />
     <None Include="Assets\Particles\DELETE ME.txt" />
     <None Include="Assets\Prefabs\DELETE ME.txt" />
@@ -193,6 +191,8 @@
     <None Include="Assets\Shaders\DELETE ME.txt" />
     <None Include="Assets\Sprites\DELETE ME.txt" />
     <None Include="Assets\Textures\DELETE ME.txt" />
+    <None Include="Assets\XInputDotNet\Docs.txt" />
+    <None Include="Assets\XInputDotNet\MITLicense.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
