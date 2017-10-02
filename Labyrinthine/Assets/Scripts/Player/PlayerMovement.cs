@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     /// <summary>
     /// Storage for the distance in movement
     /// </summary>
-    Vector3 movement;
+    Vector3 vectorForConstantForwardMovement;
     Vector3 leftLanePos, rightLanePos, centreLanePos;
     Vector3 playerOrignalPosition;
     bool movingLeft = false, movingRight = false;
@@ -25,10 +25,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
-        movement = new Vector3(DifferenceInXBetweenPlatforms, 0.0f, 0.0f);
+        vectorForConstantForwardMovement = new Vector3(DifferenceInXBetweenPlatforms, 0.0f, 0.0f);
         playerOrignalPosition = transform.position;
-        leftLanePos = playerOrignalPosition - movement;
-        rightLanePos = playerOrignalPosition + movement;
+        leftLanePos = playerOrignalPosition - vectorForConstantForwardMovement;
+        rightLanePos = playerOrignalPosition + vectorForConstantForwardMovement;
         centreLanePos = playerOrignalPosition;
     }
     void Update()
@@ -36,9 +36,10 @@ public class PlayerMovement : MonoBehaviour
 
         if(Debug.isDebugBuild)
         {
-            movement = new Vector3(DifferenceInXBetweenPlatforms, 0.0f, 0.0f);
+            vectorForConstantForwardMovement = new Vector3(DifferenceInXBetweenPlatforms, 0.0f, 0.0f);
             //Debug.Log("IN DEBUG MODE");
         }
+        //Checking if a controller is connected
         if (!playerIndexSet || !prevState.IsConnected)
         {
             PlayerIndex testPlayerIndex = (PlayerIndex)0;
@@ -51,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (!playerIndexSet)
+        if (!playerIndexSet)//No controller
         {
             //Left Movement
             if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
@@ -76,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
                 movingRight = false;
             }
         }
-        else
+        else//Has controller
         {
             prevState = state;
             state = GamePad.GetState(playerIndex);
@@ -99,7 +100,7 @@ public class PlayerMovement : MonoBehaviour
                 movingRight = false;
             }
         }
-
+        //Leftwards movement
         if (movingLeft)
         {
             if (transform.position.x > leftLanePos.x)
@@ -107,6 +108,7 @@ public class PlayerMovement : MonoBehaviour
                 transform.Translate(Vector3.left * 0.2f);
             }
         }
+        //Rightwards movement
         if (movingRight)
         {
             if (transform.position.x < rightLanePos.x)
@@ -114,12 +116,15 @@ public class PlayerMovement : MonoBehaviour
                 transform.Translate(Vector3.right * 0.2f);
             }
         }
+        //Returns to original position
         if (!movingRight && !movingLeft)
         {
+            //Moves from left to center
             if (transform.position.x < centreLanePos.x)
             {
                 transform.Translate(Vector3.right * 0.2f);
             }
+            //Moves from right to center
             if (transform.position.x > centreLanePos.x)
             {
                 transform.Translate(Vector3.left * 0.2f);
@@ -128,6 +133,7 @@ public class PlayerMovement : MonoBehaviour
     }
 	void FixedUpdate ()
     {
+        //Constant forward movement
         transform.Translate(Vector3.forward * ForwardMovementSpeed);
 	}
 }

@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labyrinthine", "Labyrinthine.csproj", "{B7B7F844-033A-7AE3-B1EF-151C022F8D46}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labyrinthine.Editor", "Labyrinthine.Editor.csproj", "{0BB27D95-419E-F85D-5DCA-07B1751B82F2}"

@@ -760,9 +760,10 @@ GameObject:
   - component: {fileID: 23985763}
   - component: {fileID: 23985762}
   - component: {fileID: 23985761}
+  - component: {fileID: 23985765}
   m_Layer: 0
   m_Name: Cube (40)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -846,6 +847,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 23985759}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &23985765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 23985759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &24378957
 Mesh:
   m_ObjectHideFlags: 0
@@ -2119,9 +2132,10 @@ GameObject:
   - component: {fileID: 72914069}
   - component: {fileID: 72914068}
   - component: {fileID: 72914067}
+  - component: {fileID: 72914071}
   m_Layer: 0
   m_Name: Cube (53)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2205,6 +2219,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 72914065}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &72914071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 72914065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &77625908
 Mesh:
   m_ObjectHideFlags: 0
@@ -2345,9 +2371,10 @@ GameObject:
   - component: {fileID: 80617611}
   - component: {fileID: 80617610}
   - component: {fileID: 80617609}
+  - component: {fileID: 80617613}
   m_Layer: 0
   m_Name: Cube (35)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2431,6 +2458,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 80617607}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &80617613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 80617607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &95512645
 GameObject:
   m_ObjectHideFlags: 0
@@ -2443,9 +2482,10 @@ GameObject:
   - component: {fileID: 95512648}
   - component: {fileID: 95512647}
   - component: {fileID: 95512650}
+  - component: {fileID: 95512651}
   m_Layer: 0
   m_Name: Cube (6)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2529,6 +2569,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &95512651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 95512645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &98359698
 Mesh:
   m_ObjectHideFlags: 0
@@ -2669,9 +2721,10 @@ GameObject:
   - component: {fileID: 99252281}
   - component: {fileID: 99252280}
   - component: {fileID: 99252279}
+  - component: {fileID: 99252283}
   m_Layer: 0
   m_Name: Cube (36)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2755,6 +2808,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 99252277}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &99252283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 99252277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &100303867
 GameObject:
   m_ObjectHideFlags: 0
@@ -3874,9 +3939,10 @@ GameObject:
   - component: {fileID: 113754820}
   - component: {fileID: 113754819}
   - component: {fileID: 113754818}
+  - component: {fileID: 113754822}
   m_Layer: 0
   m_Name: Cube (54)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3960,6 +4026,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 113754816}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &113754822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 113754816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &115740644
 Mesh:
   m_ObjectHideFlags: 0
@@ -4484,9 +4562,10 @@ GameObject:
   - component: {fileID: 120683831}
   - component: {fileID: 120683830}
   - component: {fileID: 120683829}
+  - component: {fileID: 120683833}
   m_Layer: 0
   m_Name: Cube (19)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4570,6 +4649,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 120683827}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &120683833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 120683827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &129006824
 GameObject:
   m_ObjectHideFlags: 0
@@ -4640,9 +4731,10 @@ GameObject:
   - component: {fileID: 131101069}
   - component: {fileID: 131101068}
   - component: {fileID: 131101067}
+  - component: {fileID: 131101071}
   m_Layer: 0
   m_Name: Cube (52)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4726,6 +4818,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 131101065}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &131101071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 131101065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &145484643
 GameObject:
   m_ObjectHideFlags: 0
@@ -4738,9 +4842,10 @@ GameObject:
   - component: {fileID: 145484647}
   - component: {fileID: 145484646}
   - component: {fileID: 145484645}
+  - component: {fileID: 145484649}
   m_Layer: 0
   m_Name: Cube (43)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4824,6 +4929,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 145484643}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &145484649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 145484643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &151811836
 Mesh:
   m_ObjectHideFlags: 0
@@ -5220,9 +5337,10 @@ GameObject:
   - component: {fileID: 184299793}
   - component: {fileID: 184299792}
   - component: {fileID: 184299791}
+  - component: {fileID: 184299795}
   m_Layer: 0
   m_Name: Cube (99)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5306,6 +5424,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 184299789}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &184299795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 184299789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &209823080
 GameObject:
   m_ObjectHideFlags: 0
@@ -6202,6 +6332,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityType: 0
+--- !u!1001 &220431515
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4786465382495992, guid: 5f202f60fe09bcf41ba0342a53577f68, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -99.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786465382495992, guid: 5f202f60fe09bcf41ba0342a53577f68, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786465382495992, guid: 5f202f60fe09bcf41ba0342a53577f68, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -40.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786465382495992, guid: 5f202f60fe09bcf41ba0342a53577f68, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.000005960469
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786465382495992, guid: 5f202f60fe09bcf41ba0342a53577f68, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.0000032931566
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786465382495992, guid: 5f202f60fe09bcf41ba0342a53577f68, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 8.3493816e-11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786465382495992, guid: 5f202f60fe09bcf41ba0342a53577f68, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786465382495992, guid: 5f202f60fe09bcf41ba0342a53577f68, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 5f202f60fe09bcf41ba0342a53577f68, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &221779343
 GameObject:
   m_ObjectHideFlags: 0
@@ -6214,9 +6386,10 @@ GameObject:
   - component: {fileID: 221779347}
   - component: {fileID: 221779346}
   - component: {fileID: 221779345}
+  - component: {fileID: 221779349}
   m_Layer: 0
   m_Name: Cube (25)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6300,6 +6473,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 221779343}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &221779349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 221779343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &234377487
 GameObject:
   m_ObjectHideFlags: 0
@@ -6696,9 +6881,10 @@ GameObject:
   - component: {fileID: 254720242}
   - component: {fileID: 254720241}
   - component: {fileID: 254720240}
+  - component: {fileID: 254720244}
   m_Layer: 0
   m_Name: Cube (44)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6782,6 +6968,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 254720238}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &254720244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 254720238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &278244959
 GameObject:
   m_ObjectHideFlags: 0
@@ -6794,9 +6992,10 @@ GameObject:
   - component: {fileID: 278244963}
   - component: {fileID: 278244962}
   - component: {fileID: 278244961}
+  - component: {fileID: 278244965}
   m_Layer: 0
   m_Name: Cube (81)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6880,6 +7079,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 278244959}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &278244965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 278244959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &281377802
 Mesh:
   m_ObjectHideFlags: 0
@@ -7660,9 +7871,10 @@ GameObject:
   - component: {fileID: 296350317}
   - component: {fileID: 296350316}
   - component: {fileID: 296350319}
+  - component: {fileID: 296350320}
   m_Layer: 0
   m_Name: Cube (9)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7746,6 +7958,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &296350320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 296350314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &297637969
 Mesh:
   m_ObjectHideFlags: 0
@@ -8782,9 +9006,10 @@ GameObject:
   - component: {fileID: 312033346}
   - component: {fileID: 312033345}
   - component: {fileID: 312033348}
+  - component: {fileID: 312033349}
   m_Layer: 0
   m_Name: Cube (17)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8868,6 +9093,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &312033349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 312033343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &313212815
 Mesh:
   m_ObjectHideFlags: 0
@@ -9008,9 +9245,10 @@ GameObject:
   - component: {fileID: 315224187}
   - component: {fileID: 315224186}
   - component: {fileID: 315224185}
+  - component: {fileID: 315224189}
   m_Layer: 0
   m_Name: Cube (100)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9094,6 +9332,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 315224183}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &315224189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 315224183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &319556314
 Mesh:
   m_ObjectHideFlags: 0
@@ -9234,9 +9484,10 @@ GameObject:
   - component: {fileID: 326772128}
   - component: {fileID: 326772127}
   - component: {fileID: 326772126}
+  - component: {fileID: 326772130}
   m_Layer: 0
   m_Name: Cube (32)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9320,6 +9571,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 326772124}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &326772130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 326772124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &339803505
 GameObject:
   m_ObjectHideFlags: 0
@@ -13202,9 +13465,10 @@ GameObject:
   - component: {fileID: 449993955}
   - component: {fileID: 449993954}
   - component: {fileID: 449993953}
+  - component: {fileID: 449993957}
   m_Layer: 0
   m_Name: Cube (77)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13288,6 +13552,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 449993951}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &449993957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 449993951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &453279275
 Mesh:
   m_ObjectHideFlags: 0
@@ -13428,9 +13704,10 @@ GameObject:
   - component: {fileID: 467209723}
   - component: {fileID: 467209722}
   - component: {fileID: 467209721}
+  - component: {fileID: 467209725}
   m_Layer: 0
   m_Name: Cube (58)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13514,6 +13791,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 467209719}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &467209725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 467209719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &476335430
 GameObject:
   m_ObjectHideFlags: 0
@@ -13526,9 +13815,10 @@ GameObject:
   - component: {fileID: 476335434}
   - component: {fileID: 476335433}
   - component: {fileID: 476335432}
+  - component: {fileID: 476335436}
   m_Layer: 0
   m_Name: Cube (45)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13612,6 +13902,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 476335430}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &476335436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 476335430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &491410685
 Mesh:
   m_ObjectHideFlags: 0
@@ -16007,9 +16309,10 @@ GameObject:
   - component: {fileID: 553365445}
   - component: {fileID: 553365444}
   - component: {fileID: 553365443}
+  - component: {fileID: 553365447}
   m_Layer: 0
   m_Name: Cube (68)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16093,6 +16396,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 553365441}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &553365447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 553365441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &554905829
 GameObject:
   m_ObjectHideFlags: 0
@@ -16176,9 +16491,10 @@ GameObject:
   - component: {fileID: 557689819}
   - component: {fileID: 557689818}
   - component: {fileID: 557689821}
+  - component: {fileID: 557689822}
   m_Layer: 0
   m_Name: Cube (4)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16262,6 +16578,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &557689822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 557689816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &558340859
 GameObject:
   m_ObjectHideFlags: 0
@@ -17889,9 +18217,10 @@ GameObject:
   - component: {fileID: 571566464}
   - component: {fileID: 571566463}
   - component: {fileID: 571566462}
+  - component: {fileID: 571566466}
   m_Layer: 0
   m_Name: Cube (101)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17975,6 +18304,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 571566460}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &571566466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 571566460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &578500923
 GameObject:
   m_ObjectHideFlags: 0
@@ -17987,9 +18328,10 @@ GameObject:
   - component: {fileID: 578500927}
   - component: {fileID: 578500926}
   - component: {fileID: 578500925}
+  - component: {fileID: 578500929}
   m_Layer: 0
   m_Name: Cube (21)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18073,6 +18415,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 578500923}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &578500929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 578500923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &579177412
 GameObject:
   m_ObjectHideFlags: 0
@@ -18085,9 +18439,10 @@ GameObject:
   - component: {fileID: 579177416}
   - component: {fileID: 579177415}
   - component: {fileID: 579177414}
+  - component: {fileID: 579177418}
   m_Layer: 0
   m_Name: Cube (27)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18171,6 +18526,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 579177412}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &579177418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 579177412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &600713352
 GameObject:
   m_ObjectHideFlags: 0
@@ -18183,9 +18550,10 @@ GameObject:
   - component: {fileID: 600713356}
   - component: {fileID: 600713355}
   - component: {fileID: 600713354}
+  - component: {fileID: 600713358}
   m_Layer: 0
   m_Name: Cube (29)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18269,6 +18637,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 600713352}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &600713358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 600713352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &614465287
 GameObject:
   m_ObjectHideFlags: 0
@@ -18281,9 +18661,10 @@ GameObject:
   - component: {fileID: 614465291}
   - component: {fileID: 614465290}
   - component: {fileID: 614465289}
+  - component: {fileID: 614465293}
   m_Layer: 0
   m_Name: Cube (34)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18367,6 +18748,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 614465287}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &614465293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 614465287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &625077321
 GameObject:
   m_ObjectHideFlags: 0
@@ -19531,9 +19924,10 @@ GameObject:
   - component: {fileID: 663284011}
   - component: {fileID: 663284010}
   - component: {fileID: 663284009}
+  - component: {fileID: 663284013}
   m_Layer: 0
   m_Name: Cube (78)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19617,6 +20011,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 663284007}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &663284013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 663284007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &664922747
 GameObject:
   m_ObjectHideFlags: 0
@@ -19629,9 +20035,10 @@ GameObject:
   - component: {fileID: 664922751}
   - component: {fileID: 664922750}
   - component: {fileID: 664922749}
+  - component: {fileID: 664922753}
   m_Layer: 0
   m_Name: Cube (89)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19715,6 +20122,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 664922747}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &664922753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 664922747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &677671781
 Mesh:
   m_ObjectHideFlags: 0
@@ -19855,9 +20274,10 @@ GameObject:
   - component: {fileID: 684141481}
   - component: {fileID: 684141480}
   - component: {fileID: 684141479}
+  - component: {fileID: 684141483}
   m_Layer: 0
   m_Name: Cube (67)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19941,6 +20361,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 684141477}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &684141483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 684141477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &695028410
 GameObject:
   m_ObjectHideFlags: 0
@@ -19953,9 +20385,10 @@ GameObject:
   - component: {fileID: 695028414}
   - component: {fileID: 695028413}
   - component: {fileID: 695028412}
+  - component: {fileID: 695028416}
   m_Layer: 0
   m_Name: Cube (96)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20039,6 +20472,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 695028410}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &695028416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 695028410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &700860804
 GameObject:
   m_ObjectHideFlags: 0
@@ -20051,9 +20496,10 @@ GameObject:
   - component: {fileID: 700860808}
   - component: {fileID: 700860807}
   - component: {fileID: 700860806}
+  - component: {fileID: 700860810}
   m_Layer: 0
   m_Name: Cube (65)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20137,6 +20583,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 700860804}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &700860810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 700860804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &711768448
 Mesh:
   m_ObjectHideFlags: 0
@@ -21301,9 +21759,10 @@ GameObject:
   - component: {fileID: 749196789}
   - component: {fileID: 749196788}
   - component: {fileID: 749196787}
+  - component: {fileID: 749196791}
   m_Layer: 0
   m_Name: Cube (59)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21387,6 +21846,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 749196785}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &749196791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 749196785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &751821606
 GameObject:
   m_ObjectHideFlags: 0
@@ -21831,9 +22302,10 @@ GameObject:
   - component: {fileID: 759745959}
   - component: {fileID: 759745958}
   - component: {fileID: 759745957}
+  - component: {fileID: 759745961}
   m_Layer: 0
   m_Name: Cube (80)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21917,6 +22389,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 759745955}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &759745961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 759745955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &767098041
 GameObject:
   m_ObjectHideFlags: 0
@@ -21929,9 +22413,10 @@ GameObject:
   - component: {fileID: 767098045}
   - component: {fileID: 767098044}
   - component: {fileID: 767098043}
+  - component: {fileID: 767098047}
   m_Layer: 0
   m_Name: Cube (82)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22015,6 +22500,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 767098041}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &767098047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 767098041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &771295494
 GameObject:
   m_ObjectHideFlags: 0
@@ -25306,9 +25803,10 @@ GameObject:
   - component: {fileID: 820730190}
   - component: {fileID: 820730189}
   - component: {fileID: 820730192}
+  - component: {fileID: 820730193}
   m_Layer: 0
   m_Name: Cube (3)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25392,6 +25890,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &820730193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 820730187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &826405517
 GameObject:
   m_ObjectHideFlags: 0
@@ -26635,9 +27145,10 @@ GameObject:
   - component: {fileID: 870914917}
   - component: {fileID: 870914916}
   - component: {fileID: 870914919}
+  - component: {fileID: 870914920}
   m_Layer: 0
   m_Name: Cube (13)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26721,6 +27232,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &870914920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 870914914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &871277736
 GameObject:
   m_ObjectHideFlags: 0
@@ -26733,9 +27256,10 @@ GameObject:
   - component: {fileID: 871277740}
   - component: {fileID: 871277739}
   - component: {fileID: 871277738}
+  - component: {fileID: 871277742}
   m_Layer: 0
   m_Name: Cube (33)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26819,6 +27343,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 871277736}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &871277742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 871277736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &871602751
 GameObject:
   m_ObjectHideFlags: 0
@@ -27215,9 +27751,10 @@ GameObject:
   - component: {fileID: 872273337}
   - component: {fileID: 872273336}
   - component: {fileID: 872273339}
+  - component: {fileID: 872273340}
   m_Layer: 0
   m_Name: Cube (16)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27301,6 +27838,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &872273340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 872273334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &896056542
 GameObject:
   m_ObjectHideFlags: 0
@@ -27752,9 +28301,10 @@ GameObject:
   - component: {fileID: 906954208}
   - component: {fileID: 906954207}
   - component: {fileID: 906954206}
+  - component: {fileID: 906954210}
   m_Layer: 0
   m_Name: Cube (92)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27838,6 +28388,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 906954204}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &906954210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 906954204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &916292500
 Mesh:
   m_ObjectHideFlags: 0
@@ -28362,9 +28924,10 @@ GameObject:
   - component: {fileID: 931048233}
   - component: {fileID: 931048232}
   - component: {fileID: 931048231}
+  - component: {fileID: 931048235}
   m_Layer: 0
   m_Name: Cube (23)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28448,6 +29011,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 931048229}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &931048235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 931048229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &942134037
 GameObject:
   m_ObjectHideFlags: 0
@@ -28631,9 +29206,10 @@ GameObject:
   - component: {fileID: 946169759}
   - component: {fileID: 946169758}
   - component: {fileID: 946169757}
+  - component: {fileID: 946169761}
   m_Layer: 0
   m_Name: Cube (48)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28717,6 +29293,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 946169755}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &946169761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 946169755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &952585042
 GameObject:
   m_ObjectHideFlags: 0
@@ -28729,9 +29317,10 @@ GameObject:
   - component: {fileID: 952585046}
   - component: {fileID: 952585045}
   - component: {fileID: 952585044}
+  - component: {fileID: 952585048}
   m_Layer: 0
   m_Name: Cube (57)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28815,6 +29404,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 952585042}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &952585048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 952585042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &955075335
 GameObject:
   m_ObjectHideFlags: 0
@@ -29401,9 +30002,10 @@ GameObject:
   - component: {fileID: 967560323}
   - component: {fileID: 967560322}
   - component: {fileID: 967560321}
+  - component: {fileID: 967560325}
   m_Layer: 0
   m_Name: Cube (24)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29487,6 +30089,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 967560319}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &967560325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967560319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &967758471
 GameObject:
   m_ObjectHideFlags: 0
@@ -30907,9 +31521,10 @@ GameObject:
   - component: {fileID: 998736044}
   - component: {fileID: 998736043}
   - component: {fileID: 998736042}
+  - component: {fileID: 998736046}
   m_Layer: 0
   m_Name: Cube (47)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30993,6 +31608,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 998736040}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &998736046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 998736040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &1001945404
 GameObject:
   m_ObjectHideFlags: 0
@@ -31773,9 +32400,10 @@ GameObject:
   - component: {fileID: 1018198637}
   - component: {fileID: 1018198636}
   - component: {fileID: 1018198635}
+  - component: {fileID: 1018198639}
   m_Layer: 0
   m_Name: Cube (66)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31859,6 +32487,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1018198633}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1018198639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1018198633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &1019024828
 GameObject:
   m_ObjectHideFlags: 0
@@ -31871,9 +32511,10 @@ GameObject:
   - component: {fileID: 1019024832}
   - component: {fileID: 1019024831}
   - component: {fileID: 1019024830}
+  - component: {fileID: 1019024834}
   m_Layer: 0
   m_Name: Cube (49)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31957,6 +32598,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1019024828}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1019024834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1019024828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &1032070340
 Mesh:
   m_ObjectHideFlags: 0
@@ -33377,9 +34030,10 @@ GameObject:
   - component: {fileID: 1050078294}
   - component: {fileID: 1050078293}
   - component: {fileID: 1050078296}
+  - component: {fileID: 1050078297}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33463,6 +34117,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &1050078297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1050078291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &1056947315
 GameObject:
   m_ObjectHideFlags: 0
@@ -33475,9 +34141,10 @@ GameObject:
   - component: {fileID: 1056947319}
   - component: {fileID: 1056947318}
   - component: {fileID: 1056947317}
+  - component: {fileID: 1056947321}
   m_Layer: 0
   m_Name: Cube (31)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33561,6 +34228,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1056947315}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1056947321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1056947315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &1079682876
 GameObject:
   m_ObjectHideFlags: 0
@@ -33573,9 +34252,10 @@ GameObject:
   - component: {fileID: 1079682880}
   - component: {fileID: 1079682879}
   - component: {fileID: 1079682878}
+  - component: {fileID: 1079682882}
   m_Layer: 0
   m_Name: Cube (75)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33659,6 +34339,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1079682876}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1079682882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1079682876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &1108461292
 Mesh:
   m_ObjectHideFlags: 0
@@ -33927,9 +34619,10 @@ GameObject:
   - component: {fileID: 1123181255}
   - component: {fileID: 1123181254}
   - component: {fileID: 1123181253}
+  - component: {fileID: 1123181257}
   m_Layer: 0
   m_Name: Cube (95)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34013,6 +34706,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1123181251}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1123181257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1123181251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &1123477983
 GameObject:
   m_ObjectHideFlags: 0
@@ -34661,9 +35366,10 @@ GameObject:
   - component: {fileID: 1147728194}
   - component: {fileID: 1147728193}
   - component: {fileID: 1147728192}
+  - component: {fileID: 1147728196}
   m_Layer: 0
   m_Name: Cube (51)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34747,6 +35453,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1147728190}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1147728196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1147728190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &1148914378
 Mesh:
   m_ObjectHideFlags: 0
@@ -35271,9 +35989,10 @@ GameObject:
   - component: {fileID: 1161166335}
   - component: {fileID: 1161166334}
   - component: {fileID: 1161166333}
+  - component: {fileID: 1161166337}
   m_Layer: 0
   m_Name: Cube (63)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35357,6 +36076,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1161166331}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1161166337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1161166331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &1161710581
 Mesh:
   m_ObjectHideFlags: 0
@@ -35497,9 +36228,10 @@ GameObject:
   - component: {fileID: 1163182403}
   - component: {fileID: 1163182402}
   - component: {fileID: 1163182401}
+  - component: {fileID: 1163182405}
   m_Layer: 0
   m_Name: Cube (20)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35583,6 +36315,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1163182399}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1163182405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1163182399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &1171176340
 GameObject:
   m_ObjectHideFlags: 0
@@ -35595,9 +36339,10 @@ GameObject:
   - component: {fileID: 1171176344}
   - component: {fileID: 1171176343}
   - component: {fileID: 1171176342}
+  - component: {fileID: 1171176346}
   m_Layer: 0
   m_Name: Cube (42)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35681,6 +36426,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1171176340}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1171176346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1171176340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &1184314109
 GameObject:
   m_ObjectHideFlags: 0
@@ -35693,9 +36450,10 @@ GameObject:
   - component: {fileID: 1184314113}
   - component: {fileID: 1184314112}
   - component: {fileID: 1184314111}
+  - component: {fileID: 1184314115}
   m_Layer: 0
   m_Name: Cube (60)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35779,6 +36537,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1184314109}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1184314115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1184314109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &1187565487
 GameObject:
   m_ObjectHideFlags: 0
@@ -36559,9 +37329,10 @@ GameObject:
   - component: {fileID: 1203279473}
   - component: {fileID: 1203279472}
   - component: {fileID: 1203279471}
+  - component: {fileID: 1203279475}
   m_Layer: 0
   m_Name: Cube (56)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36645,6 +37416,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1203279469}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1203279475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1203279469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &1203899392
 GameObject:
   m_ObjectHideFlags: 0
@@ -36657,9 +37440,10 @@ GameObject:
   - component: {fileID: 1203899396}
   - component: {fileID: 1203899395}
   - component: {fileID: 1203899394}
+  - component: {fileID: 1203899398}
   m_Layer: 0
   m_Name: Cube (102)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36743,6 +37527,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1203899392}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1203899398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1203899392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &1206160997
 Mesh:
   m_ObjectHideFlags: 0
@@ -36883,9 +37679,10 @@ GameObject:
   - component: {fileID: 1210102031}
   - component: {fileID: 1210102030}
   - component: {fileID: 1210102029}
+  - component: {fileID: 1210102033}
   m_Layer: 0
   m_Name: Cube (46)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36969,103 +37766,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1210102027}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1210499675
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1210499680}
-  - component: {fileID: 1210499679}
-  - component: {fileID: 1210499678}
-  - component: {fileID: 1210499677}
-  - component: {fileID: 1210499676}
-  m_Layer: 0
-  m_Name: 'Player '
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1210499676
+--- !u!114 &1210102033
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1210499675}
+  m_GameObject: {fileID: 1210102027}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cd8adb207043774e85493c2cd7b9fb5, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ForwardMovementSpeed: 0.2
-  DifferenceInXBetweenPlatforms: 3.4
---- !u!23 &1210499677
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1210499675}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 0cb2c76f837cc3146be8fb264822ba47, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!65 &1210499678
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1210499675}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &1210499679
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1210499675}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1210499680
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1210499675}
-  m_LocalRotation: {x: -0.000005960469, y: -0.0000032931566, z: 8.3493816e-11, w: 1}
-  m_LocalPosition: {x: -99.9, y: 1.5, z: -40.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2019842511}
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -360.001, y: 360, z: 0}
+  fuelEffectAmount: 1
 --- !u!1 &1211862241
 GameObject:
   m_ObjectHideFlags: 0
@@ -37462,9 +38174,10 @@ GameObject:
   - component: {fileID: 1222632565}
   - component: {fileID: 1222632564}
   - component: {fileID: 1222632567}
+  - component: {fileID: 1222632568}
   m_Layer: 0
   m_Name: Cube (11)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37548,6 +38261,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &1222632568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1222632562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &1224254551
 GameObject:
   m_ObjectHideFlags: 0
@@ -38550,9 +39275,10 @@ GameObject:
   - component: {fileID: 1245054869}
   - component: {fileID: 1245054868}
   - component: {fileID: 1245054871}
+  - component: {fileID: 1245054872}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38636,6 +39362,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &1245054872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1245054866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &1255853586
 GameObject:
   m_ObjectHideFlags: 0
@@ -40903,9 +41641,10 @@ GameObject:
   - component: {fileID: 1296013585}
   - component: {fileID: 1296013584}
   - component: {fileID: 1296013583}
+  - component: {fileID: 1296013587}
   m_Layer: 0
   m_Name: Cube (79)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40989,6 +41728,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1296013581}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1296013587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1296013581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &1302411647
 GameObject:
   m_ObjectHideFlags: 0
@@ -44624,9 +45375,10 @@ GameObject:
   - component: {fileID: 1383218453}
   - component: {fileID: 1383218452}
   - component: {fileID: 1383218451}
+  - component: {fileID: 1383218455}
   m_Layer: 0
   m_Name: Cube (86)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44710,6 +45462,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1383218449}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1383218455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1383218449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &1394110381
 GameObject:
   m_ObjectHideFlags: 0
@@ -44722,9 +45486,10 @@ GameObject:
   - component: {fileID: 1394110385}
   - component: {fileID: 1394110384}
   - component: {fileID: 1394110383}
+  - component: {fileID: 1394110387}
   m_Layer: 0
   m_Name: Cube (94)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44808,6 +45573,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1394110381}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1394110387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1394110381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &1406288832
 GameObject:
   m_ObjectHideFlags: 0
@@ -44899,9 +45676,10 @@ GameObject:
   - component: {fileID: 1413381854}
   - component: {fileID: 1413381853}
   - component: {fileID: 1413381852}
+  - component: {fileID: 1413381856}
   m_Layer: 0
   m_Name: Cube (64)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44985,6 +45763,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1413381850}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1413381856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1413381850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &1414316405
 GameObject:
   m_ObjectHideFlags: 0
@@ -45076,9 +45866,10 @@ GameObject:
   - component: {fileID: 1436732218}
   - component: {fileID: 1436732217}
   - component: {fileID: 1436732216}
+  - component: {fileID: 1436732220}
   m_Layer: 0
   m_Name: Cube (55)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45162,6 +45953,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1436732214}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1436732220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1436732214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &1440046724
 GameObject:
   m_ObjectHideFlags: 0
@@ -45942,9 +46745,10 @@ GameObject:
   - component: {fileID: 1447755238}
   - component: {fileID: 1447755237}
   - component: {fileID: 1447755236}
+  - component: {fileID: 1447755240}
   m_Layer: 0
   m_Name: Cube (39)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46028,6 +46832,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1447755234}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1447755240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1447755234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &1450807150
 GameObject:
   m_ObjectHideFlags: 0
@@ -48344,9 +49160,10 @@ GameObject:
   - component: {fileID: 1512754586}
   - component: {fileID: 1512754585}
   - component: {fileID: 1512754584}
+  - component: {fileID: 1512754588}
   m_Layer: 0
   m_Name: Cube (87)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48430,6 +49247,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1512754582}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1512754588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1512754582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &1520119942
 Mesh:
   m_ObjectHideFlags: 0
@@ -48826,9 +49655,10 @@ GameObject:
   - component: {fileID: 1532358718}
   - component: {fileID: 1532358717}
   - component: {fileID: 1532358720}
+  - component: {fileID: 1532358721}
   m_Layer: 0
   m_Name: Cube (5)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48912,6 +49742,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &1532358721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1532358715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &1545696535
 Mesh:
   m_ObjectHideFlags: 0
@@ -50076,9 +50918,10 @@ GameObject:
   - component: {fileID: 1569300066}
   - component: {fileID: 1569300065}
   - component: {fileID: 1569300064}
+  - component: {fileID: 1569300068}
   m_Layer: 0
   m_Name: Cube (98)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50162,6 +51005,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1569300062}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1569300068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1569300062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &1572951720
 GameObject:
   m_ObjectHideFlags: 0
@@ -50558,9 +51413,10 @@ GameObject:
   - component: {fileID: 1581550302}
   - component: {fileID: 1581550301}
   - component: {fileID: 1581550304}
+  - component: {fileID: 1581550305}
   m_Layer: 0
   m_Name: Cube (8)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50644,6 +51500,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &1581550305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1581550299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &1601545548
 Mesh:
   m_ObjectHideFlags: 0
@@ -50784,9 +51652,10 @@ GameObject:
   - component: {fileID: 1608580247}
   - component: {fileID: 1608580246}
   - component: {fileID: 1608580245}
+  - component: {fileID: 1608580249}
   m_Layer: 0
   m_Name: Cube (26)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50870,6 +51739,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1608580243}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1608580249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1608580243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &1617641191
 GameObject:
   m_ObjectHideFlags: 0
@@ -51394,9 +52275,10 @@ GameObject:
   - component: {fileID: 1635272874}
   - component: {fileID: 1635272873}
   - component: {fileID: 1635272872}
+  - component: {fileID: 1635272876}
   m_Layer: 0
   m_Name: Cube (61)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51480,6 +52362,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1635272870}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1635272876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1635272870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &1641725864
 GameObject:
   m_ObjectHideFlags: 0
@@ -51492,9 +52386,10 @@ GameObject:
   - component: {fileID: 1641725868}
   - component: {fileID: 1641725867}
   - component: {fileID: 1641725866}
+  - component: {fileID: 1641725870}
   m_Layer: 0
   m_Name: Cube (28)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51578,6 +52473,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1641725864}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1641725870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1641725864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &1647049071
 GameObject:
   m_ObjectHideFlags: 0
@@ -51590,9 +52497,10 @@ GameObject:
   - component: {fileID: 1647049075}
   - component: {fileID: 1647049074}
   - component: {fileID: 1647049073}
+  - component: {fileID: 1647049077}
   m_Layer: 0
   m_Name: Cube (84)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51676,6 +52584,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1647049071}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1647049077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1647049071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &1652196108
 GameObject:
   m_ObjectHideFlags: 0
@@ -52968,9 +53888,10 @@ GameObject:
   - component: {fileID: 1698892656}
   - component: {fileID: 1698892655}
   - component: {fileID: 1698892654}
+  - component: {fileID: 1698892658}
   m_Layer: 0
   m_Name: Cube (30)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53054,6 +53975,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1698892652}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1698892658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1698892652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &1701365441
 Mesh:
   m_ObjectHideFlags: 0
@@ -53578,9 +54511,10 @@ GameObject:
   - component: {fileID: 1718152872}
   - component: {fileID: 1718152871}
   - component: {fileID: 1718152870}
+  - component: {fileID: 1718152874}
   m_Layer: 0
   m_Name: Cube (38)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53664,6 +54598,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1718152868}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1718152874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1718152868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &1738674289
 GameObject:
   m_ObjectHideFlags: 0
@@ -53755,9 +54701,10 @@ GameObject:
   - component: {fileID: 1740283304}
   - component: {fileID: 1740283303}
   - component: {fileID: 1740283302}
+  - component: {fileID: 1740283306}
   m_Layer: 0
   m_Name: Cube (91)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53841,6 +54788,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1740283300}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1740283306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1740283300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &1744321726
 GameObject:
   m_ObjectHideFlags: 0
@@ -53853,9 +54812,10 @@ GameObject:
   - component: {fileID: 1744321729}
   - component: {fileID: 1744321728}
   - component: {fileID: 1744321731}
+  - component: {fileID: 1744321732}
   m_Layer: 0
   m_Name: Cube (15)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53939,6 +54899,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &1744321732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1744321726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &1746284963
 GameObject:
   m_ObjectHideFlags: 0
@@ -54719,9 +55691,10 @@ GameObject:
   - component: {fileID: 1762593048}
   - component: {fileID: 1762593047}
   - component: {fileID: 1762593050}
+  - component: {fileID: 1762593051}
   m_Layer: 0
   m_Name: Cube (7)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54805,6 +55778,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &1762593051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1762593045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &1764175383
 GameObject:
   m_ObjectHideFlags: 0
@@ -55201,9 +56186,10 @@ GameObject:
   - component: {fileID: 1775119034}
   - component: {fileID: 1775119033}
   - component: {fileID: 1775119032}
+  - component: {fileID: 1775119036}
   m_Layer: 0
   m_Name: Cube (88)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55287,6 +56273,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1775119030}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1775119036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1775119030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &1789657180
 Mesh:
   m_ObjectHideFlags: 0
@@ -55427,9 +56425,10 @@ GameObject:
   - component: {fileID: 1793119842}
   - component: {fileID: 1793119841}
   - component: {fileID: 1793119844}
+  - component: {fileID: 1793119845}
   m_Layer: 0
   m_Name: Cube (10)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55513,6 +56512,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &1793119845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1793119839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &1796996111
 GameObject:
   m_ObjectHideFlags: 0
@@ -55525,9 +56536,10 @@ GameObject:
   - component: {fileID: 1796996115}
   - component: {fileID: 1796996114}
   - component: {fileID: 1796996113}
+  - component: {fileID: 1796996117}
   m_Layer: 0
   m_Name: Cube (37)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55611,6 +56623,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1796996111}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1796996117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1796996111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &1806247568
 GameObject:
   m_ObjectHideFlags: 0
@@ -55623,9 +56647,10 @@ GameObject:
   - component: {fileID: 1806247571}
   - component: {fileID: 1806247570}
   - component: {fileID: 1806247573}
+  - component: {fileID: 1806247574}
   m_Layer: 0
   m_Name: Cube (14)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55709,6 +56734,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &1806247574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1806247568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &1810127200
 GameObject:
   m_ObjectHideFlags: 0
@@ -57129,9 +58166,10 @@ GameObject:
   - component: {fileID: 1852057807}
   - component: {fileID: 1852057806}
   - component: {fileID: 1852057809}
+  - component: {fileID: 1852057810}
   m_Layer: 0
   m_Name: Cube (12)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57215,6 +58253,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &1852057810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1852057804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &1860292289
 GameObject:
   m_ObjectHideFlags: 0
@@ -57227,9 +58277,10 @@ GameObject:
   - component: {fileID: 1860292293}
   - component: {fileID: 1860292292}
   - component: {fileID: 1860292291}
+  - component: {fileID: 1860292295}
   m_Layer: 0
   m_Name: Cube (83)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57313,6 +58364,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1860292289}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1860292295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1860292289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &1861589914
 Mesh:
   m_ObjectHideFlags: 0
@@ -57453,9 +58516,10 @@ GameObject:
   - component: {fileID: 1864555841}
   - component: {fileID: 1864555840}
   - component: {fileID: 1864555839}
+  - component: {fileID: 1864555843}
   m_Layer: 0
   m_Name: Cube (22)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57539,6 +58603,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1864555837}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1864555843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1864555837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &1881426750
 Mesh:
   m_ObjectHideFlags: 0
@@ -59343,9 +60419,10 @@ GameObject:
   - component: {fileID: 1906098167}
   - component: {fileID: 1906098166}
   - component: {fileID: 1906098165}
+  - component: {fileID: 1906098169}
   m_Layer: 0
   m_Name: Cube (76)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59429,6 +60506,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1906098163}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1906098169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1906098163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &1911269150
 Mesh:
   m_ObjectHideFlags: 0
@@ -59771,9 +60860,10 @@ GameObject:
   - component: {fileID: 1962563102}
   - component: {fileID: 1962563101}
   - component: {fileID: 1962563100}
+  - component: {fileID: 1962563104}
   m_Layer: 0
   m_Name: Cube (97)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59857,6 +60947,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1962563098}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1962563104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1962563098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &1964560877
 Mesh:
   m_ObjectHideFlags: 0
@@ -59997,9 +61099,10 @@ GameObject:
   - component: {fileID: 1970579798}
   - component: {fileID: 1970579797}
   - component: {fileID: 1970579796}
+  - component: {fileID: 1970579800}
   m_Layer: 0
   m_Name: Cube (93)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60083,6 +61186,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1970579794}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1970579800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1970579794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &1992392269
 Mesh:
   m_ObjectHideFlags: 0
@@ -60351,9 +61466,10 @@ GameObject:
   - component: {fileID: 2001728509}
   - component: {fileID: 2001728508}
   - component: {fileID: 2001728507}
+  - component: {fileID: 2001728511}
   m_Layer: 0
   m_Name: Cube (90)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60437,6 +61553,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2001728505}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2001728511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2001728505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &2005688354
 Mesh:
   m_ObjectHideFlags: 0
@@ -60693,95 +61821,6 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
---- !u!1 &2019842506
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2019842511}
-  - component: {fileID: 2019842510}
-  - component: {fileID: 2019842509}
-  - component: {fileID: 2019842508}
-  - component: {fileID: 2019842507}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!81 &2019842507
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2019842506}
-  m_Enabled: 1
---- !u!124 &2019842508
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2019842506}
-  m_Enabled: 1
---- !u!92 &2019842509
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2019842506}
-  m_Enabled: 1
---- !u!20 &2019842510
-Camera:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2019842506}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
-  m_StereoMirrorMode: 0
---- !u!4 &2019842511
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2019842506}
-  m_LocalRotation: {x: -0.17971273, y: -0.000011411327, z: 0.0000015428524, w: -0.98371917}
-  m_LocalPosition: {x: -0.000053570715, y: 5.9099293, z: -5.9000645}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1210499680}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 20.707, y: -449.999, z: 0}
 --- !u!1 &2024453476
 GameObject:
   m_ObjectHideFlags: 0
@@ -61562,9 +62601,10 @@ GameObject:
   - component: {fileID: 2053743626}
   - component: {fileID: 2053743625}
   - component: {fileID: 2053743624}
+  - component: {fileID: 2053743628}
   m_Layer: 0
   m_Name: Cube (62)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61648,6 +62688,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2053743622}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2053743628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2053743622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &2055249012
 Mesh:
   m_ObjectHideFlags: 0
@@ -61788,9 +62840,10 @@ GameObject:
   - component: {fileID: 2057893658}
   - component: {fileID: 2057893657}
   - component: {fileID: 2057893656}
+  - component: {fileID: 2057893660}
   m_Layer: 0
   m_Name: Cube (85)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61874,6 +62927,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2057893654}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2057893660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2057893654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &2062339869
 Mesh:
   m_ObjectHideFlags: 0
@@ -62014,9 +63079,10 @@ GameObject:
   - component: {fileID: 2071904282}
   - component: {fileID: 2071904281}
   - component: {fileID: 2071904280}
+  - component: {fileID: 2071904284}
   m_Layer: 0
   m_Name: Cube (41)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62100,6 +63166,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2071904278}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2071904284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2071904278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!1 &2079369300
 GameObject:
   m_ObjectHideFlags: 0
@@ -62496,9 +63574,10 @@ GameObject:
   - component: {fileID: 2080500405}
   - component: {fileID: 2080500404}
   - component: {fileID: 2080500403}
+  - component: {fileID: 2080500407}
   m_Layer: 0
   m_Name: Cube (50)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62582,6 +63661,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2080500401}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2080500407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2080500401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &2099673289
 Mesh:
   m_ObjectHideFlags: 0
@@ -63106,9 +64197,10 @@ GameObject:
   - component: {fileID: 2114163681}
   - component: {fileID: 2114163680}
   - component: {fileID: 2114163679}
+  - component: {fileID: 2114163683}
   m_Layer: 0
   m_Name: Cube (18)
-  m_TagString: Untagged
+  m_TagString: Notes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63192,6 +64284,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2114163677}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2114163683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2114163677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3315e49e265374cb6a3cbb2fe47b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelEffectAmount: 1
 --- !u!43 &2118853089
 Mesh:
   m_ObjectHideFlags: 0

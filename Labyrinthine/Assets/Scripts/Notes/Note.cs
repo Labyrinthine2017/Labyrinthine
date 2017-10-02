@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class Note : MonoBehaviour
 {
-    [SerializeField]
-    float fuelEffectAmount;
+    public float fuelEffectAmount = 1.0f;
 
 
     void OnTriggerStay(Collider col)
     {
         if (col.gameObject.tag == "Player")
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKey(KeyCode.Space))
             {
-                col.GetComponent<FuelMonitoring>().AlterFuelAmount(fuelEffectAmount);
+                col.GetComponent<EngineBehaviour>().CoolEngineByAmount(fuelEffectAmount);
                 Destroy(this.gameObject);
             }
 
