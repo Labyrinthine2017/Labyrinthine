@@ -10,39 +10,71 @@ public class GameManager : MonoBehaviour
     public int comboScore { get; set; }
     int comboValue { get; set; }
     public bool controller { get; set; }
+    float globalTime;
+    float scoreTimer;
+
+    //For UI -----------------------------------------------------------
+    bool startedWarningSt1Blink = false;
+    bool startedWarningSt2Blink = false;
+    bool showedStreak = false;
+
+    float timerStreak;
+    [SerializeField] Image WarningSt1;
+    [SerializeField] BlinkingImage WarningSt2;
+    [SerializeField] Text scoreText;
+
+    [SerializeField] Image multiplier;
+    [SerializeField] Sprite x2Multiplier;
+    [SerializeField] Sprite x3Multiplier;
+    [SerializeField] Sprite x4Multiplier;
+    [SerializeField] Image streak;
+    [SerializeField] Sprite x5NoteStreak;
+    [SerializeField] Sprite x12NoteStreak;
+    [SerializeField] Sprite x19NoteStreak;
+    Sprite defualt = null;
+
+
+    //------------------------------------------------------------------
+
 
     Player player;
-    Text scoreText, comboText, heatText;
     EngineBehaviour playerEngine;
 
 	void Start ()
     {
         Application.targetFrameRate = 60;
         comboValue = 1;
+        globalTime = 0.0f;
         gameScore = 0;
+        streak.enabled = false;
 	}
 
     void Awake()
     {
-        scoreText = GameObject.FindGameObjectWithTag("ScoreText").GetComponent<Text>();
-        comboText = GameObject.FindGameObjectWithTag("ComboText").GetComponent<Text>();
-        heatText = GameObject.FindGameObjectWithTag("EngineHeatText").GetComponent<Text>();
-
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        playerEngine = GameObject.FindGameObjectWithTag("Player").GetComponent<EngineBehaviour>();
+        playerEngine = GameObject.FindGameObjectWithTag("Player").GetComponent<EngineBehaviour>();        
     }
 
     void Update()
     {
-        if(comboScore >= combo2Score)
+        globalTime += Time.deltaTime;
+        scoreTimer += Time.deltaTime;
+        //Every half second you get a point
+        if(scoreTimer >= 0.5f)
+        {
+            gameScore++;
+            scoreTimer = 0.0f;
+        }
+
+        if(comboScore == combo2Score)
         {
             comboValue = 2;
         }
-        if(comboScore >= combo3Score)
+        if(comboScore == combo3Score)
         {
             comboValue = 3;
         }
-        if (comboScore >= combo4Score)
+        if (comboScore == combo4Score)
         {
             comboValue = 4;
         }
@@ -71,10 +103,96 @@ public class GameManager : MonoBehaviour
     //Updates the UI element of the values for the player
     void UpdateUI()
     {
-        scoreText.text = "Score: " + gameScore.ToString();
-        comboText.text = "x" + comboValue.ToString();
-        heatText.text = playerEngine.engineHeatAmount.ToString() + "%";
-        
+        //Set the score text field
+        scoreText.text = gameScore.ToString();
+
+        //Set multiplier sprite to the appropriate combo 
+        if(comboValue == 1)
+        {
+            multiplier.enabled = false;
+        }
+        else
+        {
+            multiplier.enabled = true;
+        }
+        if(comboValue == 2)
+        {
+            multiplier.sprite = x2Multiplier;
+            multiplier.SetNativeSize();
+        }
+        if(comboValue == 3)
+        {
+            multiplier.sprite = x3Multiplier;
+        }
+        if(comboValue == 4)
+        {
+            multiplier.sprite = x4Multiplier;
+        }
+        //----------------------------------------------
+
+        //Set streak sprite to the appropriate streak
+            
+        if (comboScore == 5)
+        {
+            streak.enabled = true;
+            streak.sprite = x5NoteStreak;
+            showedStreak = true;
+            streak.SetNativeSize();
+        }
+        else if (comboScore == 12)
+        {
+            streak.enabled = true;
+            showedStreak = true;
+            streak.sprite = x12NoteStreak;
+        }
+        else if (comboScore == 19)
+        {
+            streak.enabled = true;
+            showedStreak = true;
+            streak.sprite = x19NoteStreak;
+        }
+
+        if(showedStreak)
+        {
+            timerStreak += Time.deltaTime;
+        }
+        if(timerStreak >= 2.0f)
+        {
+            streak.enabled = false;
+            showedStreak = false;
+            timerStreak = 0.0f;
+        }
+        //--------------------------------------------
+
+        //Red bar = 147
+        //Used to enable and disable the warning words to appear
+        if (playerEngine.engineHeatAmount > 81.1f && startedWarningSt1Blink == false)
+        {
+            WarningSt1.enabled = true;
+            startedWarningSt1Blink = true;
+        }
+        else if (playerEngine.engineHeatAmount < 81.1f && startedWarningSt1Blink == true)
+        {
+            WarningSt1.enabled = false;
+            startedWarningSt1Blink = false;
+        }
+        //Warning bar = 169
+        //Used to enable and disable the blinking warning red border
+        if (playerEngine.engineHeatAmount > 93.8f && startedWarningSt2Blink == false)
+        {
+            WarningSt2.enabled = true;
+            startedWarningSt2Blink = true;
+        }
+        else if (playerEngine.engineHeatAmount < 93.8f && startedWarningSt2Blink == true)
+        {
+            WarningSt2.enabled = false;
+            if(WarningSt2.GetComponent<Image>().enabled == true)
+            {
+                WarningSt2.GetComponent<Image>().enabled = false;
+            }
+            startedWarningSt2Blink = false;
+        }
+
     }
 
 }

@@ -22,7 +22,7 @@ public class Note : MonoBehaviour
     {
         if (allowedToCollect == true)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKey(KeyCode.Space))
             {
                 playerMovement.gameObject.GetComponent<EngineBehaviour>().CoolEngineByAmount(coolantAmount);
                 manager.comboScore += 1;
@@ -46,12 +46,25 @@ public class Note : MonoBehaviour
             beenMissed = true;
         }
     }
-    void OnTriggerEnter(Collider col)
+    //void OnTriggerEnter(Collider col)
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Space) == false)
+    //    {
+    //        allowedToCollect = true;
+    //    }
+    //}
+    void OnCollisionExit(Collision col)
     {
-        allowedToCollect = true;
+        if (col.gameObject.tag == "Player")
+        {
+            allowedToCollect = false;
+        }
     }
-    void OnTriggerExit(Collider col)
+    void OnCollisionStay(Collision other)
     {
-        allowedToCollect = false;
+        if (other.gameObject.tag == "Player" && !Input.GetKey(KeyCode.Space))
+        {
+            allowedToCollect = true;
+        }
     }
 }

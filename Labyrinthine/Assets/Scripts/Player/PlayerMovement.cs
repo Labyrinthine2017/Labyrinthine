@@ -61,27 +61,33 @@ public class PlayerMovement : MonoBehaviour
         }
         if (!playerIndexSet)//No controller
         {
-            //Left Movement
-            if ((Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) && movingRight == false)
+            if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
             {
-                //transform.position = transform.position - movement;
-                movingLeft = true;
-            }
-            if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.A))
-            {
-                //transform.position = transform.position + movement;
                 movingLeft = false;
-            }
-            //Right Movement
-            if ((Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) && movingLeft == false)
-            {
-                //transform.position = transform.position + movement;
-                movingRight = true;
-            }
-            if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.D))
-            {
-                //transform.position = transform.position - movement;
                 movingRight = false;
+            }
+            else
+            {
+                //Left Movement
+                if ((Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)))
+                {
+                    //transform.position = transform.position - movement;
+                    movingLeft = true;
+                }
+                else
+                {
+                    movingLeft = false;
+                }
+                //Right Movement
+                if ((Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)))
+                {
+                    //transform.position = transform.position + movement;
+                    movingRight = true;
+                }
+                else
+                {
+                    movingRight = false;
+                }
             }
         }
         else//Has controller

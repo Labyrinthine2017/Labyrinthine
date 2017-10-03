@@ -12,6 +12,7 @@ TagManager:
   - ScoreText
   - ComboText
   - EngineHeatText
+  - Warning
   layers:
   - Default
   - TransparentFX
