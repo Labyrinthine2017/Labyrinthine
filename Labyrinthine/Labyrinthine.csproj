@@ -97,9 +97,6 @@
     <Reference Include="Poly2Tri">
       <HintPath>Assets\3rdPartyAssets\ProCore\ProBuilder\Classes\ClassesLib\Poly2Tri.dll</HintPath>
     </Reference>
-    <Reference Include="XInputDotNetPure">
-      <HintPath>Assets\XInputDotNet\Plugins\XInputDotNetPure.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\3rdPartyAssets\OBJExport\OBJExporter.cs" />
@@ -188,8 +185,6 @@
     <None Include="Assets\3rdPartyAssets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
     <None Include="Assets\Meshes\DELETE ME.txt" />
     <None Include="Assets\Particles\DELETE ME.txt" />
-    <None Include="Assets\Prefabs\DELETE ME.txt" />
-    <None Include="Assets\Scripts\DELETE ME.txt" />
     <None Include="Assets\Shaders\DELETE ME.txt" />
     <None Include="Assets\Sprites\DELETE ME.txt" />
     <None Include="Assets\Textures\DELETE ME.txt" />

@@ -148,9 +148,6 @@
     <Reference Include="ProBuilderEditor-Unity5">
       <HintPath>Assets\3rdPartyAssets\ProCore\ProBuilder\Editor\ProBuilderEditor-Unity5.dll</HintPath>
     </Reference>
-    <Reference Include="XInputDotNetPure">
-      <HintPath>Assets\XInputDotNet\Plugins\XInputDotNetPure.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Labyrinthine.csproj">
@@ -237,8 +234,6 @@
     <None Include="Assets\3rdPartyAssets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
     <None Include="Assets\Meshes\DELETE ME.txt" />
     <None Include="Assets\Particles\DELETE ME.txt" />
-    <None Include="Assets\Prefabs\DELETE ME.txt" />
-    <None Include="Assets\Scripts\DELETE ME.txt" />
     <None Include="Assets\Shaders\DELETE ME.txt" />
     <None Include="Assets\Sprites\DELETE ME.txt" />
     <None Include="Assets\Textures\DELETE ME.txt" />
