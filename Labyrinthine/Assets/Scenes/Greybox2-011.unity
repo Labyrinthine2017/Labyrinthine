@@ -838,8 +838,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.9766998, y: 1, z: 2.330986}
-  m_Center: {x: -0.043356296, y: 0, z: -0.05268002}
+  m_Size: {x: 4.240505, y: 1, z: 2.330986}
+  m_Center: {x: -0.020418877, y: 0, z: -0.05268002}
 --- !u!33 &23985764
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2338,8 +2338,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.9766998, y: 1, z: 2.330986}
-  m_Center: {x: -0.043356296, y: 0, z: -0.05268002}
+  m_Size: {x: 4.240505, y: 1, z: 2.330986}
+  m_Center: {x: -0.020418877, y: 0, z: -0.05268002}
 --- !u!33 &80617612
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2434,8 +2434,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.9766998, y: 1, z: 2.330986}
-  m_Center: {x: -0.043356296, y: 0, z: -0.05268002}
+  m_Size: {x: 4.240505, y: 1, z: 2.330986}
+  m_Center: {x: -0.020418877, y: 0, z: -0.05268002}
 --- !u!33 &95512649
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3795,8 +3795,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.9766998, y: 1, z: 2.330986}
-  m_Center: {x: -0.043356296, y: 0, z: -0.05268002}
+  m_Size: {x: 4.240505, y: 1, z: 2.330986}
+  m_Center: {x: -0.020418877, y: 0, z: -0.05268002}
 --- !u!33 &113754821
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4418,8 +4418,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.9766998, y: 1, z: 2.330986}
-  m_Center: {x: -0.043356296, y: 0, z: -0.05268002}
+  m_Size: {x: 4.240505, y: 1, z: 2.330986}
+  m_Center: {x: -0.020418877, y: 0, z: -0.05268002}
 --- !u!33 &120683832
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5825,7 +5825,7 @@ Prefab:
     - target: {fileID: 114259836701577978, guid: 5f202f60fe09bcf41ba0342a53577f68,
         type: 2}
       propertyPath: ForwardMovementSpeed
-      value: 1.5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 114259836701577978, guid: 5f202f60fe09bcf41ba0342a53577f68,
         type: 2}
@@ -5851,6 +5851,11 @@ Prefab:
         type: 2}
       propertyPath: m_Center.z
       value: -0.26586342
+      objectReference: {fileID: 0}
+    - target: {fileID: 114259836701577978, guid: 5f202f60fe09bcf41ba0342a53577f68,
+        type: 2}
+      propertyPath: LeftRightMovementSpeed
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f202f60fe09bcf41ba0342a53577f68, type: 2}
@@ -12759,8 +12764,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.9766998, y: 1, z: 2.330986}
-  m_Center: {x: -0.043356296, y: 0, z: -0.05268002}
+  m_Size: {x: 4.240505, y: 1, z: 2.330986}
+  m_Center: {x: -0.020418877, y: 0, z: -0.05268002}
 --- !u!33 &449993956
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -13126,8 +13131,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.9766998, y: 1, z: 2.330986}
-  m_Center: {x: -0.043356296, y: 0, z: -0.05268002}
+  m_Size: {x: 4.240505, y: 1, z: 2.330986}
+  m_Center: {x: -0.020418877, y: 0, z: -0.05268002}
 --- !u!33 &476335435
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14005,7 +14010,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh11958
+  m_Name: pb_Mesh11890
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -20841,8 +20846,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.9766998, y: 1, z: 2.330986}
-  m_Center: {x: -0.043356296, y: 0, z: -0.05268002}
+  m_Size: {x: 4.240505, y: 1, z: 2.330986}
+  m_Center: {x: -0.020418877, y: 0, z: -0.05268002}
 --- !u!33 &759745960
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -26291,8 +26296,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.9766998, y: 1, z: 2.330986}
-  m_Center: {x: -0.043356296, y: 0, z: -0.05268002}
+  m_Size: {x: 4.240505, y: 1, z: 2.330986}
+  m_Center: {x: -0.020418877, y: 0, z: -0.05268002}
 --- !u!33 &906954209
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -32319,6 +32324,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1123477984}
+  - component: {fileID: 1123477985}
   m_Layer: 0
   m_Name: Note Blocks
   m_TagString: Untagged
@@ -32351,6 +32357,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -719.999, z: 0}
+--- !u!114 &1123477985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1123477983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5006de8d1a6094d8f1b81080b3d348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1125408903
 GameObject:
   m_ObjectHideFlags: 0
@@ -42165,8 +42182,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.9766998, y: 1, z: 2.330986}
-  m_Center: {x: -0.043356296, y: 0, z: -0.05268002}
+  m_Size: {x: 4.240505, y: 1, z: 2.330986}
+  m_Center: {x: -0.020418877, y: 0, z: -0.05268002}
 --- !u!33 &1383218454
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -47663,8 +47680,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.9766998, y: 1, z: 2.330986}
-  m_Center: {x: -0.043356296, y: 0, z: -0.05268002}
+  m_Size: {x: 4.240505, y: 1, z: 2.330986}
+  m_Center: {x: -0.020418877, y: 0, z: -0.05268002}
 --- !u!33 &1569300067
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -54430,7 +54447,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh12912
+  m_Name: pb_Mesh12590
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -58921,8 +58938,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.9766998, y: 1, z: 2.330986}
-  m_Center: {x: -0.043356296, y: 0, z: -0.05268002}
+  m_Size: {x: 4.240505, y: 1, z: 2.330986}
+  m_Center: {x: -0.020418877, y: 0, z: -0.05268002}
 --- !u!33 &2053743627
 MeshFilter:
   m_ObjectHideFlags: 0

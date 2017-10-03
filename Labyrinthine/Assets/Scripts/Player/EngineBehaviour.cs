@@ -11,7 +11,7 @@ public class EngineBehaviour : MonoBehaviour
 
     void Start()
     {
-        engineHeatAmount = 75.0f;
+        engineHeatAmount = 0.0f;
     }
     void FixedUpdate ()
     {

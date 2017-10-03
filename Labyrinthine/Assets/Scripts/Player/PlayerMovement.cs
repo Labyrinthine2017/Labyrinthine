@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using XInputDotNetPure;
+using XboxCtrlrInput;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -18,10 +18,8 @@ public class PlayerMovement : MonoBehaviour
     bool movingLeft = false, movingRight = false;
 
     //For Xbox360 controller
-    bool playerIndexSet = false;
-    PlayerIndex playerIndex;
-    public GamePadState state { get; set; }
-    GamePadState prevState;
+    public XboxController controller { get; set; }
+
 
     // Update is called once per frame
     void Start()
@@ -31,26 +29,7 @@ public class PlayerMovement : MonoBehaviour
         leftLanePos = playerOrignalPosition - vectorForConstantForwardMovement;
         rightLanePos = playerOrignalPosition + vectorForConstantForwardMovement;
         centreLanePos = playerOrignalPosition;
-    }
-    void Awake()
-    {
-        //Checking if a controller is connected
-        if (!playerIndexSet || !prevState.IsConnected)
-        {
-            PlayerIndex testPlayerIndex = (PlayerIndex)0;
-            GamePadState testState = GamePad.GetState(testPlayerIndex);
-            if (testState.IsConnected)
-            {
-                Debug.Log(string.Format("GamePad found {0}", testPlayerIndex));
-                playerIndex = testPlayerIndex;
-                playerIndexSet = true;
-                hasController = true;
-            }
-        }
-        else
-        {
-            hasController = false;
-        }
+        controller = XboxController.First;
     }
     void Update()
     {
@@ -59,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
             vectorForConstantForwardMovement = new Vector3(DifferenceInXBetweenPlatforms, 0.0f, 0.0f);
             //Debug.Log("IN DEBUG MODE");
         }
-        if (!playerIndexSet)//No controller
+        if (controller != XboxController.Any)
         {
             if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
             {
@@ -69,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 //Left Movement
-                if ((Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)))
+                if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
                 {
                     //transform.position = transform.position - movement;
                     movingLeft = true;
@@ -79,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
                     movingLeft = false;
                 }
                 //Right Movement
-                if ((Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)))
+                if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
                 {
                     //transform.position = transform.position + movement;
                     movingRight = true;
@@ -90,29 +69,25 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
         }
-        else//Has controller
+        else
         {
-            prevState = state;
-            state = GamePad.GetState(playerIndex);
-
-            Debug.Log(state.ThumbSticks.Left.X);
-
-            if (state.ThumbSticks.Left.X < 0.0f)
+            if (XCI.GetAxisRaw(XboxAxis.LeftStickX, controller) < 0.0f)
             {
                 movingLeft = true;
                 movingRight = false;
             }
-            if(state.ThumbSticks.Left.X > 0.0f)
+            if (XCI.GetAxisRaw(XboxAxis.LeftStickX, controller) > 0.0f)
             {
                 movingRight = true;
                 movingLeft = false;
             }
-            if(state.ThumbSticks.Left.X == 0.0f)
+            if (XCI.GetAxisRaw(XboxAxis.LeftStickX, controller) == 0.0f)
             {
                 movingLeft = false;
                 movingRight = false;
             }
         }
+        
         //Leftwards movement
         if (movingLeft)
         {
