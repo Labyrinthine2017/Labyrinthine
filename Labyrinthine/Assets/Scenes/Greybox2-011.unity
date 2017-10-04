@@ -5825,7 +5825,7 @@ Prefab:
     - target: {fileID: 114259836701577978, guid: 5f202f60fe09bcf41ba0342a53577f68,
         type: 2}
       propertyPath: ForwardMovementSpeed
-      value: 2.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114259836701577978, guid: 5f202f60fe09bcf41ba0342a53577f68,
         type: 2}

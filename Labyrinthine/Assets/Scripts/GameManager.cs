@@ -40,19 +40,19 @@ public class GameManager : MonoBehaviour
     Player player;
     EngineBehaviour playerEngine;
 
-	void Start ()
+    void Start()
     {
         Application.targetFrameRate = 60;
         comboValue = 1;
         globalTime = 0.0f;
         gameScore = 0;
         streak.enabled = false;
-	}
+    }
 
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        playerEngine = GameObject.FindGameObjectWithTag("Player").GetComponent<EngineBehaviour>();        
+        playerEngine = GameObject.FindGameObjectWithTag("Player").GetComponent<EngineBehaviour>();
     }
 
     void Update()
@@ -60,17 +60,17 @@ public class GameManager : MonoBehaviour
         globalTime += Time.deltaTime;
         scoreTimer += Time.deltaTime;
         //Every half second you get a point
-        if(scoreTimer >= 0.5f)
+        if (scoreTimer >= 0.5f)
         {
             gameScore++;
             scoreTimer = 0.0f;
         }
 
-        if(comboScore == combo2Score)
+        if (comboScore == combo2Score)
         {
             comboValue = 2;
         }
-        if(comboScore == combo3Score)
+        if (comboScore == combo3Score)
         {
             comboValue = 3;
         }
@@ -88,7 +88,7 @@ public class GameManager : MonoBehaviour
     public void AddScore(float a_score)
     {
         gameScore += a_score * comboValue;
-        
+
     }
     public void SubtractScore(float a_score)
     {
@@ -107,7 +107,7 @@ public class GameManager : MonoBehaviour
         scoreText.text = gameScore.ToString();
 
         //Set multiplier sprite to the appropriate combo 
-        if(comboValue == 1)
+        if (comboValue == 1)
         {
             multiplier.enabled = false;
         }
@@ -115,23 +115,23 @@ public class GameManager : MonoBehaviour
         {
             multiplier.enabled = true;
         }
-        if(comboValue == 2)
+        if (comboValue == 2)
         {
             multiplier.sprite = x2Multiplier;
             multiplier.SetNativeSize();
         }
-        if(comboValue == 3)
+        if (comboValue == 3)
         {
             multiplier.sprite = x3Multiplier;
         }
-        if(comboValue == 4)
+        if (comboValue == 4)
         {
             multiplier.sprite = x4Multiplier;
         }
         //----------------------------------------------
 
         //Set streak sprite to the appropriate streak
-            
+
         if (comboScore == 5)
         {
             streak.enabled = true;
@@ -152,11 +152,11 @@ public class GameManager : MonoBehaviour
             streak.sprite = x19NoteStreak;
         }
 
-        if(showedStreak)
+        if (showedStreak)
         {
             timerStreak += Time.deltaTime;
         }
-        if(timerStreak >= 2.0f)
+        if (timerStreak >= 2.0f)
         {
             streak.enabled = false;
             showedStreak = false;
@@ -186,13 +186,18 @@ public class GameManager : MonoBehaviour
         else if (playerEngine.engineHeatAmount < 93.8f && startedWarningSt2Blink == true)
         {
             WarningSt2.enabled = false;
-            if(WarningSt2.GetComponent<Image>().enabled == true)
+            if (WarningSt2.GetComponent<Image>().enabled == true)
             {
                 WarningSt2.GetComponent<Image>().enabled = false;
             }
             startedWarningSt2Blink = false;
         }
 
+    }
+
+    public Player GetPlayer()
+    {
+        return player;
     }
 
 }

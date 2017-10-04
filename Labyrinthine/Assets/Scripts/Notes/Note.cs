@@ -25,38 +25,23 @@ public class Note : MonoBehaviour
                 playerMovement.gameObject.GetComponent<EngineBehaviour>().CoolEngineByAmount(coolantAmount);
                 manager.comboScore += 1;
                 manager.AddScore(10.0f);
-                Destroy(this.gameObject);
+                this.GetComponent<MeshRenderer>().enabled = false;
             }
-            if (XCI.GetButtonDown(XboxButton.A/*, playerMovement.controller*/))
+            if (XCI.GetButtonDown(XboxButton.A))
             {
                 playerMovement.gameObject.GetComponent<EngineBehaviour>().CoolEngineByAmount(coolantAmount);
                 manager.comboScore += 1;
                 manager.AddScore(10.0f);
-                Destroy(this.gameObject);
+                this.GetComponent<MeshRenderer>().enabled = false;
             }
 
             //hello
             
         }
-        if (playerMovement.transform.position.z - 2.4f > transform.position.z && beenMissed == false)
-        {
-            manager.ResetCombo();
-            beenMissed = true;
-        }
-    }
-    void OnTriggerEnter(Collider col)
-    {
-        if (col.tag == "Player")
-        {
-            allowedToCollect = true;
-        }
-    }
-    void OnTriggerExit(Collider col)
-    {
-        if (col.tag == "Player")
-        {
-            allowedToCollect = false;
-        }
     }
 
+    public void AllowedCollection(bool a_state)
+    {
+        allowedToCollect = a_state;
+    }
 }
