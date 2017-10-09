@@ -7,6 +7,7 @@ public class Note : MonoBehaviour
 {
     public float coolantAmount = 1.0f;
     bool allowedToCollect = false;
+    public bool collected { get; set; }
     GameManager manager;
     PlayerMovement playerMovement;
 
@@ -14,6 +15,7 @@ public class Note : MonoBehaviour
     {
         playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
         manager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+        collected = false;
     }
     void Update()
     {
@@ -25,6 +27,7 @@ public class Note : MonoBehaviour
                 manager.comboScore += 1;
                 manager.AddScore(10.0f);
                 this.GetComponent<MeshRenderer>().enabled = false;
+                collected = true;
             }
             if (XCI.GetButtonDown(XboxButton.A))
             {
@@ -32,6 +35,7 @@ public class Note : MonoBehaviour
                 manager.comboScore += 1;
                 manager.AddScore(10.0f);
                 this.GetComponent<MeshRenderer>().enabled = false;
+                collected = true;
             }            
         }
     }

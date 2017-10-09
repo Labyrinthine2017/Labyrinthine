@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour
     bool startedWarningSt1Blink = false;
     bool startedWarningSt2Blink = false;
     bool showedStreak = false;
+    bool showed5combo = false;
+    bool showed12combo = false;
+    bool showed19combo = false;
 
     float timerStreak;
     [SerializeField] Image WarningSt1;
@@ -98,6 +101,9 @@ public class GameManager : MonoBehaviour
     {
         comboValue = 1;
         comboScore = 0;
+        showed5combo = false;
+        showed12combo = false;
+        showed19combo = false;
     }
 
     //Updates the UI element of the values for the player
@@ -132,23 +138,26 @@ public class GameManager : MonoBehaviour
 
         //Set streak sprite to the appropriate streak
 
-        if (comboScore == 5)
+        if (comboScore == 5 && showed5combo == false)
         {
             streak.enabled = true;
             streak.sprite = x5NoteStreak;
             showedStreak = true;
+            showed5combo = true;
             streak.SetNativeSize();
         }
-        else if (comboScore == 12)
+        else if (comboScore == 12 && showed12combo == false)
         {
             streak.enabled = true;
             showedStreak = true;
+            showed12combo = true;
             streak.sprite = x12NoteStreak;
         }
-        else if (comboScore == 19)
+        else if (comboScore == 19 && showed19combo == false)
         {
             streak.enabled = true;
             showedStreak = true;
+            showed19combo = true;
             streak.sprite = x19NoteStreak;
         }
 

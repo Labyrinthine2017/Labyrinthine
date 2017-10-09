@@ -7,6 +7,7 @@ public class NoteLists : MonoBehaviour
     Stack<Note> noteStack;
     List<Note> noteList;
     GameManager manager;
+    [SerializeField] float distanceBetweenPlayerAndNode = 7.0f;
 	// Use this for initialization
     void Awake()
     {
@@ -36,13 +37,17 @@ public class NoteLists : MonoBehaviour
             Vector3 vecTowards = vecBetween.normalized;
             if (manager.GetPlayer().transform.position.x >= noteStack.Peek().transform.position.x - 0.3f && manager.GetPlayer().transform.position.x <= noteStack.Peek().transform.position.x + 0.3f)
             {
-                if (vecBetween.magnitude <= 5.0f)
+                if (vecBetween.magnitude <= distanceBetweenPlayerAndNode)
                 {
                     noteStack.Peek().AllowedCollection(true);
                 }
             }
             if (manager.GetPlayer().transform.position.z > noteStack.Peek().transform.position.z)
             {
+                if(noteStack.Peek().collected == false)
+                {
+                    manager.ResetCombo();
+                }
                 noteStack.Peek().AllowedCollection(false);
                 noteStack.Pop();
             }
