@@ -13,6 +13,7 @@ TagManager:
   - ComboText
   - EngineHeatText
   - Warning
+  - NodeCounter
   layers:
   - Default
   - TransparentFX

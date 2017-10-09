@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] Image WarningSt1;
     [SerializeField] BlinkingImage WarningSt2;
     [SerializeField] Text scoreText;
+    [SerializeField] Text nodeCounter;
 
     [SerializeField] Image multiplier;
     [SerializeField] Sprite x2Multiplier;
@@ -62,11 +63,14 @@ public class GameManager : MonoBehaviour
     {
         globalTime += Time.deltaTime;
         scoreTimer += Time.deltaTime;
-        //Every half second you get a point
-        if (scoreTimer >= 0.5f)
+        if (playerEngine.engineHeatAmount < 100.0f)
         {
-            gameScore++;
-            scoreTimer = 0.0f;
+            //Every half second you get a point
+            if (scoreTimer >= 0.5f)
+            {
+                gameScore++;
+                scoreTimer = 0.0f;
+            }
         }
 
         if (comboScore == combo2Score)
@@ -111,6 +115,7 @@ public class GameManager : MonoBehaviour
     {
         //Set the score text field
         scoreText.text = gameScore.ToString();
+        nodeCounter.text = comboScore.ToString();
 
         //Set multiplier sprite to the appropriate combo 
         if (comboValue == 1)
