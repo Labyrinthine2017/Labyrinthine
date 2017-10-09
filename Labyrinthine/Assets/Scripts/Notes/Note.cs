@@ -6,7 +6,6 @@ using XboxCtrlrInput;
 public class Note : MonoBehaviour
 {
     public float coolantAmount = 1.0f;
-    bool beenMissed = false;
     bool allowedToCollect = false;
     GameManager manager;
     PlayerMovement playerMovement;
@@ -33,10 +32,7 @@ public class Note : MonoBehaviour
                 manager.comboScore += 1;
                 manager.AddScore(10.0f);
                 this.GetComponent<MeshRenderer>().enabled = false;
-            }
-
-            //hello
-            
+            }            
         }
     }
 

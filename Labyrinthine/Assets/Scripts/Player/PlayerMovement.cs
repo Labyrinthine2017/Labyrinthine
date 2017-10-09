@@ -33,11 +33,6 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        if(Debug.isDebugBuild)
-        {
-            vectorForConstantForwardMovement = new Vector3(DifferenceInXBetweenPlatforms, 0.0f, 0.0f);
-            //Debug.Log("IN DEBUG MODE");
-        }
         if (controller != XboxController.Any)
         {
             if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
@@ -50,7 +45,6 @@ public class PlayerMovement : MonoBehaviour
                 //Left Movement
                 if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
                 {
-                    //transform.position = transform.position - movement;
                     movingLeft = true;
                 }
                 else
@@ -60,7 +54,6 @@ public class PlayerMovement : MonoBehaviour
                 //Right Movement
                 if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
                 {
-                    //transform.position = transform.position + movement;
                     movingRight = true;
                 }
                 else
@@ -88,13 +81,20 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         
+        
+    }
+	void FixedUpdate ()
+    {
+        //Constant forward movement
+        transform.Translate(Vector3.forward * ForwardMovementSpeed * Time.fixedDeltaTime);
+
         //Leftwards movement
         if (movingLeft)
         {
             if (transform.position.x > leftLanePos.x)
             {
-                transform.Translate(Vector3.left * LeftRightMovementSpeed);
-                if(transform.position.x < leftLanePos.x)
+                transform.Translate(Vector3.left * LeftRightMovementSpeed * Time.fixedDeltaTime);
+                if (transform.position.x < leftLanePos.x)
                 {
                     transform.position = new Vector3(leftLanePos.x, transform.position.y, transform.position.z);
                 }
@@ -105,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (transform.position.x < rightLanePos.x)
             {
-                transform.Translate(Vector3.right * LeftRightMovementSpeed);
+                transform.Translate(Vector3.right * LeftRightMovementSpeed * Time.fixedDeltaTime);
                 if (transform.position.x > rightLanePos.x)
                 {
                     transform.position = new Vector3(rightLanePos.x, transform.position.y, transform.position.z);
@@ -118,7 +118,7 @@ public class PlayerMovement : MonoBehaviour
             //Moves from left to center
             if (transform.position.x < centreLanePos.x)
             {
-                transform.Translate(Vector3.right * LeftRightMovementSpeed);
+                transform.Translate(Vector3.right * LeftRightMovementSpeed * Time.fixedDeltaTime);
                 movingLeft = false;
                 movingRight = false;
                 if (transform.position.x > centreLanePos.x)
@@ -129,7 +129,7 @@ public class PlayerMovement : MonoBehaviour
             //Moves from right to center
             if (transform.position.x > centreLanePos.x)
             {
-                transform.Translate(Vector3.left * LeftRightMovementSpeed);
+                transform.Translate(Vector3.left * LeftRightMovementSpeed * Time.fixedDeltaTime);
                 movingLeft = false;
                 movingRight = false;
                 if (transform.position.x < centreLanePos.x)
@@ -139,9 +139,4 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
-	void FixedUpdate ()
-    {
-        //Constant forward movement
-        transform.Translate(Vector3.forward * ForwardMovementSpeed);
-	}
 }

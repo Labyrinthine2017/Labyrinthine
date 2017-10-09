@@ -34,10 +34,8 @@ public class NoteLists : MonoBehaviour
         {
             Vector3 vecBetween = manager.GetPlayer().transform.position - noteStack.Peek().transform.position;
             Vector3 vecTowards = vecBetween.normalized;
-            //Debug.Log("Note: " + noteList[0].transform.position.x + "   Player: " + manager.GetPlayer().transform.position.x);
             if (manager.GetPlayer().transform.position.x >= noteStack.Peek().transform.position.x - 0.3f && manager.GetPlayer().transform.position.x <= noteStack.Peek().transform.position.x + 0.3f)
             {
-                Debug.Log(vecBetween.magnitude);
                 if (vecBetween.magnitude <= 5.0f)
                 {
                     noteStack.Peek().AllowedCollection(true);
