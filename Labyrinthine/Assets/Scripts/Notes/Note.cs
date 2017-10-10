@@ -27,6 +27,7 @@ public class Note : MonoBehaviour
                 manager.comboScore += 1;
                 manager.AddScore(10.0f);
                 this.GetComponent<MeshRenderer>().enabled = false;
+                this.GetComponentInChildren<Light>().enabled = false;
                 collected = true;
             }
             if (XCI.GetButtonDown(XboxButton.A))
@@ -35,6 +36,7 @@ public class Note : MonoBehaviour
                 manager.comboScore += 1;
                 manager.AddScore(10.0f);
                 this.GetComponent<MeshRenderer>().enabled = false;
+                this.GetComponentInChildren<Light>().enabled = false;
                 collected = true;
             }            
         }
