@@ -42,6 +42,10 @@ public class Note : MonoBehaviour
         }
     }
 
+
+
+
+
     public void AllowedCollection(bool a_state)
     {
         allowedToCollect = a_state;

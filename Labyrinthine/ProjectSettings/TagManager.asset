@@ -14,6 +14,8 @@ TagManager:
   - EngineHeatText
   - Warning
   - NodeCounter
+  - wall1
+  - wall2
   layers:
   - Default
   - TransparentFX
