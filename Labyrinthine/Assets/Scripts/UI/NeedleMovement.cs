@@ -18,6 +18,6 @@ public class NeedleMovement : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        gameObject.transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, (playerEngine.engineHeatAmount * rotationAmount) + 270)));
+        gameObject.transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, (playerEngine.engineHeatAmount * rotationAmount) + 180)));
     }
 }
