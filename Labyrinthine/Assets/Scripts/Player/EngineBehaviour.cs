@@ -7,6 +7,7 @@ public class EngineBehaviour : MonoBehaviour
     public float engineHeatAmount { get; set; }
     [SerializeField]
     float heatIncreaseAmount = 1.0f;
+    float timer = 0.0f;
     // Update is called once per frame
 
     void Start()
@@ -15,13 +16,22 @@ public class EngineBehaviour : MonoBehaviour
     }
     void FixedUpdate ()
     {
+        //Every second your engine's heat increases.
         engineHeatAmount += heatIncreaseAmount;
-        //Debug.Log(engineHeatAmount);
+        
+        //Keeps the engineHeatAmount from going over 100 and shuts the engine down.
         if(engineHeatAmount > 100.0f)
         {
             engineHeatAmount = 100.0f;
             gameObject.GetComponent<PlayerMovement>().enabled = false;
         }
+        if(engineHeatAmount < 0.0f)
+        {
+            engineHeatAmount = 0.0f;
+        }
+        //Commands for testing
+        if(Debug.isDebugBuild)
+        { 
         if(Input.GetKeyDown(KeyCode.C))
         {
             engineHeatAmount -= 50;
@@ -29,6 +39,7 @@ public class EngineBehaviour : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.H))
         {
             engineHeatAmount += 50;
+        }
         }
 	}
 

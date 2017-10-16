@@ -6,7 +6,7 @@ using XboxCtrlrInput;
 public class PlayerMovement : MonoBehaviour
 {
 
-    public float ForwardMovementSpeed = 0.2f, DifferenceInXBetweenPlatforms = 3.39f, LeftRightMovementSpeed = 0.2f;
+    public float ForwardMovementSpeed = 0.2f, DifferenceInXBetweenPlatforms = 3.39f, LeftRightMovementSpeed = 0.2f, HoverHeight = 2.0f, UpwardsSpeed = 0.2f;
     public bool hasController { get; set; }
     //For PC
     /// <summary>
@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     Vector3 vectorForConstantForwardMovement;
     Vector3 leftLanePos, rightLanePos, centreLanePos;
     Vector3 playerOrignalPosition;
-    bool movingLeft = false, movingRight = false;
+    bool movingLeft = false, movingRight = false, hovering = false;
 
     //For Xbox360 controller
     public XboxController controller { get; set; }
@@ -60,6 +60,14 @@ public class PlayerMovement : MonoBehaviour
                 {
                     movingRight = false;
                 }
+            }
+            if(Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
+            {
+                hovering = true;
+            }
+            else
+            {
+                hovering = false;
             }
         }
         else
@@ -136,6 +144,27 @@ public class PlayerMovement : MonoBehaviour
                 {
                     transform.position = new Vector3(centreLanePos.x, transform.position.y, transform.position.z);
                 }
+            }
+        }
+        //Hovering
+        if(hovering)
+        {
+            //If the player goes higher than in
+            if(transform.position.y < playerOrignalPosition.y + HoverHeight)
+            {
+                transform.Translate(Vector3.up * UpwardsSpeed * Time.fixedDeltaTime);               
+            }
+            else
+            {
+                transform.position = new Vector3(transform.position.x, playerOrignalPosition.y + HoverHeight, transform.position.z);
+            }
+
+        }
+        else
+        {
+            if (transform.position.y > playerOrignalPosition.y)
+            {
+                transform.Translate(Vector3.down * UpwardsSpeed * Time.fixedDeltaTime);
             }
         }
     }
