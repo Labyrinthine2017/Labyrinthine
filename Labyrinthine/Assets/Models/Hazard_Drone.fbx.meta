@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: b906d39f88815144f913e9504e3695b0
-timeCreated: 1507682642
+guid: 2ff04d1cfd888774a88f1a701c17f649
+timeCreated: 1508212318
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
@@ -9,8 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: pCube1
-    9500000: //RootNode
+    4300000: Hazard_Drone_V1
   materials:
     importMaterials: 1
     materialName: 0
@@ -80,7 +79,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

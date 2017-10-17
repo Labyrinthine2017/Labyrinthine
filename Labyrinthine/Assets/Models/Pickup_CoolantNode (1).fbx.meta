@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: d0456642f014e9d479e6cdb384623dd0
-timeCreated: 1507682643
+guid: d78f480943c9d254aa0528bcd471a62f
+timeCreated: 1508212480
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
@@ -9,8 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Building_Steelmill_01:pPipe5
-    9500000: //RootNode
+    4300000: Coolant_Node
   materials:
     importMaterials: 1
     materialName: 0
@@ -80,7 +79,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
