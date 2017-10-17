@@ -594,9 +594,9 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 7e646bf6-c0b4-46be-b88b-34121e03df8c
+  cloudProjectId: d9a34c2b-f3d7-46eb-823d-11972d0bc50e
   projectName: End of year project
-  organizationId: shadowzora200
+  organizationId: devon-sanders
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

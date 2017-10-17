@@ -33,7 +33,8 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        if (controller != XboxController.Any)
+		if (controller != XboxController.All)
+		//if (true)
         {
             if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
             {
