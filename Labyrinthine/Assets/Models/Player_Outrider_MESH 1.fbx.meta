@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: f2c0dfec7d0bf6f42ba12859a180e8a6
-timeCreated: 1508195721
+guid: 5f92d7dc439b74e4884e03b4e9b9ddae
+timeCreated: 1508214751
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
@@ -811,7 +811,6 @@ ModelImporter:
     4300262: Bolt1
     4300264: Brace
     4300266: Bolt4
-    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -881,7 +880,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
