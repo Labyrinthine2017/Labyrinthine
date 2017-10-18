@@ -13,4 +13,12 @@ public class Player : MonoBehaviour
         engine = this.gameObject.GetComponent<EngineBehaviour>();
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "End")
+        {
+            Time.timeScale = 0.0f;
+        }
+    }
+
 }
