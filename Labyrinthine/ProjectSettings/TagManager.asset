@@ -16,6 +16,7 @@ TagManager:
   - NodeCounter
   - wall1
   - wall2
+  - END
   layers:
   - Default
   - TransparentFX
