@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public bool controller { get; set; }
     float globalTime;
     float scoreTimer;
+    bool showInfo = false;
 
     //For UI -----------------------------------------------------------
     bool startedWarningSt1Blink = false;
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] BlinkingImage WarningSt2;
     [SerializeField] Text scoreText;
     [SerializeField] Text nodeCounter;
+    [SerializeField] Text gameInfo;
 
     [SerializeField] Image multiplier;
     [SerializeField] Sprite x2Multiplier;
@@ -72,7 +74,10 @@ public class GameManager : MonoBehaviour
                 scoreTimer = 0.0f;
             }
         }
-
+        if(Input.GetKeyDown(KeyCode.I))
+        {
+            showInfo = !showInfo;
+        }
         if (comboScore == combo2Score)
         {
             comboValue = 2;
@@ -138,6 +143,14 @@ public class GameManager : MonoBehaviour
         if (comboValue == 4)
         {
             multiplier.sprite = x4Multiplier;
+        }
+        if(showInfo)
+        {
+            gameInfo.enabled = true;
+        }
+        if(gameInfo.enabled == true)
+        {
+            gameInfo.text = "FPS: " + 1.0f / Time.deltaTime + "\nEngine Heat: " + playerEngine.engineHeatAmount;
         }
         //----------------------------------------------
 
