@@ -27,7 +27,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] BlinkingImage WarningSt2;
     [SerializeField] Text scoreText;
     [SerializeField] Text nodeCounter;
-    [SerializeField] Text gameInfo;
 
     [SerializeField] Image multiplier;
     [SerializeField] Sprite x2Multiplier;
@@ -144,14 +143,6 @@ public class GameManager : MonoBehaviour
         {
             multiplier.sprite = x4Multiplier;
         }
-        if(showInfo)
-        {
-            gameInfo.enabled = true;
-        }
-        if(gameInfo.enabled == true)
-        {
-            gameInfo.text = "FPS: " + 1.0f / Time.deltaTime + "\nEngine Heat: " + playerEngine.engineHeatAmount;
-        }
         //----------------------------------------------
 
         //Set streak sprite to the appropriate streak
@@ -195,29 +186,29 @@ public class GameManager : MonoBehaviour
         //Used to enable and disable the warning words to appear
         if (playerEngine.engineHeatAmount > 81.1f && startedWarningSt1Blink == false)
         {
-            WarningSt1.enabled = true;
-            startedWarningSt1Blink = true;
+            WarningSt2.enabled = true;
+            startedWarningSt2Blink = true;
         }
         else if (playerEngine.engineHeatAmount < 81.1f && startedWarningSt1Blink == true)
         {
-            WarningSt1.enabled = false;
-            startedWarningSt1Blink = false;
+            WarningSt2.enabled = false;
+            startedWarningSt2Blink = false;
         }
         //Warning bar = 169
         //Used to enable and disable the blinking warning red border
         if (playerEngine.engineHeatAmount > 93.8f && startedWarningSt2Blink == false)
         {
-            WarningSt2.enabled = true;
-            startedWarningSt2Blink = true;
+            WarningSt1.enabled = true;
+            startedWarningSt1Blink = true;
         }
         else if (playerEngine.engineHeatAmount < 93.8f && startedWarningSt2Blink == true)
         {
-            WarningSt2.enabled = false;
-            if (WarningSt2.GetComponent<Image>().enabled == true)
+            WarningSt1.enabled = false;
+            if (WarningSt1.GetComponent<Image>().enabled == true)
             {
-                WarningSt2.GetComponent<Image>().enabled = false;
+                WarningSt1.GetComponent<Image>().enabled = false;
             }
-            startedWarningSt2Blink = false;
+            startedWarningSt1Blink = false;
         }
 
     }
