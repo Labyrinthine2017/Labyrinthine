@@ -8,7 +8,7 @@ using System.Globalization;
 
 public class EditorScript : MonoBehaviour
 {
-
+	public float beatPlacement = 90.0f; 
     [MenuItem("Coolant Nodes/Load Coolant Nodes")]
     private static void LoadCoolant()
     {
@@ -48,7 +48,7 @@ public class EditorScript : MonoBehaviour
             GameObject m_goCollantClone = Instantiate(m_oCoolant, Vector3.zero, Quaternion.identity) as GameObject;
 
             //has to contain all milleseconds that are already converted to distance
-            m_goCollantClone.transform.position = new Vector3(0, 0.9f, m_lBeatTimes[i] / 1000.0f * 90.0f);
+			m_goCollantClone.transform.position = new Vector3(0, 0.9f, m_lBeatTimes[i] / 1000.0f * 90.0f);
             Undo.RegisterCreatedObjectUndo(m_goCollantClone, "Created Coolant Nodes");
         }        
     }
