@@ -17,37 +17,22 @@ public class Note : MonoBehaviour
         manager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
         collected = false;
     }
-    void Update()
-    {
-        if (allowedToCollect == true)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                playerMovement.gameObject.GetComponent<EngineBehaviour>().CoolEngineByAmount(coolantAmount);
-                manager.comboScore += 1;
-                manager.AddScore(10.0f);
-                this.GetComponent<MeshRenderer>().enabled = false;
-                this.GetComponentInChildren<Light>().enabled = false;
-                collected = true;
-            }
-            if (XCI.GetButtonDown(XboxButton.A))
-            {
-                playerMovement.gameObject.GetComponent<EngineBehaviour>().CoolEngineByAmount(coolantAmount);
-                manager.comboScore += 1;
-                manager.AddScore(10.0f);
-                this.GetComponent<MeshRenderer>().enabled = false;
-                this.GetComponentInChildren<Light>().enabled = false;
-                collected = true;
-            }            
-        }
-    }
-
-
-
-
 
     public void AllowedCollection(bool a_state)
     {
         allowedToCollect = a_state;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Player")
+        {
+            playerMovement.gameObject.GetComponent<EngineBehaviour>().CoolEngineByAmount(coolantAmount);
+            manager.comboScore += 1;
+            manager.AddScore(10.0f);
+            this.GetComponent<MeshRenderer>().enabled = false;
+            this.GetComponentInChildren<Light>().enabled = false;
+            collected = true;
+        }
     }
 }

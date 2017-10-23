@@ -31,27 +31,27 @@ public class NoteLists : MonoBehaviour
 
     void Update()
     {
-        if (noteStack.Count > 0)
+        //if (noteStack.Count > 0)
+        //{
+        //    Vector3 vecBetween = manager.GetPlayer().transform.position - noteStack.Peek().transform.position;
+        //    Vector3 vecTowards = vecBetween.normalized;
+        //    if (manager.GetPlayer().transform.position.x >= noteStack.Peek().transform.position.x - 0.3f && manager.GetPlayer().transform.position.x <= noteStack.Peek().transform.position.x + 0.3f)
+        //    {
+        //        if (vecBetween.magnitude <= distanceBetweenPlayerAndNode)
+        //        {
+        //            noteStack.Peek().AllowedCollection(true);
+        //        }
+        //    }
+        if (manager.GetPlayer().transform.position.z > noteStack.Peek().transform.position.z)
         {
-            Vector3 vecBetween = manager.GetPlayer().transform.position - noteStack.Peek().transform.position;
-            Vector3 vecTowards = vecBetween.normalized;
-            if (manager.GetPlayer().transform.position.x >= noteStack.Peek().transform.position.x - 0.3f && manager.GetPlayer().transform.position.x <= noteStack.Peek().transform.position.x + 0.3f)
+            if (noteStack.Peek().collected == false)
             {
-                if (vecBetween.magnitude <= distanceBetweenPlayerAndNode)
-                {
-                    noteStack.Peek().AllowedCollection(true);
-                }
+                manager.ResetCombo();
             }
-            if (manager.GetPlayer().transform.position.z > noteStack.Peek().transform.position.z)
-            {
-                if(noteStack.Peek().collected == false)
-                {
-                    manager.ResetCombo();
-                }
-                noteStack.Peek().AllowedCollection(false);
-                noteStack.Pop();
-            }
+            noteStack.Peek().AllowedCollection(false);
+            noteStack.Pop();
         }
+        //}
     }
 
     public List<Note> GetNoteList()
