@@ -7,31 +7,40 @@ public class GridGenerator : MonoBehaviour
     int xSize;
     private Vector3[] vertices;
     private Mesh mesh;
-    private Mesh[] meshes;
+    private List<Mesh> meshes;
     int meshesCount = 0;
     int[] triangles;
     Grid[] childern;
+
+    public GameObject sphere;
 	// Use this for initialization
 	void Start ()
     {
         childern = gameObject.GetComponentsInChildren<Grid>();
-        meshes = new Mesh[childern.Length-1];
+        meshes = new List<Mesh>();
 
         for(int i = 0; i < childern.Length - 1; i ++)
         {
-            MergeTwoLines(childern[i], childern[i + 1]);
-        }
-        
+            if(isPerpendicular(childern[i], childern[i + 1]))
+            {
+                Debug.Log("Perpendicular");
+                MergeCorner(childern[i], childern[i + 1]);
+            }
+            else
+            {
+                MergeTwoLines(childern[i], childern[i + 1]);
+            }           
+        }        
         CombineMeshes();
     }
 
     void CombineMeshes()
     {
         //MeshFilter[] childMeshFilters = GetComponentsInChildren<MeshFilter>();
-        CombineInstance[] meshesToCombine = new CombineInstance[meshes.Length];
+        CombineInstance[] meshesToCombine = new CombineInstance[meshes.Count];
         int meshCounter = 0;
         //While the counter is less than the amount of child mesh filters
-        while (meshCounter < meshes.Length)
+        while (meshCounter < meshes.Count)
         {
             if (meshes[meshCounter] != GetComponent<MeshFilter>().mesh)
             {
@@ -48,12 +57,11 @@ public class GridGenerator : MonoBehaviour
         transform.GetComponent<MeshFilter>().mesh = new Mesh();
         transform.GetComponent<MeshFilter>().name = "MapMesh";
         transform.GetComponent<MeshFilter>().mesh.CombineMeshes(meshesToCombine);
+        transform.gameObject.AddComponent<MeshCollider>();
         transform.gameObject.SetActive(true);
     }
     void MergeTwoLines(Grid child1, Grid child2)
-    {
-
-       
+    {       
         Mesh tempMesh = new Mesh();
     
      
@@ -76,7 +84,86 @@ public class GridGenerator : MonoBehaviour
         tempTriangles[5] = 3;
 
         tempMesh.triangles = tempTriangles;
-        meshes[meshesCount] = tempMesh;
+        meshes.Add(tempMesh);
         meshesCount++;
+    }
+    void MergeCorner(Grid child1, Grid child2)
+    {
+        //Gets the number of triangles that will be required for the mesh
+        int triangles = (int)(90.0f / 1.0f) + 1;
+        //Sets the number of vertices for the curve
+        //one for each triangle of circle, + 1 for the corner, + 1 for the last point on rotation.
+        Vector3[] tempVertices = new Vector3[1 * triangles + 1 + 1];
+        Vector3 previousPoint = new Vector3();
+        //Each triangle has 3 points
+        int[] tempTriangles = new int[triangles*3];
+        bool firstCorner = true;
+        if ((child1.LPos.x / child2.LPos.x >= 0.95f && child1.LPos.x / child2.LPos.x <= 1.05f) || (child1.LPos.x / child2.LPos.x <= -0.95f && child1.LPos.x / child2.LPos.x >= -1.05f))
+        {
+            if(firstCorner)
+            {
+                previousPoint = child1.LPos;
+                firstCorner = false;
+            }
+            Vector3 vecCenterForRotation = child1.LPos;
+            Vector3 vecBetween = child1.RPos - vecCenterForRotation;
+
+            Mesh tempMesh = new Mesh();
+            int triangleIndex = 0;
+            int vertexIndex = 0;
+
+            int pointOnCircleIndex = 0;
+
+            //set first vert as 
+            tempVertices[vertexIndex++] = vecCenterForRotation;
+
+            //set's up vertices
+            float xRotation = 0.0f;
+            while (xRotation <= 90.0f)
+            {
+                //Pushes the line for rotation up the curve
+                Quaternion rotation = Quaternion.Euler(new Vector3(0.0f, xRotation, 0.0f));
+                Vector3 newVec = rotation * vecBetween;
+                //Pushes the point out to the edge of the curve
+                newVec += vecCenterForRotation;
+                
+                tempVertices[vertexIndex++] = newVec;      
+
+                previousPoint = newVec;
+                xRotation += 1.0f;
+            }
+            tempMesh.vertices = tempVertices;
+            
+            //loops and creates triangles
+            while (triangleIndex <= triangles * 3 - 2)
+            {
+                tempTriangles[triangleIndex++] = 0;
+                tempTriangles[triangleIndex++] = pointOnCircleIndex;
+                tempTriangles[triangleIndex++] = pointOnCircleIndex + 1;
+
+                pointOnCircleIndex++;
+            }
+
+            tempMesh.triangles = tempTriangles;
+
+            meshes.Add(tempMesh);
+            meshesCount++;
+        }
+    }
+    bool isPerpendicular(Grid child1, Grid child2)
+    {
+        if (child1.yRotation == 0.0f && child2.yRotation == 90.0f)
+        {
+            return true;
+        }
+        return false;
+        //Vector3 forward = child1.transform.TransformDirection(Vector3.forward);
+        //Vector3 toOther = child2.transform.position - child1.transform.position;
+        //Debug.Log(Vector3.Dot(forward, toOther));
+        //if (Vector3.Dot(forward, toOther.normalized) == 0)
+        //{
+        //    return true;
+        //}
+        //return false;
     }
 }

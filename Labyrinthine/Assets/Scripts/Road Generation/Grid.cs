@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class Grid : MonoBehaviour
 {
-    public int xSize, zSize;
-    public int zRotation;
+    public int xSize;
+    public int xRotation, yRotation, zRotation;
     public int meshNumber;
+
+    public GameObject LeftSphere;
+    public GameObject RightSphere;
 
     public Vector3 LPos { get; set; }
     public Vector3 RPos { get; set; }
 
     private Vector3[] vertices;
     private Mesh mesh;
-    int[] triangles;
-    Vector2[] uv;
-    [SerializeField] GameObject sphere;
+
+    //[SerializeField] GameObject sphere;
 
 	// Use this for initialization
 	void Awake ()
@@ -33,12 +35,13 @@ public class Grid : MonoBehaviour
     {
         //Initializes the vertices array to size of xSize by ySize
         vertices = new Vector3[2];
-        uv = new Vector2[vertices.Length];
         GetComponent<MeshFilter>().mesh = mesh = new Mesh();
         mesh.name = "Procedural Grid" + meshNumber;
 
-        vertices[0] = new Vector3(0.0f, 0.0f, 0.0f);
-        vertices[1] = new Vector3(xSize, 0.0f, 0.0f);
+        transform.Rotate(new Vector3(xRotation, yRotation, zRotation));
+
+        vertices[0] = new Vector3(-xSize / 2, 0.0f, 0.0f);
+        vertices[1] = new Vector3(xSize / 2, 0.0f, 0.0f);
 
         mesh.vertices = vertices;
 
@@ -46,8 +49,8 @@ public class Grid : MonoBehaviour
         LPos = transform.TransformPoint(bounds.min);//Bottom left corner
         RPos = transform.TransformPoint(new Vector3(bounds.max.x, 0.0f, bounds.min.z));//Bottom right corner
 
-        Instantiate(sphere, LPos, Quaternion.identity);
-        Instantiate(sphere, RPos, Quaternion.identity);
+        Instantiate(LeftSphere, LPos, Quaternion.identity);
+        Instantiate(RightSphere, RPos, Quaternion.identity);
 
     }
     //private void OnDrawGizmos()
@@ -67,21 +70,5 @@ public class Grid : MonoBehaviour
     public Vector3 GetVerticies(int a_index)
     {
         return vertices[a_index];
-    }
-    public Vector2[] GetUV()
-    {
-        return uv;
-    }
-    public Vector2 GetUV( int a_index)
-    {
-        return uv[a_index];
-    }
-    public int[] GetTriangles()
-    {
-        return triangles;
-    }
-    public int GetTriangles(int a_index)
-    {
-        return triangles[a_index];
     }
 }

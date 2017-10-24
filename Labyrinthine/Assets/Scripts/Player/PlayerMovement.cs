@@ -35,11 +35,19 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
+        if (Input.GetKey(KeyCode.Space) || XCI.GetButton(XboxButton.A))
+        {
+            hovering = true;
+        }
+        else
+        {
+            hovering = false;
+        }
         if (magnatise)
         {
             if (controller != XboxController.All)
-            //if (true)
             {
+                //If both directions are being pressed
                 if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
                 {
                     movingLeft = false;
@@ -66,14 +74,7 @@ public class PlayerMovement : MonoBehaviour
                         movingRight = false;
                     }
                 }
-                if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
-                {
-                    hovering = true;
-                }
-                else
-                {
-                    hovering = false;
-                }
+                
             }
             else
             {
