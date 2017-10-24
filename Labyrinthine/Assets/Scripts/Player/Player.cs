@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.tag == "End")
+        if(other.tag == "END")
         {
             Time.timeScale = 0.0f;
         }
