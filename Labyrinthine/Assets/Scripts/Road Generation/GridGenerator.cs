@@ -10,7 +10,7 @@ public class GridGenerator : MonoBehaviour
     private List<Mesh> meshes;
     int meshesCount = 0;
     int[] triangles;
-    Grid[] childern;
+    public Grid[] childern;
 
     public GameObject sphere;
 	// Use this for initialization
@@ -21,15 +21,7 @@ public class GridGenerator : MonoBehaviour
 
         for(int i = 0; i < childern.Length - 1; i ++)
         {
-            if(isPerpendicular(childern[i], childern[i + 1]))
-            {
-                Debug.Log("Perpendicular");
-                MergeCorner(childern[i], childern[i + 1]);
-            }
-            else
-            {
-                MergeTwoLines(childern[i], childern[i + 1]);
-            }           
+            MergeCorner(childern[i], childern[i + 1]);  
         }        
         CombineMeshes();
     }
@@ -89,81 +81,99 @@ public class GridGenerator : MonoBehaviour
     }
     void MergeCorner(Grid child1, Grid child2)
     {
-        //Gets the number of triangles that will be required for the mesh
-        int triangles = (int)(90.0f / 1.0f) + 1;
-        //Sets the number of vertices for the curve
-        //one for each triangle of circle, + 1 for the corner, + 1 for the last point on rotation.
-        Vector3[] tempVertices = new Vector3[1 * triangles + 1 + 1];
-        Vector3 previousPoint = new Vector3();
-        //Each triangle has 3 points
-        int[] tempTriangles = new int[triangles*3];
-        bool firstCorner = true;
-        if ((child1.LPos.x / child2.LPos.x >= 0.95f && child1.LPos.x / child2.LPos.x <= 1.05f) || (child1.LPos.x / child2.LPos.x <= -0.95f && child1.LPos.x / child2.LPos.x >= -1.05f))
+        if(child1.LPos == child2.LPos && child1.LPos.y == child2.LPos.y)
         {
-            if(firstCorner)
+            //Gets the 2 vectors required to get the angle between the 2 lines
+            Vector3 vecChild1 = child1.RPos - child1.LPos;
+            Vector3 vecChild2 = child2.RPos - child2.LPos;
+            //Get the angle between the 2 vectors for the amount of triangles that will be required
+            float angleBetween = Vector3.Angle(vecChild1, vecChild2);
+            int amountOfTriangles = (int)(angleBetween / 1.0f) + 1;
+
+            Vector3 rotationCenterPoint = vecChild1;
+
+            while (rotationCenterPoint != vecChild2)
             {
-                previousPoint = child1.LPos;
-                firstCorner = false;
+                rotationCenterPoint = Vector3.RotateTowards(rotationCenterPoint, vecChild2, 1.0f, 0.0f);
+                Instantiate(sphere, rotationCenterPoint, Quaternion.identity);
             }
-            Vector3 vecCenterForRotation = child1.LPos;
-            Vector3 vecBetween = child1.RPos - vecCenterForRotation;
-
-            Mesh tempMesh = new Mesh();
-            int triangleIndex = 0;
-            int vertexIndex = 0;
-
-            int pointOnCircleIndex = 0;
-
-            //set first vert as 
-            tempVertices[vertexIndex++] = vecCenterForRotation;
-
-            //set's up vertices
-            float xRotation = 0.0f;
-            while (xRotation <= 90.0f)
-            {
-                //Pushes the line for rotation up the curve
-                Quaternion rotation = Quaternion.Euler(new Vector3(0.0f, xRotation, 0.0f));
-                Vector3 newVec = rotation * vecBetween;
-                //Pushes the point out to the edge of the curve
-                newVec += vecCenterForRotation;
-                
-                tempVertices[vertexIndex++] = newVec;      
-
-                previousPoint = newVec;
-                xRotation += 1.0f;
-            }
-            tempMesh.vertices = tempVertices;
-            
-            //loops and creates triangles
-            while (triangleIndex <= triangles * 3 - 2)
-            {
-                tempTriangles[triangleIndex++] = 0;
-                tempTriangles[triangleIndex++] = pointOnCircleIndex;
-                tempTriangles[triangleIndex++] = pointOnCircleIndex + 1;
-
-                pointOnCircleIndex++;
-            }
-
-            tempMesh.triangles = tempTriangles;
-
-            meshes.Add(tempMesh);
-            meshesCount++;
         }
-    }
-    bool isPerpendicular(Grid child1, Grid child2)
-    {
-        if (child1.yRotation == 0.0f && child2.yRotation == 90.0f)
+        if (child1.RPos.x == child2.RPos.x && child1.RPos.y == child2.RPos.y)
         {
-            return true;
+            //Gets the 2 vectors required to get the angle between the 2 lines
+            Vector3 vecChild1 = child1.LPos - child1.RPos;
+            Vector3 vecChild2 = child2.LPos - child2.RPos;
+            //Get the angle between the 2 vectors for the amount of triangles that will be required
+            float angleBetween = Vector3.Angle(vecChild1, vecChild2);
+            int amountOfTriangles = (int)(angleBetween / 1.0f) + 1;
+
+            Vector3 rotationCenterPoint = vecChild1;
+
+            while (rotationCenterPoint != vecChild2)
+            {
+                rotationCenterPoint = Vector3.RotateTowards(rotationCenterPoint, vecChild2, 1.0f, 0.0f);
+                Instantiate(sphere, rotationCenterPoint, Quaternion.identity);
+            }
         }
-        return false;
-        //Vector3 forward = child1.transform.TransformDirection(Vector3.forward);
-        //Vector3 toOther = child2.transform.position - child1.transform.position;
-        //Debug.Log(Vector3.Dot(forward, toOther));
-        //if (Vector3.Dot(forward, toOther.normalized) == 0)
-        //{
-        //    return true;
-        //}
-        //return false;
+        //////Gets the number of triangles that will be required for the mesh
+        ////int triangles = (int)(90.0f / 1.0f) + 1;
+        //////Sets the number of vertices for the curve
+        //////one for each triangle of circle, + 1 for the corner, + 1 for the last point on rotation.
+        ////Vector3[] tempVertices = new Vector3[1 * triangles + 1 + 1];
+        ////Vector3 previousPoint = new Vector3();
+        //////Each triangle has 3 points
+        ////int[] tempTriangles = new int[triangles*3];
+        ////bool firstCorner = true;
+        ////if ((child1.LPos.x / child2.LPos.x >= 0.95f && child1.LPos.x / child2.LPos.x <= 1.05f) || (child1.LPos.x / child2.LPos.x <= -0.95f && child1.LPos.x / child2.LPos.x >= -1.05f))
+        ////{
+        ////    if(firstCorner)
+        ////    {
+        ////        previousPoint = child1.LPos;
+        ////        firstCorner = false;
+        ////    }
+        ////    Vector3 vecCenterForRotation = child1.LPos;
+        ////    Vector3 vecBetween = child1.RPos - vecCenterForRotation;
+
+        ////    Mesh tempMesh = new Mesh();
+        ////    int triangleIndex = 0;
+        ////    int vertexIndex = 0;
+
+        ////    int pointOnCircleIndex = 0;
+
+        ////    //set first vert as 
+        ////    tempVertices[vertexIndex++] = vecCenterForRotation;
+
+        ////    //set's up vertices
+        ////    float xRotation = 0.0f;
+        ////    while (xRotation <= 90.0f)
+        ////    {
+        ////        //Pushes the line for rotation up the curve
+        ////        Quaternion rotation = Quaternion.Euler(new Vector3(0.0f, xRotation, 0.0f));
+        ////        Vector3 newVec = rotation * vecBetween;
+        ////        //Pushes the point out to the edge of the curve
+        ////        newVec += vecCenterForRotation;
+
+        ////        tempVertices[vertexIndex++] = newVec;      
+
+        ////        previousPoint = newVec;
+        ////        xRotation += 1.0f;
+        ////    }
+        ////    tempMesh.vertices = tempVertices;
+
+        ////    //loops and creates triangles
+        ////    while (triangleIndex <= triangles * 3 - 2)
+        ////    {
+        ////        tempTriangles[triangleIndex++] = 0;
+        ////        tempTriangles[triangleIndex++] = pointOnCircleIndex;
+        ////        tempTriangles[triangleIndex++] = pointOnCircleIndex + 1;
+
+        ////        pointOnCircleIndex++;
+        ////    }
+
+        ////    tempMesh.triangles = tempTriangles;
+
+        ////    meshes.Add(tempMesh);
+        ////    meshesCount++;
+        ////}
     }
 }
