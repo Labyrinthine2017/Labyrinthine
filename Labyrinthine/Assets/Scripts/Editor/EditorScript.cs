@@ -38,7 +38,7 @@ public class EditorScript : MonoBehaviour
             streamreader.Close();
         }
 
-		Object m_oCoolant = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Pickup_CoolantNode.prefab", typeof(GameObject));
+		Object m_oCoolant = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Pickup_CoolantNodeUnwrapped.prefab", typeof(GameObject));
        
         //needs to load all beats played into an array that will covert time to distance 
         //adding a list of long to unity 
