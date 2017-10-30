@@ -31,7 +31,7 @@ public class FireDrone : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider col)
+    void OnTriggerStay(Collider col)
     {
         if(col.gameObject.tag == "Player")
         {
