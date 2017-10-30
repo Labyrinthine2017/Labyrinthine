@@ -45,34 +45,39 @@ public class PlayerMovement : MonoBehaviour
         }
         if (magnatise)
         {
-           //If both directions are being pressed
-           if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
-           {
-               movingLeft = false;
-               movingRight = false;
-           }
-           else
-           {
-               //Left Movement
-               if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
-               {
-                   movingLeft = true;
-               }
-               else
-               {
-                   movingLeft = false;
-               }
-               //Right Movement
-               if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
-               {
-                   movingRight = true;
-               }
-               else
-               {
-                   movingRight = false;
-               }
-           }
-            if (XCI.GetAxisRaw(XboxAxis.LeftStickX, controller) < 0.0f)
+            if (!XCI.IsPluggedIn(1))
+            {
+                //If both directions are being pressed
+                if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
+                {
+                    movingLeft = false;
+                    movingRight = false;
+                }
+                else
+                {
+                    //Left Movement
+                    if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+                    {
+                        movingLeft = true;
+                    }
+                    else
+                    {
+                        movingLeft = false;
+                    }
+                    //Right Movement
+                    if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+                    {
+                        movingRight = true;
+                    }
+                    else
+                    {
+                        movingRight = false;
+                    }
+                }
+            }
+            else
+            {
+                if (XCI.GetAxisRaw(XboxAxis.LeftStickX, controller) < 0.0f)
                 {
                     movingLeft = true;
                     movingRight = false;
@@ -87,59 +92,64 @@ public class PlayerMovement : MonoBehaviour
                     movingLeft = false;
                     movingRight = false;
                 }
-
+            }
         }     
         else if(!magnatise)
         {
-            if(transform.position.x == leftLanePos.x)
+            if (!XCI.IsPluggedIn(1))
             {
-                if(movingLeft)
+                if (transform.position.x == leftLanePos.x)
                 {
-                    movingLeft = false;
+                    if (movingLeft)
+                    {
+                        movingLeft = false;
+                    }
+                    inLeftLane = true;
+                    inMidLane = false;
+                    inRightLane = false;
                 }
-                inLeftLane = true;
-                inMidLane = false;
-                inRightLane = false;
-            }
-            if (transform.position.x == rightLanePos.x)
-            {
-                if(movingRight)
+                if (transform.position.x == rightLanePos.x)
                 {
+                    if (movingRight)
+                    {
+                        movingRight = false;
+                    }
+                    inLeftLane = false;
+                    inMidLane = false;
+                    inRightLane = true;
+                }
+                if (transform.position.x == centreLanePos.x)
+                {
+                    inLeftLane = false;
+                    inMidLane = true;
+                    inRightLane = false;
+                }
+            }
+            else
+            {
+                if ((Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) && (!inLeftLane || !inMidLane))
+                {
+                    movingLeft = true;
+                }
+                if ((Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) && (!inMidLane || !inRightLane))
+                {
+                    movingRight = true;
+                }
+                if (XCI.GetAxisRaw(XboxAxis.LeftStickX, controller) < 0.0f)
+                {
+                    movingLeft = true;
                     movingRight = false;
                 }
-                inLeftLane = false;
-                inMidLane = false;
-                inRightLane = true;
-            }
-            if (transform.position.x == centreLanePos.x)
-            {
-                inLeftLane = false;
-                inMidLane = true;
-                inRightLane = false;
-            }
-
-            if((Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) && (!inLeftLane || !inMidLane))
-            {
-                movingLeft = true;
-            }
-            if ((Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) && (!inMidLane || !inRightLane))
-            {
-                movingRight = true;
-            }
-            if (XCI.GetAxisRaw(XboxAxis.LeftStickX, controller) < 0.0f)
-            {
-                movingLeft = true;
-                movingRight = false;
-            }
-            if (XCI.GetAxisRaw(XboxAxis.LeftStickX, controller) > 0.0f)
-            {
-                movingRight = true;
-                movingLeft = false;
-            }
-            if (XCI.GetAxisRaw(XboxAxis.LeftStickX, controller) == 0.0f)
-            {
-                movingLeft = false;
-                movingRight = false;
+                if (XCI.GetAxisRaw(XboxAxis.LeftStickX, controller) > 0.0f)
+                {
+                    movingRight = true;
+                    movingLeft = false;
+                }
+                if (XCI.GetAxisRaw(XboxAxis.LeftStickX, controller) == 0.0f)
+                {
+                    movingLeft = false;
+                    movingRight = false;
+                }
             }
         }
     }
