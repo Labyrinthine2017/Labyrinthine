@@ -17,6 +17,8 @@ TagManager:
   - wall1
   - wall2
   - END
+  - GameInfo
+  - InGameOption
   layers:
   - Default
   - TransparentFX

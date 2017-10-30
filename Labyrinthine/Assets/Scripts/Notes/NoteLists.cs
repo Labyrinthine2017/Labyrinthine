@@ -7,7 +7,7 @@ public class NoteLists : MonoBehaviour
     Stack<Note> noteStack;
     List<Note> noteList;
     GameManager manager;
-    [SerializeField] float distanceBetweenPlayerAndNode = 7.0f;
+    //[SerializeField] float distanceBetweenPlayerAndNode = 7.0f;
 	// Use this for initialization
     void Awake()
     {

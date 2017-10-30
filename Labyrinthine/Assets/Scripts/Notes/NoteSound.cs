@@ -27,6 +27,4 @@ public class NoteSound : MonoBehaviour
         if (other.gameObject.tag == "Player")
             bPlay = true;
     }
-
-    
 }
