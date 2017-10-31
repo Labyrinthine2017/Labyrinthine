@@ -8,16 +8,16 @@ public class PlayerMovement : MonoBehaviour
 
     public float ForwardMovementSpeed = 0.2f, DifferenceInXBetweenPlatforms = 3.39f, LeftRightMovementSpeed = 0.2f, HoverHeight = 2.0f, UpwardsSpeed = 0.2f;
     public bool hasController { get; set; }
-    //For PC
-    /// <summary>
-    /// Storage for the distance in movement
-    /// </summary>
     Vector3 vectorForConstantForwardMovement;
     Vector3 leftLanePos, rightLanePos, centreLanePos;
     Vector3 playerOrignalPosition;
-    bool movingLeft = false, movingRight = false, hovering = false;
+    bool movingLeft = false, movingRight = false, hovering = false, isGrounded = true, allowedToJump = true;
     bool inLeftLane = false, inMidLane = true, inRightLane = false;
+    float timer = 0.0f;
+    float refreshJumpTimer = 0.0f;
     [SerializeField] bool magnatise = false;
+    [SerializeField] float timeInAir = 0.5f;
+    [SerializeField] float timeBetweenJumps = 2.0f;
 
     //For Xbox360 controller
     public XboxController controller { get; set; }
@@ -35,13 +35,11 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space) || XCI.GetButton(XboxButton.A))
+        if ((Input.GetKeyDown(KeyCode.Space) || XCI.GetButtonDown(XboxButton.A)) && allowedToJump)
         {
             hovering = true;
-        }
-        else
-        {
-            hovering = false;
+            isGrounded = false;
+            allowedToJump = false;
         }
         if (magnatise)
         {
@@ -246,7 +244,7 @@ public class PlayerMovement : MonoBehaviour
         //Hovering
         if(hovering)
         {
-            //If the player goes higher than in
+            //If the player goes higher
             if(transform.position.y < playerOrignalPosition.y + HoverHeight)
             {
                 transform.Translate(Vector3.up * UpwardsSpeed * Time.fixedDeltaTime);               
@@ -254,6 +252,12 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 transform.position = new Vector3(transform.position.x, playerOrignalPosition.y + HoverHeight, transform.position.z);
+                timer += Time.fixedDeltaTime;
+            }
+            if(timer >= timeInAir)
+            {
+                hovering = false;
+                timer = 0.0f;
             }
 
         }
@@ -262,6 +266,19 @@ public class PlayerMovement : MonoBehaviour
             if (transform.position.y > playerOrignalPosition.y)
             {
                 transform.Translate(Vector3.down * UpwardsSpeed * Time.fixedDeltaTime);
+            }
+            if(transform.position.y == playerOrignalPosition.y && !isGrounded)
+            {
+                isGrounded = true;
+            }
+            if(isGrounded && !allowedToJump)
+            {
+                refreshJumpTimer += Time.fixedDeltaTime;
+            }
+            if(refreshJumpTimer >= timeBetweenJumps)
+            {
+                allowedToJump = true;
+                refreshJumpTimer = 0.0f;
             }
         }
     }
