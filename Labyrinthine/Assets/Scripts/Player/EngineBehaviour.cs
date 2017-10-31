@@ -25,6 +25,10 @@ public class EngineBehaviour : MonoBehaviour
             engineHeatAmount = 100.0f;
             gameObject.GetComponent<PlayerMovement>().enabled = false;
         }
+        else
+        {
+            gameObject.GetComponent<PlayerMovement>().enabled = true;
+        }
         if(engineHeatAmount < 0.0f)
         {
             engineHeatAmount = 0.0f;

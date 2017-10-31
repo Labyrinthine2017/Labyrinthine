@@ -210,6 +210,13 @@ public class GameManager : MonoBehaviour
             }
             startedWarningSt1Blink = false;
         }
+        if(playerEngine.engineHeatAmount < 81.1f)
+        {
+            WarningSt1.enabled = false;
+            startedWarningSt1Blink = false;
+            WarningSt2.enabled = false;
+            startedWarningSt2Blink = false;
+        }
 
     }
 
