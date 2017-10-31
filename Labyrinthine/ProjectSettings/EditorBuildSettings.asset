@@ -14,12 +14,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Enviromental Greybox/Rad_City_Alpha.unity
     guid: 8d043493af6b2244998ca9d4d36d0304
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menu/Menu.unity
     guid: f4a2704222a2ec646bb2a508158ed7d4
   - enabled: 0
     path: 
     guid: a9508094d2bb9f84b9588c03ee9cc1f2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/RAD_City_018 (Test).unity
     guid: 192d90181cc87a648af435def1643d6d
+  - enabled: 1
+    path: Assets/Scenes/RAD_City_018.unity
+    guid: c05534eb1b49089428a2fd410fcda06b
