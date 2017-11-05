@@ -19,6 +19,7 @@ TagManager:
   - END
   - GameInfo
   - InGameOption
+  - tp
   layers:
   - Default
   - TransparentFX
