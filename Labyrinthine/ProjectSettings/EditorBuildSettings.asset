@@ -29,3 +29,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RAD_City_019.unity
     guid: 88c09a20805df524fbee0d134df79029
+  - enabled: 0
+    path: Assets/Scenes/RAD_City_014_Testing.unity
+    guid: fd9cf3f5e5148ac4e9379215dfa6abf7
