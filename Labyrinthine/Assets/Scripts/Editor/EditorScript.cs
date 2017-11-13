@@ -77,7 +77,7 @@ public class EditorScript : MonoBehaviour
         GameObject Hazards = GameObject.FindGameObjectWithTag("Hazards");
         GameObject Beats = GameObject.FindGameObjectWithTag("Notes");
         Object drone = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/SmelterDrone.prefab", typeof(GameObject));
-        Object node = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Pickup_CoolantNode_Unwrapped.prefab", typeof(GameObject));
+        Object node = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/NodeObject.prefab", typeof(GameObject));
         Object car = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/HazardCar.prefab", typeof(GameObject));
         TextReader reader = null;
         try
