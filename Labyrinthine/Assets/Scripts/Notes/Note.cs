@@ -8,6 +8,8 @@ public class Note : MonoBehaviour
     private bool collected;
     public bool IsCollected { get { return collected; } private set { collected = value; } }
     [SerializeField]private float coolantAmount = 1.0f;
+    [SerializeField] ParticleSystem particles;
+    float timer = 0.0f;
 
     private GameManager manager;
     void Awake()
@@ -26,7 +28,34 @@ public class Note : MonoBehaviour
             manager.AddScore(10.0f);
 
             this.GetComponent<MeshRenderer>().enabled = false;
-            this.GetComponentInChildren<Light>().enabled = false;
+
+
+            var emission = particles.emission;
+            if (particles.isPlaying == false)
+            {
+                emission.enabled = true;
+                particles.Play(true);
+            }
+            else
+            {
+                timer += Time.deltaTime;
+                if (timer >= 1.0f)
+                {
+                    for (int i = 0; i < transform.childCount; i++)
+                    {
+                        if (transform.GetChild(i).tag == "Vechicle")
+                        {
+                            transform.GetChild(i).gameObject.SetActive(false);
+                        }
+                    }
+                }
+                if (timer >= 2.0f)
+                {
+                    emission.enabled = false;
+                    particles.Play(false);
+
+                }
+            }
 
             collected = true;
         }

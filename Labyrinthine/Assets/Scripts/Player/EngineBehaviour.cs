@@ -5,6 +5,7 @@ using UnityEngine;
 public class EngineBehaviour : MonoBehaviour
 {
     public float engineHeatAmount { get; set; }
+    [SerializeField] GameObject blast;
     [SerializeField]
     float heatIncreaseAmount = 1.0f;
     float timer = 0.0f;
@@ -24,6 +25,11 @@ public class EngineBehaviour : MonoBehaviour
         {
             engineHeatAmount = 100.0f;
             gameObject.GetComponent<PlayerMovement>().enabled = false;
+            var emission = blast.GetComponent<ParticleSystem>().emission;
+            if (emission.enabled == false)
+            {
+                emission.enabled = true;
+            }
         }
         else
         {

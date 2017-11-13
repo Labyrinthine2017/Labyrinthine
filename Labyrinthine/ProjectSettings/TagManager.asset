@@ -22,6 +22,7 @@ TagManager:
   - tp
   - Hazards
   - Road
+  - Vechicle
   layers:
   - Default
   - TransparentFX
