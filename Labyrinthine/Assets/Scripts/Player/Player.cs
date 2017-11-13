@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
     public PlayerMovement movement { get; set; }
     public EngineBehaviour engine { get; set; }
+
+    [SerializeField] ScreenShake shake;
 	// Update is called once per frame
     void Start()
     {
@@ -20,5 +22,15 @@ public class Player : MonoBehaviour
             Time.timeScale = 0.0f;
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Hazards")
+        {
+            shake.shake = true;
+        }
+    }
+
+
 
 }

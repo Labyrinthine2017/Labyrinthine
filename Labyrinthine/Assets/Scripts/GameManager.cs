@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     bool showed5combo = false;
     bool showed12combo = false;
     bool showed19combo = false;
+    public bool isDead { get; set; }
 
     float timerStreak;
     [SerializeField] Image WarningSt1;
@@ -73,10 +74,7 @@ public class GameManager : MonoBehaviour
                 scoreTimer = 0.0f;
             }
         }
-        if(Input.GetKeyDown(KeyCode.I))
-        {
-            showInfo = !showInfo;
-        }
+        if(playerEngine)
         if (comboScore == combo2Score)
         {
             comboValue = 2;

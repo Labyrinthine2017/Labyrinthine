@@ -131,7 +131,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1697140497332406}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.093514204, y: 1.17, z: 104.8}
+  m_LocalPosition: {x: -0.5725279, y: -0.013427734, z: 46.077713}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4564063897779462}
@@ -217,6 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coolantAmount: 1
   particles: {fileID: 198251645147676278}
+  coolant: {fileID: 0}
 --- !u!114 &114559951109101250
 MonoBehaviour:
   m_ObjectHideFlags: 1

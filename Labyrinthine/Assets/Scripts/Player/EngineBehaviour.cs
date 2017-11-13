@@ -21,7 +21,7 @@ public class EngineBehaviour : MonoBehaviour
         engineHeatAmount += heatIncreaseAmount;
         
         //Keeps the engineHeatAmount from going over 100 and shuts the engine down.
-        if(engineHeatAmount > 100.0f)
+        if(engineHeatAmount >= 100.0f)
         {
             engineHeatAmount = 100.0f;
             gameObject.GetComponent<PlayerMovement>().enabled = false;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ScreenShake : MonoBehaviour
 {
+    public bool shake = false;
     //Created by ftvs
     //https://gist.github.com/ftvs/5822103
 
@@ -14,6 +15,7 @@ public class ScreenShake : MonoBehaviour
 
     // How long the object should shake for.
     public float shakeDuration = 0f;
+    private float duration;
 
     // Amplitude of the shake. A larger value shakes the camera harder.
     public float shakeAmount = 0.7f;
@@ -26,26 +28,29 @@ public class ScreenShake : MonoBehaviour
         if (camTransform == null)
         {
             camTransform = GetComponent<Transform>();
+            originalPos = camTransform.localPosition;
+            duration = shakeDuration;
         }
-    }
-
-    void OnEnable()
-    {
-        originalPos = camTransform.localPosition;
     }
 
     void Update()
     {
-        if (shakeDuration > 0)
+        if (shake)
         {
-            camTransform.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
+            if (shakeDuration > 0)
+            {
+                camTransform.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
 
-            shakeDuration -= Time.deltaTime * decreaseFactor;
-        }
-        else
-        {
-            shakeDuration = 0f;
-            camTransform.localPosition = originalPos;
+                shakeDuration -= Time.deltaTime * decreaseFactor;
+            }
+            else
+            {
+                shakeDuration = duration;
+                camTransform.localPosition = originalPos;
+                shake = false;
+            }
         }
     }
+
+
 }

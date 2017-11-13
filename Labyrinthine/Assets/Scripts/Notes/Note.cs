@@ -9,6 +9,7 @@ public class Note : MonoBehaviour
     public bool IsCollected { get { return collected; } private set { collected = value; } }
     [SerializeField]private float coolantAmount = 1.0f;
     [SerializeField] ParticleSystem particles;
+    [SerializeField] FadeImage coolant;
     float timer = 0.0f;
 
     private GameManager manager;
@@ -56,7 +57,7 @@ public class Note : MonoBehaviour
 
                 }
             }
-
+            coolant.flash = true;
             collected = true;
         }
     }
