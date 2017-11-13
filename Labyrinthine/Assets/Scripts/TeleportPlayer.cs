@@ -10,11 +10,6 @@ public class TeleportPlayer : MonoBehaviour
     {
         vStartPos = new Vector3(0, 0.38f, -899.97f);
 	}
-	
-	void Update()
-    { 
-       
-	}
 
     private void OnTriggerEnter(Collider other)
     {

@@ -98,8 +98,8 @@ public class InGameOption : MonoBehaviour
 
             if (GUI.Button(new Rect(MainMenu.X_Value, MainMenu.Y_Value, MainMenu.Width, MainMenu.Height), MainMenu.sMainMenu))
             {
-                SceneManager.LoadScene("Menu");
-                bPaused = TogglePause();
+                SceneManager.LoadScene(1);
+                bPaused = TogglePause();    
             }
         }
     }

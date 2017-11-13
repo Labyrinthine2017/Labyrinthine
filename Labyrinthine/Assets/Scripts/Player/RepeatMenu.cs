@@ -7,6 +7,7 @@ public class RepeatMenu : MonoBehaviour
     private Vector3 vCurrentPos;
     private Vector3 vStartPos;
     private Vector3 vEndPos;
+    public bool bEndLoop = false;
 
 	void Awake ()
     {
@@ -18,7 +19,9 @@ public class RepeatMenu : MonoBehaviour
 	
 	void Update ()
     {
-        if(vCurrentPos == vEndPos)
+        if (vCurrentPos == vEndPos)
+        {
             vCurrentPos = vStartPos;
-	}
+        }
+    }
 }
