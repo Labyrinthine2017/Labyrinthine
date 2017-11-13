@@ -4,23 +4,22 @@ using UnityEngine;
 
 public class NoteLists : MonoBehaviour
 {
-    Stack<Note> noteStack;
-    List<Note> noteList;
-    GameManager manager;
-    //[SerializeField] float distanceBetweenPlayerAndNode = 7.0f;
-	// Use this for initialization
+    private Stack<Note> noteStack = new Stack<Note>();
+    private List<Note> noteList = new List<Note>();
+    private GameManager manager;
+
     void Awake()
     {
-        noteStack = new Stack<Note>();
-        noteList = new List<Note>();
         manager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
     }
 	void Start()
     {
+        //Gets and adds all children to the List
         for (int i = 0; i < transform.childCount; i++)
         {
             noteList.Add(transform.GetChild(i).GetComponent<Note>());
         }
+        //Sorts the list
         Bubblesort(noteList);
         noteList.Reverse();
         foreach(Note note in noteList)
@@ -33,19 +32,12 @@ public class NoteLists : MonoBehaviour
     {
         if (manager.GetPlayer().transform.position.z > noteStack.Peek().transform.position.z)
         {
-            if (noteStack.Peek().collected == false)
+            if (noteStack.Peek().IsCollected == false)
             {
                 manager.ResetCombo();
             }
-            noteStack.Peek().AllowedCollection(false);
             noteStack.Pop();
         }
-        //}
-    }
-
-    public List<Note> GetNoteList()
-    {
-        return noteList;
     }
 
     public List<Note> Bubblesort(List<Note> a)

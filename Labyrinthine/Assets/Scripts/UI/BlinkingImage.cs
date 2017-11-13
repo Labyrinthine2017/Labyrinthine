@@ -40,4 +40,8 @@ public class BlinkingImage : MonoBehaviour
     {
         myImage.enabled = !myImage.enabled;
     }
+    public void SwitchOff()
+    {
+        myImage.enabled = false;
+    }
 }

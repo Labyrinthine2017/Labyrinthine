@@ -4,31 +4,22 @@ using UnityEngine;
 
 public class FireDrone : MonoBehaviour
 {
-    [SerializeField] float heatDamage = 5.0f;
-    [SerializeField] float timeBetweenActivations = 1.0f;
-    [SerializeField] float timeOfActivation = 1.0f;
-    BoxCollider myCollider;
-    float timer = 0.0f;
-	// Use this for initialization
+    [SerializeField] private float heatDamage = 5.0f;
+    [SerializeField] private float timeBetweenActivations = 1.0f;
+    [SerializeField] private float timeOfActivation = 1.0f;
+    [SerializeField] private Camera mainCamera;
+
+    private BoxCollider myCollider;
+    private float timer = 0.0f;
+
 	void Start ()
     {
         myCollider = this.GetComponent<BoxCollider>();
 	}
-	
-	// Update is called once per frame
+
 	void FixedUpdate ()
     {
-        timer += Time.deltaTime;
-        if (myCollider.enabled == false && timer >= timeBetweenActivations)
-        {
-            timer = 0.0f;
-            myCollider.enabled = true;
-        }
-        if (myCollider.enabled == true && timer >= timeOfActivation)
-        {
-            timer = 0.0f;
-            myCollider.enabled = false;
-        }
+        
     }
 
     void OnTriggerStay(Collider col)
@@ -36,6 +27,7 @@ public class FireDrone : MonoBehaviour
         if(col.gameObject.tag == "Player")
         {
             col.gameObject.GetComponent<EngineBehaviour>().engineHeatAmount += heatDamage;
+            mainCamera.GetComponent<ScreenShake>().enabled = true;
         }
     }
 }

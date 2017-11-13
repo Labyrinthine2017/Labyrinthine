@@ -5,33 +5,29 @@ using XboxCtrlrInput;
 
 public class Note : MonoBehaviour
 {
-    public float coolantAmount = 1.0f;
-    bool allowedToCollect = false;
-    public bool collected { get; set; }
-    GameManager manager;
-    PlayerMovement playerMovement;
+    private bool collected;
+    public bool IsCollected { get { return collected; } private set { collected = value; } }
+    [SerializeField]private float coolantAmount = 1.0f;
 
+    private GameManager manager;
     void Awake()
     {
-        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
         manager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
         collected = false;
-    }
-
-    public void AllowedCollection(bool a_state)
-    {
-        allowedToCollect = a_state;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
         {
-            playerMovement.gameObject.GetComponent<EngineBehaviour>().CoolEngineByAmount(coolantAmount);
+            other.gameObject.GetComponent<EngineBehaviour>().CoolEngineByAmount(coolantAmount);
+
             manager.comboScore += 1;
             manager.AddScore(10.0f);
+
             this.GetComponent<MeshRenderer>().enabled = false;
             this.GetComponentInChildren<Light>().enabled = false;
+
             collected = true;
         }
     }

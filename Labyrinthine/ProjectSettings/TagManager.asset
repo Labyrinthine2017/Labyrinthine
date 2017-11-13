@@ -20,6 +20,8 @@ TagManager:
   - GameInfo
   - InGameOption
   - tp
+  - Hazards
+  - Road
   layers:
   - Default
   - TransparentFX

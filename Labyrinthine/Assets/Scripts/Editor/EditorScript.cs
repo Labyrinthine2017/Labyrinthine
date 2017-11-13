@@ -5,10 +5,28 @@ using UnityEditor;
 using System.Text;
 using System.IO;
 using System.Globalization;
+using System.Xml;
+using System.Xml.Serialization;
 
 public class EditorScript : MonoBehaviour
 {
-	public float beatPlacement = 90.0f; 
+    public class ObjectLoc
+    {
+        public ObjectLoc() { }
+        public ObjectLoc(string n, float x, float y, float z)
+        {
+            name = n;
+            xPos = x;
+            yPos = y;
+            zPos = z;
+        }
+        public string name;
+        public float xPos;
+        public float yPos;
+        public float zPos;
+    }   
+
+    public float beatPlacement = 90.0f; 
     [MenuItem("Coolant Nodes/Load Coolant Nodes")]
     private static void LoadCoolant()
     {
@@ -52,7 +70,64 @@ public class EditorScript : MonoBehaviour
             Undo.RegisterCreatedObjectUndo(m_goCollantClone, "Created Coolant Nodes");
         }        
     }
-     
+    [MenuItem("Coolant Nodes/Load From XML")]
+    private static void LoadFromXML()
+    {
+        List<ObjectLoc> temp = new List<ObjectLoc>();
+        GameObject Hazards = GameObject.FindGameObjectWithTag("Hazards");
+        GameObject Beats = GameObject.FindGameObjectWithTag("Notes");
+        Object drone = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/SmelterDrone.prefab", typeof(GameObject));
+        Object node = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Pickup_CoolantNode_Unwrapped.prefab", typeof(GameObject));
+        Object car = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/HazardCar.prefab", typeof(GameObject));
+        TextReader reader = null;
+        try
+        {
+            var serializer = new XmlSerializer(typeof(List<ObjectLoc>));
+            reader = new StreamReader("ObjectLoc.xml");
+            temp = (List<ObjectLoc>)serializer.Deserialize(reader);
+        }
+        finally
+        {
+            if (reader != null)
+                reader.Close();
+        }
+
+        for(int i = 0; i < temp.Count; i ++)
+        {
+            if(temp[i].name == "Drones")
+            {
+                GameObject tempObject = Instantiate(drone, GameObject.FindGameObjectWithTag("Hazards").transform) as GameObject;
+                tempObject.transform.position = new Vector3(temp[i].xPos, 5.0f, temp[i].zPos);
+                tempObject.transform.SetParent(Hazards.transform);
+            }
+            if(temp[i].name == "Notes")
+            {
+                GameObject tempObject = Instantiate(node, GameObject.FindGameObjectWithTag("Notes").transform) as GameObject;
+                tempObject.transform.position = new Vector3(temp[i].xPos, 0.9f, temp[i].zPos);
+                tempObject.transform.SetParent(Beats.transform);
+            }
+            if(temp[i].name == "HazardCar")
+            {
+                GameObject tempObject = Instantiate(car, GameObject.FindGameObjectWithTag("Hazards").transform) as GameObject;
+                tempObject.transform.position = new Vector3(temp[i].xPos, 0.5f, temp[i].zPos);
+                tempObject.transform.rotation = Quaternion.Euler(0.0f, Random.Range(0.0f, 360.0f), 0.0f);
+                tempObject.transform.SetParent(Hazards.transform);
+            }
+        }
+
+    }
+    [MenuItem("Coolant Nodes/Load Road")]
+    private static void LoadRoad()
+    {
+        Object road = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Full_Road.prefab", typeof(GameObject));
+        float zLoc = 33.88f;
+        while (zLoc < 11000.0f)
+        {
+            Instantiate(road, new Vector3(3.84f, 0.0f, zLoc), Quaternion.identity, GameObject.FindGameObjectWithTag("Road").transform);
+            zLoc += 78.79f;
+        }
+
+    }
 
 
 }

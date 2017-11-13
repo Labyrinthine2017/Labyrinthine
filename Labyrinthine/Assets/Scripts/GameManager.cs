@@ -184,24 +184,24 @@ public class GameManager : MonoBehaviour
 
         //Red bar = 147
         //Used to enable and disable the warning words to appear
-        if (playerEngine.engineHeatAmount > 81.1f && startedWarningSt1Blink == false)
+        if (playerEngine.engineHeatAmount > 81.1f)
         {
             WarningSt2.enabled = true;
             startedWarningSt2Blink = true;
         }
-        else if (playerEngine.engineHeatAmount < 81.1f && startedWarningSt1Blink == true)
+        else if (playerEngine.engineHeatAmount < 81.1f)
         {
             WarningSt2.enabled = false;
             startedWarningSt2Blink = false;
         }
         //Warning bar = 169
         //Used to enable and disable the blinking warning red border
-        if (playerEngine.engineHeatAmount > 93.8f && startedWarningSt2Blink == false)
+        if (playerEngine.engineHeatAmount > 93.8f)
         {
             WarningSt1.enabled = true;
             startedWarningSt1Blink = true;
         }
-        else if (playerEngine.engineHeatAmount < 93.8f && startedWarningSt2Blink == true)
+        else if (playerEngine.engineHeatAmount < 93.8f)
         {
             WarningSt1.enabled = false;
             if (WarningSt1.GetComponent<Image>().enabled == true)
@@ -213,9 +213,7 @@ public class GameManager : MonoBehaviour
         if(playerEngine.engineHeatAmount < 81.1f)
         {
             WarningSt1.enabled = false;
-            startedWarningSt1Blink = false;
-            WarningSt2.enabled = false;
-            startedWarningSt2Blink = false;
+            WarningSt2.SwitchOff();
         }
 
     }

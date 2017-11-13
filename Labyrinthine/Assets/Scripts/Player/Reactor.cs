@@ -12,15 +12,14 @@ public class Reactor : MonoBehaviour
 	void Start ()
     {
         engine = GameObject.FindGameObjectWithTag("Player").GetComponent<EngineBehaviour>();
+        rend = this.GetComponent<Renderer>();
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        //1 / 100 = 0.x
-        //0.x * 3 = value required
-        value = (1 / engine.engineHeatAmount) * 3;
-        rend.material.SetFloat("node_3604", value);
-
+        value = 3 * 1 * (engine.engineHeatAmount / 100);
+        rend.material.SetFloat("_node_3604", value);
+        Debug.Log(rend.material.GetFloat("_node_3604"));
 	}
 }
