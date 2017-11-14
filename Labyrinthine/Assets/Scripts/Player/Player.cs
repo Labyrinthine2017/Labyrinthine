@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Hazards")
+        if(other.transform.parent.gameObject.tag == "Hazards")
         {
             shake.shake = true;
         }
