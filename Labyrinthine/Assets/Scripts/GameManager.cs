@@ -14,6 +14,19 @@ public class GameManager : MonoBehaviour
     float scoreTimer;
     bool showInfo = false;
 
+    [SerializeField] float distanceBetweenObjects = 250.0f;
+    //[SerializeField] GameObject roadParent;
+    //[SerializeField] GameObject hazardParent;
+    //[SerializeField] GameObject noteParent;
+    //[SerializeField] GameObject groundParent;
+    //[SerializeField] GameObject mountiansParnet;
+    //[SerializeField] GameObject buildingsParnet;
+    //[SerializeField] GameObject propsParent;
+    //[SerializeField] GameObject mesaParent;
+    public GameObject[] parentArray;
+
+    GameObject[] allObjects;
+
     //For UI -----------------------------------------------------------
     bool startedWarningSt1Blink = false;
     bool startedWarningSt2Blink = false;
@@ -54,6 +67,7 @@ public class GameManager : MonoBehaviour
         gameScore = 0;
         streak.enabled = false;
         isDead = false;
+        allObjects = (GameObject[])Resources.FindObjectsOfTypeAll(typeof(GameObject));
     }
 
     void Awake()
@@ -91,6 +105,23 @@ public class GameManager : MonoBehaviour
         {
             comboValue = 4;
         }
+
+        for(int i = 0; i < parentArray.Length; i ++)
+        {
+            for(int j = 0; j < parentArray[i].transform.childCount; j ++)
+            {
+                if(Vector3.Distance(parentArray[i].transform.GetChild(j).transform.position, player.transform.position) <= distanceBetweenObjects)
+                {
+                    parentArray[i].transform.GetChild(j).gameObject.SetActive(true);
+                }
+                else
+                {
+                    parentArray[i].transform.GetChild(j).gameObject.SetActive(false);
+                }
+            }
+        }
+
+        
     }
     void FixedUpdate()
     {

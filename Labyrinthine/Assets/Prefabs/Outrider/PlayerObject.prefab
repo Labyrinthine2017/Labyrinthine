@@ -2691,7 +2691,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1797928162226090
 GameObject:
   m_ObjectHideFlags: 1
@@ -12035,6 +12035,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c33d493c27997442aac9ecf5aa07ded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shieldTimer: 0
+  timeInDangerToTakeDamage: 0
+  hazardHeatDamage: 5
+  dangerZoneHeatDamage: 10
+  coolantAmount: 1
+  shake: {fileID: 0}
+  vehicle: {fileID: 0}
+  coolant: {fileID: 0}
+  hazard: {fileID: 0}
 --- !u!114 &114162049280441536
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12081,6 +12090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5eac5aaad41a8e47ae0d8d6ecefc5d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shake: 0
   camTransform: {fileID: 0}
   shakeDuration: 0.5
   shakeAmount: 0.7

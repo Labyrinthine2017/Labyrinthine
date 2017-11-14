@@ -214,7 +214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1843317052190132
 GameObject:
   m_ObjectHideFlags: 1
@@ -712,6 +712,8 @@ MonoBehaviour:
   combo2Score: 5
   combo3Score: 12
   combo4Score: 19
+  distanceBetweenObjects: 250
+  parentArray: []
   WarningSt1: {fileID: 114601489714323708}
   WarningSt2: {fileID: 114766555712864532}
   scoreText: {fileID: 114489010753423752}
