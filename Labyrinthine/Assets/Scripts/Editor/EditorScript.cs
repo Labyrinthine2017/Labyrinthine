@@ -173,7 +173,7 @@ public class EditorScript : MonoBehaviour
     [MenuItem("Coolant NOdes/Replace Requested Object")]
     private static void Replace()
     {
-        Object newObject = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/fissureexterior.prefab", typeof(GameObject));
+        Object newObject = AssetDatabase.LoadAssetAtPath("Assets/Fissure/fissureexterior.prefab", typeof(GameObject));
 
         List<GameObject> objects = new List<GameObject>();
         GameObject parent = GameObject.FindGameObjectWithTag("Fissures");
