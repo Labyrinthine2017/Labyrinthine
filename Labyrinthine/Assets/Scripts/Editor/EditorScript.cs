@@ -170,5 +170,25 @@ public class EditorScript : MonoBehaviour
 
         LoadFromXML();
     }
+    [MenuItem("Coolant NOdes/Replace Requested Object")]
+    private static void Replace()
+    {
+        Object newObject = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/fissureexterior.prefab", typeof(GameObject));
+
+        List<GameObject> objects = new List<GameObject>();
+        GameObject parent = GameObject.FindGameObjectWithTag("Fissures");
+        objects.AddRange(GameObject.FindGameObjectsWithTag("Replacement"));
+        for(int i = 0; i < objects.Count; i ++)
+        {
+            GameObject temp = Instantiate(newObject, objects[i].transform.position, Quaternion.identity, parent.transform) as GameObject;
+            temp.transform.localScale = objects[i].transform.localScale;
+            temp.transform.localRotation = objects[i].transform.localRotation;
+        }
+        GameObject[] objectsToDestroy = objects.ToArray();
+        for(int i = 0; i < objectsToDestroy.Length; i ++)
+        {
+            DestroyImmediate(objectsToDestroy[i]);
+        }
+    }
 
 }
