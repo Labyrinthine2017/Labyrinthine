@@ -6,8 +6,7 @@ public class EngineBehaviour : MonoBehaviour
 {
     public float engineHeatAmount { get; set; }
     [SerializeField] GameObject blast;
-    [SerializeField]
-    float heatIncreaseAmount = 1.0f;
+    [SerializeField] float heatIncreaseAmount = 1.0f;
     float timer = 0.0f;
     // Update is called once per frame
 

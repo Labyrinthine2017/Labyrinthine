@@ -53,6 +53,7 @@ public class GameManager : MonoBehaviour
         globalTime = 0.0f;
         gameScore = 0;
         streak.enabled = false;
+        isDead = false;
     }
 
     void Awake()
@@ -74,7 +75,10 @@ public class GameManager : MonoBehaviour
                 scoreTimer = 0.0f;
             }
         }
-        if(playerEngine)
+        if(playerEngine.engineHeatAmount >= 100.0f)
+        {
+            isDead = true;
+        }
         if (comboScore == combo2Score)
         {
             comboValue = 2;
