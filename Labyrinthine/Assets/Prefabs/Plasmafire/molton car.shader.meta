@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 2975bfdb9611fb244848b36643c59684
+timeCreated: 1510611363
+licenseType: Free
+ShaderImporter:
+  defaultTextures:
+  - _Emmisivemap: {fileID: 2800000, guid: 4b1dda4735c5f42418370109881a4600, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
