@@ -22,8 +22,9 @@ GameObject:
   - component: {fileID: 33235234759626846}
   - component: {fileID: 65374546114199370}
   - component: {fileID: 23347980317357982}
-  - component: {fileID: 114209524297813746}
   - component: {fileID: 54207932951279860}
+  - component: {fileID: 114832630715104286}
+  - component: {fileID: 114211573658776698}
   m_Layer: 8
   m_Name: Damage Zone
   m_TagString: Untagged
@@ -38,8 +39,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1274608853480928}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.23, y: 0.54999995, z: 5353.2}
-  m_LocalScale: {x: 2.93, y: 2, z: 31.43}
+  m_LocalPosition: {x: -5.8400006, y: 0.54999995, z: 5526.1}
+  m_LocalScale: {x: 7.5, y: 2, z: 28}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -110,7 +111,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114209524297813746
+--- !u!114 &114211573658776698
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -118,9 +119,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1274608853480928}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 942bdc316ec41384ca54260524e1064f, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ba51a248acc6ee49af3e7e85ba2bde6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heatDamage: 1
-  timeBetweenActivations: 1
-  timeOfActivation: 1
+  timeToTakeDamage: 0.5
+  heatDamage: 5
+  hazard: {fileID: 0}
+  playerEngine: {fileID: 0}
+--- !u!114 &114832630715104286
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1274608853480928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba51a248acc6ee49af3e7e85ba2bde6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToTakeDamage: 0.5
+  heatDamage: 5
+  hazard: {fileID: 0}
+  playerEngine: {fileID: 0}

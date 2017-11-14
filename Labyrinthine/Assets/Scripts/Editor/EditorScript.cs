@@ -128,6 +128,47 @@ public class EditorScript : MonoBehaviour
         }
 
     }
+    [MenuItem("Coolant Nodes/Reload Current Objects")]
+    private static void Reload()
+    {
+        List<ObjectLoc> objects = new List<ObjectLoc>();
+        Object drone = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/SmelterDrone.prefab", typeof(GameObject));
+        Object node = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/NodeObject.prefab", typeof(GameObject));
+        Object car = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/HazardCar.prefab", typeof(GameObject));
 
+        GameObject beats = GameObject.FindGameObjectWithTag("Notes");
+        GameObject hazards = GameObject.FindGameObjectWithTag("Hazards");
+
+        for(int i = 0; i < beats.transform.childCount; i ++)
+        {
+            objects.Add(new ObjectLoc("Notes", beats.transform.GetChild(i).position.x, beats.transform.GetChild(i).position.y, beats.transform.GetChild(i).position.z));
+        }
+        for(int i = beats.transform.childCount - 1; i > -1; i --)
+        {
+            DestroyImmediate(beats.transform.GetChild(i).gameObject);
+        }
+        for (int i = 0; i < hazards.transform.childCount; i++)
+        {
+            objects.Add(new ObjectLoc("HazardCar", hazards.transform.GetChild(i).position.x, hazards.transform.GetChild(i).position.y, hazards.transform.GetChild(i).position.z));
+        }
+        for (int i = hazards.transform.childCount - 1; i > -1; i--)
+        {
+            DestroyImmediate(hazards.transform.GetChild(i).gameObject);
+        }
+
+        for(int i = 0; i < objects.Count; i ++)
+        {
+            if(objects[i].name == "Notes")
+            {
+                Instantiate(node, new Vector3(objects[i].xPos, objects[i].yPos, objects[i].zPos), Quaternion.identity, beats.transform);
+            }
+            if(objects[i].name == "HazardCar")
+            {
+                Instantiate(node, new Vector3(objects[i].xPos, objects[i].yPos, objects[i].zPos), Quaternion.identity, hazards.transform);
+            }
+        }
+
+        LoadFromXML();
+    }
 
 }
