@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
                 shieldTimer = timeStorage;
             }
         }
-        if(startInTimer)
+        if(startInTimer && !takenDamage)
         {
             timerForInDanger += Time.deltaTime;
             if (timerForInDanger >= timeInDangerToTakeDamage)
@@ -79,6 +79,7 @@ public class Player : MonoBehaviour
                 shake.shake = true;
                 //Enables a little shield
                 takenDamage = true;
+				hazard.flash = true;
             }
         }
         if(other.tag == "Note")
@@ -101,13 +102,12 @@ public class Player : MonoBehaviour
         }
         if(other.tag == "DangerZone")
         {
-            if (!takenDamage)
-            {
                 //Starts a timer for the duration that you are inside the danger zone
                 startInTimer = true;
-            }
+            
         }
     }
+
     private void OnTriggerExit(Collider other)
     {
         if(other.tag == "DangerZone")

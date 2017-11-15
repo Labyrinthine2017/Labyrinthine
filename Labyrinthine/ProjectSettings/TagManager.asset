@@ -25,6 +25,9 @@ TagManager:
   - Vechicle
   - Replacement
   - Fissures
+  - DangerZone
+  - Note
+  - Hazard
   layers:
   - Default
   - TransparentFX
