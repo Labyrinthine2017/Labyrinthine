@@ -23,8 +23,9 @@ TagManager:
   - Hazards
   - Road
   - Vechicle
-  - Replacement
   - Fissures
+  - Fissure
+  - Replacement
   - DangerZone
   - Note
   - Hazard
