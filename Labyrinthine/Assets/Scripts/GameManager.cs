@@ -152,7 +152,6 @@ public class GameManager : MonoBehaviour
     {
         //Set the score text field
         scoreText.text = gameScore.ToString();
-        nodeCounter.text = comboScore.ToString();
 
         //Set multiplier sprite to the appropriate combo 
         if (comboValue == 1)

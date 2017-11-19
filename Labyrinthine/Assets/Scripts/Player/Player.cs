@@ -31,32 +31,28 @@ public class Player : MonoBehaviour
         engine = this.gameObject.GetComponent<EngineBehaviour>();
         manager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
     }
-
-    private void Update()
-    {
-        if(takenDamage)
-        {
-            shieldTimer -= Time.deltaTime;
-            if(shieldTimer <= 0.0f)
-            {
-                takenDamage = false;
-                shieldTimer = timeStorage;
-            }
-        }
-        if(startInTimer && !takenDamage)
-        {
-            timerForInDanger += Time.deltaTime;
-            if (timerForInDanger >= timeInDangerToTakeDamage)
-            {
-                takenDamage = true;
-                engine.engineHeatAmount += dangerZoneHeatDamage;
-                hazard.flash = true;
-                timerForInDanger = 0;
-            }
-        }
-    }
     private void FixedUpdate()
     {
+		if(takenDamage)
+		{
+			shieldTimer -= Time.fixedDeltaTime;
+			if(shieldTimer <= 0.0f)
+			{
+				takenDamage = false;
+				shieldTimer = timeStorage;
+			}
+		}
+		if(startInTimer && !takenDamage)
+		{
+			timerForInDanger += Time.fixedDeltaTime;
+			if (timerForInDanger >= timeInDangerToTakeDamage)
+			{
+				takenDamage = true;
+				engine.engineHeatAmount += dangerZoneHeatDamage;
+				hazard.flash = true;
+				timerForInDanger = 0;
+			}
+		}
         if(takenDamage)
         {
             vehicle.gameObject.SetActive(!vehicle.activeSelf);
