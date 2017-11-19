@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class TeleportPlayer : MonoBehaviour
 {
-    Vector3 vStartPos;
+    private Vector3 vStartPos;
 
 	void Start()
     {
-        vStartPos = new Vector3(0, 0.38f, -899.97f);
+        vStartPos = new Vector3(15.49608f, -10.62763f, -881.07f);
 	}
 
     private void OnTriggerEnter(Collider other)

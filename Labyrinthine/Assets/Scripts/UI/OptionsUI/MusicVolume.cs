@@ -9,6 +9,7 @@ public class MusicVolume : MonoBehaviour
 
     public void ControlVolume()
     {
+        
         sliderVolume.value = audioSource.volume;
     }
 }
