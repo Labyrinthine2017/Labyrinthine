@@ -77,7 +77,7 @@ public class Player : MonoBehaviour
                 //Adds the heat to the engine
                 engine.engineHeatAmount += hazardHeatDamage;
                 //Shakes your screen
-                shake.shake = true;
+                shake.StartShake();
                 //Enables a little shield
                 takenDamage = true;
 				hazard.flash = true;

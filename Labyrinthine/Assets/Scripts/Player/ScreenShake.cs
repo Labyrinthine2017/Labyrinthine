@@ -52,5 +52,10 @@ public class ScreenShake : MonoBehaviour
         }
     }
 
-
+    public void StartShake()
+    {
+        shake = true;
+        originalPos = camTransform.localPosition;
+        duration = shakeDuration;
+    }
 }

@@ -9,6 +9,9 @@ public class CameraMovement : MonoBehaviour
     private GameObject tp;
     private GameObject UIMenu;
 
+    private Vector3 m_vMenuPos;
+    private Vector3 m_vGamepos;
+
     public float fSpeed;
     private int nCurrent;
     private bool bStart = false;
@@ -16,6 +19,8 @@ public class CameraMovement : MonoBehaviour
     private void Awake()
     {
         transform.LookAt(tCar);
+        m_vMenuPos = transform.position;
+        m_vGamepos = new Vector3(0f, 0.38f, -11.5f);
     }
 
     public void StartGame()
@@ -36,13 +41,17 @@ public class CameraMovement : MonoBehaviour
 
                Destroy(tp);
                Destroy(UIMenu);
-           }
+
+            }
            else
            {
                transform.position = tTarget[nCurrent].position;
                transform.LookAt(tCar);
                nCurrent = (nCurrent + 1) % tTarget.Length;
-           }
+
+                m_vMenuPos = m_vGamepos;
+                this.enabled = false;
+            }
         }     
 
 	}

@@ -5,46 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/RAD_City_009.unity
-    guid: b4a3096d029759e4190b0b71f00ca369
-  - enabled: 0
-    path: Assets/Scenes/Enviromental Greybox/Rad_City_Alpha_Enviroment_001.unity
-    guid: 632cbbbad4562054fa59ff30f12cab51
-  - enabled: 0
-    path: Assets/Scenes/Enviromental Greybox/Rad_City_Alpha.unity
-    guid: 8d043493af6b2244998ca9d4d36d0304
-  - enabled: 0
-    path: Assets/Scenes/Menu/Menu.unity
-    guid: f4a2704222a2ec646bb2a508158ed7d4
-  - enabled: 0
-    path: 
-    guid: a9508094d2bb9f84b9588c03ee9cc1f2
-  - enabled: 0
-    path: Assets/Scenes/RAD_City_018 (Test).unity
-    guid: 192d90181cc87a648af435def1643d6d
-  - enabled: 0
-    path: Assets/Scenes/RAD_City_018.unity
-    guid: c05534eb1b49089428a2fd410fcda06b
-  - enabled: 0
-    path: 
-    guid: 88c09a20805df524fbee0d134df79029
-  - enabled: 0
-    path: Assets/Scenes/RAD_City_014_Testing.unity
-    guid: fd9cf3f5e5148ac4e9379215dfa6abf7
-  - enabled: 0
-    path: Assets/Scenes/RAD_City_019.5.unity
-    guid: f1e2af410d2d1d345b2a6c9499d82483
-<<<<<<< .mine
   - enabled: 1
-    path: Assets/Scenes/GameScenes/GameOver.unity
-    guid: 473a030f4f1a1b04784eaf275bd05f79
-  - enabled: 1
-    path: Assets/Scenes/RAD_City_023.unity
-    guid: 74965fb5d680df34b86d6365ae3754f4
-||||||| .r155
-=======
-  - enabled: 1
-    path: Assets/Scenes/RAD_City_Beta.unity
-    guid: f674b886d02df5344af2ef9b1cc8431c
->>>>>>> .r159
+    path: Assets/Scenes/RAD_City_Built.unity
+    guid: 246730d8ee5a6c944826100b7fb7fc09
