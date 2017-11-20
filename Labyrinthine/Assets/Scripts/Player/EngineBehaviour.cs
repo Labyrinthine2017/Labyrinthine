@@ -41,14 +41,14 @@ public class EngineBehaviour : MonoBehaviour
         //Commands for testing
         if(Debug.isDebugBuild)
         { 
-        if(Input.GetKeyDown(KeyCode.C))
-        {
-            engineHeatAmount -= 50;
-        }
-        if(Input.GetKeyDown(KeyCode.H))
-        {
-            engineHeatAmount += 50;
-        }
+            if(Input.GetKeyDown(KeyCode.C))
+            {
+                engineHeatAmount -= 50;
+            }
+            if(Input.GetKeyDown(KeyCode.H))
+            {
+                engineHeatAmount += 50;
+            }
         }
 	}
 

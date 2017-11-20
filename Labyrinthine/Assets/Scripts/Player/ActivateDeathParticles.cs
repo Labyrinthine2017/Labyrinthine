@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ActivateDeathParticles : MonoBehaviour
 {
+    //This class is for the activation of the death particle and the disabling of the player object
     [SerializeField]ParticleSystem myParticle;
     EngineBehaviour myEngine;
     float timer = 0.0f;
@@ -19,8 +20,7 @@ public class ActivateDeathParticles : MonoBehaviour
             var emission = myParticle.emission;
             
             if (myParticle.isPlaying == false)
-            {
-                
+            {                
                 emission.enabled = true;
                 myParticle.Play(true);
             }

@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     private float timeStorage;
     private bool startInTimer;
     private float timerForInDanger;
+    public bool finished = false;
 
     [SerializeField] float shieldTimer;
     [SerializeField] float timeInDangerToTakeDamage;
@@ -33,28 +34,27 @@ public class Player : MonoBehaviour
     }
     private void FixedUpdate()
     {
-		if(takenDamage)
-		{
-			shieldTimer -= Time.fixedDeltaTime;
-			if(shieldTimer <= 0.0f)
-			{
-				takenDamage = false;
-				shieldTimer = timeStorage;
-			}
-		}
-		if(startInTimer && !takenDamage)
-		{
-			timerForInDanger += Time.fixedDeltaTime;
-			if (timerForInDanger >= timeInDangerToTakeDamage)
-			{
-				takenDamage = true;
-				engine.engineHeatAmount += dangerZoneHeatDamage;
-				hazard.flash = true;
-				timerForInDanger = 0;
-			}
-		}
-        if(takenDamage)
+        if (startInTimer && !takenDamage)
         {
+            timerForInDanger += Time.deltaTime;
+            if (timerForInDanger >= timeInDangerToTakeDamage)
+            {
+                takenDamage = true;
+                engine.engineHeatAmount += dangerZoneHeatDamage;
+                hazard.flash = true;
+                timerForInDanger = 0;
+            }
+        }
+        if (takenDamage)
+        {
+            //Shield ability that keeps you from taking damage
+            shieldTimer -= Time.deltaTime;
+            if (shieldTimer <= 0.0f)
+            {
+                takenDamage = false;
+                shieldTimer = timeStorage;
+            }
+            //Mimiks the flashing effect of the player, after being hit
             vehicle.gameObject.SetActive(!vehicle.activeSelf);
         }
         if (!takenDamage && vehicle.gameObject.activeSelf == false)
@@ -65,6 +65,11 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if(other.tag == "END")
+        {
+            movement.finished = true;
+            shake.transform.parent = null;
+        }
         if(other.tag == "Hazard")
         {
             if (!takenDamage)
@@ -90,11 +95,6 @@ public class Player : MonoBehaviour
             engine.CoolEngineByAmount(coolantAmount);
             //Starts the animation for the note collection
             other.GetComponent<Note>().Collected();
-        }
-        if (other.tag == "END")
-        {
-            //Stops the game
-            Time.timeScale = 0.0f;
         }
         if(other.tag == "DangerZone")
         {

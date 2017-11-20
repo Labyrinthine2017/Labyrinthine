@@ -6,18 +6,36 @@ using XboxCtrlrInput;
 public class PlayerMovement : MonoBehaviour
 {
 
-    public float ForwardMovementSpeed = 0.2f, DifferenceInXBetweenPlatforms = 3.39f, LeftRightMovementSpeed = 0.2f, HoverHeight = 2.0f, UpwardsSpeed = 0.2f;
+    public float ForwardMovementSpeed = 90.0f;
+    public float DifferenceInXBetweenPlatforms = 4f;
+    public float LeftRightMovementSpeed = 50.0f;
+    public float HoverHeight = 2.0f;
+    public float UpwardsSpeed = 50.0f;
+
     public bool hasController { get; set; }
+
     Vector3 vectorForConstantForwardMovement;
-    Vector3 leftLanePos, rightLanePos, centreLanePos;
+    Vector3 leftLanePos;
+    Vector3 rightLanePos;
+    Vector3 centreLanePos;
     Vector3 playerOrignalPosition;
-    bool movingLeft = false, movingRight = false, hovering = false, isGrounded = true, allowedToJump = true;
-    bool inLeftLane = false, inMidLane = true, inRightLane = false;
+
+    public bool finished = false;
+    bool movingLeft = false;
+    bool movingRight = false;
+    bool hovering = false;
+    bool isGrounded = true;
+    bool allowedToJump = true;
+    bool inLeftLane = false;
+    bool inMidLane = true;
+    bool inRightLane = false;
+
     float timer = 0.0f;
     float refreshJumpTimer = 0.0f;
+
     [SerializeField] bool magnatise = false;
-    [SerializeField] float timeInAir = 0.5f;
-    [SerializeField] float timeBetweenJumps = 2.0f;
+    [SerializeField] float timeInAir = 0.3f;
+    [SerializeField] float timeBetweenJumps = 0.2f;
 
     //For Xbox360 controller
     public XboxController controller { get; set; }
@@ -35,120 +53,128 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.Space) || XCI.GetButtonDown(XboxButton.A)) && allowedToJump)
+        if (!finished)
         {
-            hovering = true;
-            isGrounded = false;
-            allowedToJump = false;
-        }
-        if (magnatise)
-        {
-            if (!XCI.IsPluggedIn(1))
+            if ((Input.GetKeyDown(KeyCode.Space) || XCI.GetButtonDown(XboxButton.A)) && allowedToJump)
             {
-                //If both directions are being pressed
-                if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
+                hovering = true;
+                isGrounded = false;
+                allowedToJump = false;
+            }
+            if (magnatise)
+            {
+                if (!XCI.IsPluggedIn(1))
                 {
-                    movingLeft = false;
-                    movingRight = false;
+                    //If both directions are being pressed
+                    if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
+                    {
+                        movingLeft = false;
+                        movingRight = false;
+                    }
+                    else
+                    {
+                        //Left Movement
+                        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+                        {
+                            movingLeft = true;
+                        }
+                        else
+                        {
+                            movingLeft = false;
+                        }
+                        //Right Movement
+                        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+                        {
+                            movingRight = true;
+                        }
+                        else
+                        {
+                            movingRight = false;
+                        }
+                    }
                 }
                 else
                 {
-                    //Left Movement
-                    if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+                    if (XCI.GetAxisRaw(XboxAxis.LeftStickX, controller) < 0.0f)
+                    {
+                        movingLeft = true;
+                        movingRight = false;
+                    }
+                    if (XCI.GetAxisRaw(XboxAxis.LeftStickX, controller) > 0.0f)
+                    {
+                        movingRight = true;
+                        movingLeft = false;
+                    }
+                    if (XCI.GetAxisRaw(XboxAxis.LeftStickX, controller) == 0.0f)
+                    {
+                        movingLeft = false;
+                        movingRight = false;
+                    }
+                }
+            }
+            else if (!magnatise)
+            {
+                if (!XCI.IsPluggedIn(1))
+                {
+                    if (transform.position.x == leftLanePos.x)
+                    {
+                        if (movingLeft)
+                        {
+                            movingLeft = false;
+                        }
+                        inLeftLane = true;
+                        inMidLane = false;
+                        inRightLane = false;
+                    }
+                    if (transform.position.x == rightLanePos.x)
+                    {
+                        if (movingRight)
+                        {
+                            movingRight = false;
+                        }
+                        inLeftLane = false;
+                        inMidLane = false;
+                        inRightLane = true;
+                    }
+                    if (transform.position.x == centreLanePos.x)
+                    {
+                        inLeftLane = false;
+                        inMidLane = true;
+                        inRightLane = false;
+                    }
+                }
+                else
+                {
+                    if ((Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) && (!inLeftLane || !inMidLane))
                     {
                         movingLeft = true;
                     }
-                    else
-                    {
-                        movingLeft = false;
-                    }
-                    //Right Movement
-                    if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+                    if ((Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) && (!inMidLane || !inRightLane))
                     {
                         movingRight = true;
                     }
-                    else
+                    if (XCI.GetAxisRaw(XboxAxis.LeftStickX, controller) < 0.0f)
                     {
+                        movingLeft = true;
                         movingRight = false;
                     }
-                }
-            }
-            else
-            {
-                if (XCI.GetAxisRaw(XboxAxis.LeftStickX, controller) < 0.0f)
-                {
-                    movingLeft = true;
-                    movingRight = false;
-                }
-                if (XCI.GetAxisRaw(XboxAxis.LeftStickX, controller) > 0.0f)
-                {
-                    movingRight = true;
-                    movingLeft = false;
-                }
-                if (XCI.GetAxisRaw(XboxAxis.LeftStickX, controller) == 0.0f)
-                {
-                    movingLeft = false;
-                    movingRight = false;
-                }
-            }
-        }     
-        else if(!magnatise)
-        {
-            if (!XCI.IsPluggedIn(1))
-            {
-                if (transform.position.x == leftLanePos.x)
-                {
-                    if (movingLeft)
+                    if (XCI.GetAxisRaw(XboxAxis.LeftStickX, controller) > 0.0f)
                     {
+                        movingRight = true;
                         movingLeft = false;
                     }
-                    inLeftLane = true;
-                    inMidLane = false;
-                    inRightLane = false;
-                }
-                if (transform.position.x == rightLanePos.x)
-                {
-                    if (movingRight)
+                    if (XCI.GetAxisRaw(XboxAxis.LeftStickX, controller) == 0.0f)
                     {
+                        movingLeft = false;
                         movingRight = false;
                     }
-                    inLeftLane = false;
-                    inMidLane = false;
-                    inRightLane = true;
-                }
-                if (transform.position.x == centreLanePos.x)
-                {
-                    inLeftLane = false;
-                    inMidLane = true;
-                    inRightLane = false;
                 }
             }
-            else
-            {
-                if ((Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) && (!inLeftLane || !inMidLane))
-                {
-                    movingLeft = true;
-                }
-                if ((Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) && (!inMidLane || !inRightLane))
-                {
-                    movingRight = true;
-                }
-                if (XCI.GetAxisRaw(XboxAxis.LeftStickX, controller) < 0.0f)
-                {
-                    movingLeft = true;
-                    movingRight = false;
-                }
-                if (XCI.GetAxisRaw(XboxAxis.LeftStickX, controller) > 0.0f)
-                {
-                    movingRight = true;
-                    movingLeft = false;
-                }
-                if (XCI.GetAxisRaw(XboxAxis.LeftStickX, controller) == 0.0f)
-                {
-                    movingLeft = false;
-                    movingRight = false;
-                }
-            }
+        }
+        else
+        {
+            movingLeft = false;
+            movingRight = false;
         }
     }
 	void FixedUpdate ()

@@ -14,6 +14,10 @@ public class GameManager : MonoBehaviour
     float scoreTimer;
     bool showInfo = false;
 
+    //Values for restart
+    Transform playerTransformSave;
+
+
     [SerializeField] float distanceBetweenObjects = 250.0f;
     //[SerializeField] GameObject roadParent;
     //[SerializeField] GameObject hazardParent;
@@ -40,7 +44,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] Image WarningSt1;
     [SerializeField] BlinkingImage WarningSt2;
     [SerializeField] Text scoreText;
-    [SerializeField] Text nodeCounter;
 
     [SerializeField] Image multiplier;
     [SerializeField] Sprite x2Multiplier;
@@ -78,45 +81,52 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        globalTime += Time.deltaTime;
-        scoreTimer += Time.deltaTime;
-        if (playerEngine.engineHeatAmount < 100.0f)
+        if (!player.finished)
         {
-            //Every half second you get a point
-            if (scoreTimer >= 0.5f)
+            globalTime += Time.deltaTime;
+            scoreTimer += Time.deltaTime;
+            if (playerEngine.engineHeatAmount < 100.0f)
             {
-                gameScore++;
-                scoreTimer = 0.0f;
-            }
-        }
-        if(playerEngine.engineHeatAmount >= 100.0f)
-        {
-            isDead = true;
-        }
-        if (comboScore == combo2Score)
-        {
-            comboValue = 2;
-        }
-        if (comboScore == combo3Score)
-        {
-            comboValue = 3;
-        }
-        if (comboScore == combo4Score)
-        {
-            comboValue = 4;
-        }
-
-        for(int i = 0; i < parentArray.Length; i ++)
-        {
-            for(int j = 0; j < parentArray[i].transform.childCount; j ++)
-            {
-                if(Vector3.Distance(parentArray[i].transform.GetChild(j).transform.position, player.transform.position) <= distanceBetweenObjects)
+                //Every half second you get a point
+                if (scoreTimer >= 0.5f)
                 {
-                    parentArray[i].transform.GetChild(j).gameObject.SetActive(true);
+                    gameScore++;
+                    scoreTimer = 0.0f;
                 }
-                else
+            }
+            if (playerEngine.engineHeatAmount >= 100.0f)
+            {
+                isDead = true;
+            }
+            if (comboScore == combo2Score)
+            {
+                comboValue = 2;
+            }
+            if (comboScore == combo3Score)
+            {
+                comboValue = 3;
+            }
+            if (comboScore == combo4Score)
+            {
+                comboValue = 4;
+            }
+
+            for (int i = 0; i < parentArray.Length; i++)
+            {
+                for (int j = 0; j < parentArray[i].transform.childCount; j++)
                 {
-                    parentArray[i].transform.GetChild(j).gameObject.SetActive(false);
+                    if (Vector3.Distance(parentArray[i].transform.GetChild(j).transform.position, player.transform.position) <= distanceBetweenObjects)
+                    {
+                        parentArray[i].transform.GetChild(j).gameObject.SetActive(true);
+                    }
+                    else
+                    {
+                        parentArray[i].transform.GetChild(j).gameObject.SetActive(false);
+                    }
+                    if (parentArray[i].transform.GetChild(j).transform.position.z < player.transform.position.z - 40.0f)
+                    {
+                        parentArray[i].transform.GetChild(j).gameObject.SetActive(false);
+                    }
                 }
             }
         }

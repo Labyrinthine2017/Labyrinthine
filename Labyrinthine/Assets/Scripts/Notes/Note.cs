@@ -16,10 +16,11 @@ public class Note : MonoBehaviour
         collected = false;
     }
 
+    //Called from Player Script when the note has been hit
     public void Collected()
     {
         this.GetComponent<MeshRenderer>().enabled = false;
-
+        //Enables the particle emission of the note
         var emission = particles.emission;
         if (particles.isPlaying == false)
         {
@@ -29,16 +30,6 @@ public class Note : MonoBehaviour
         else
         {
             timer += Time.deltaTime;
-            if (timer >= 1.0f)
-            {
-                //for (int i = 0; i < transform.childCount; i++)
-                //{
-                //    if (transform.GetChild(i).tag == "Vechicle")
-                //    {
-                //        transform.GetChild(i).gameObject.SetActive(false);
-                //    }
-                //}
-            }
             if (timer >= 2.0f)
             {
                 emission.enabled = false;

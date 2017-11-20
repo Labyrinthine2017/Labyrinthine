@@ -22,7 +22,6 @@ public class FadeImage : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        Debug.Log(image.color.a);
         if (flash)
         {
             Color color = new Color(image.color.r, image.color.g, image.color.b, image.color.a + fadeAmount);
