@@ -176,6 +176,7 @@ public class GameManager : MonoBehaviour
         {
             multiplier.sprite = x2Multiplier;
             multiplier.SetNativeSize();
+            //multiplier.rectTransform.position = new Vector3(multiplier.rectTransform.position.x, multiplier.rectTransform.position.y - 400, multiplier.rectTransform.position.z);
         }
         if (comboValue == 3)
         {

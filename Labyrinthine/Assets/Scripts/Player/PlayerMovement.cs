@@ -63,54 +63,46 @@ public class PlayerMovement : MonoBehaviour
             }
             if (magnatise)
             {
-                if (!XCI.IsPluggedIn(1))
+
+                //If both directions are being pressed
+                if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) && XCI.GetAxisRaw(XboxAxis.LeftStickX, controller) == 0.0f)
                 {
-                    //If both directions are being pressed
-                    if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
-                    {
-                        movingLeft = false;
-                        movingRight = false;
-                    }
-                    else
-                    {
-                        //Left Movement
-                        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
-                        {
-                            movingLeft = true;
-                        }
-                        else
-                        {
-                            movingLeft = false;
-                        }
-                        //Right Movement
-                        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
-                        {
-                            movingRight = true;
-                        }
-                        else
-                        {
-                            movingRight = false;
-                        }
-                    }
+                    movingLeft = false;
+                    movingRight = false;
                 }
                 else
                 {
-                    if (XCI.GetAxisRaw(XboxAxis.LeftStickX, controller) < 0.0f)
+                    //Left Movement
+                    if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
                     {
                         movingLeft = true;
-                        movingRight = false;
                     }
-                    if (XCI.GetAxisRaw(XboxAxis.LeftStickX, controller) > 0.0f)
+                    else
+                    {
+                        movingLeft = false;
+                    }
+                    //Right Movement
+                    if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
                     {
                         movingRight = true;
-                        movingLeft = false;
                     }
-                    if (XCI.GetAxisRaw(XboxAxis.LeftStickX, controller) == 0.0f)
+                    else
                     {
-                        movingLeft = false;
                         movingRight = false;
                     }
                 }
+                
+
+                if (XCI.GetAxisRaw(XboxAxis.LeftStickX, controller) < 0.0f)
+                {
+                    movingLeft = true;
+                    movingRight = false;
+                }
+                if (XCI.GetAxisRaw(XboxAxis.LeftStickX, controller) > 0.0f)
+                {
+                    movingRight = true;
+                    movingLeft = false;
+                }                
             }
             else if (!magnatise)
             {

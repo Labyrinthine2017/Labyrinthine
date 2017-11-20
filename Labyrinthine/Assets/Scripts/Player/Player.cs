@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using XInputDotNetPure;
 
 public class Player : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject vehicle;
     [SerializeField] FadeImage coolant;
     [SerializeField] FadeImage hazard;
+    [SerializeField] GameObject nuke;
     // Update is called once per frame
     void Start()
     {
@@ -69,6 +71,10 @@ public class Player : MonoBehaviour
         {
             movement.finished = true;
             shake.transform.parent = null;
+        }
+        if(other.tag == "Nuke")
+        {
+            nuke.SetActive(true);
         }
         if(other.tag == "Hazard")
         {
