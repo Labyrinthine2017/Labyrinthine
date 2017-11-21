@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class NoteSound : MonoBehaviour
 {
-    private AudioSource source;
+    public AudioSource source;
+    public AudioClip clip;
     private bool bPlay = false;
 
     void Awake()
@@ -15,10 +16,12 @@ public class NoteSound : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && bPlay == true)
+        if(bPlay == true)
         {
-            source.Play();
-            bPlay = false;
+            Camera.main.GetComponent<AudioSource>().Play();
+           //AudioSource.PlayClipAtPoint(clip, transform.position);
+           // source.PlayOneShot(clip, 1.0f);
+           // bPlay = false;
         }
     }
 

@@ -29,6 +29,9 @@ TagManager:
   - DangerZone
   - Note
   - Hazard
+  - MenuTag
+  - GUI_Tag
+  - PlayMusic
   layers:
   - Default
   - TransparentFX

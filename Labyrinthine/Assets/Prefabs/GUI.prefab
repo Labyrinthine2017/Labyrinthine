@@ -111,7 +111,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1293513552754640
 GameObject:
   m_ObjectHideFlags: 1
@@ -515,7 +515,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01d7fcfc7892c404f8a2c2624c5ecdb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: RAD_City_019.5
 --- !u!114 &114489010753423752
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -717,7 +716,6 @@ MonoBehaviour:
   WarningSt1: {fileID: 114601489714323708}
   WarningSt2: {fileID: 114766555712864532}
   scoreText: {fileID: 114489010753423752}
-  nodeCounter: {fileID: 114054056389049724}
   multiplier: {fileID: 114106807951346754}
   x2Multiplier: {fileID: 21300000, guid: 4bf080f7e84ed5e49a5193aa26723afd, type: 3}
   x3Multiplier: {fileID: 21300000, guid: 3b9f144f8df5e9c46838cd83a86ffdae, type: 3}

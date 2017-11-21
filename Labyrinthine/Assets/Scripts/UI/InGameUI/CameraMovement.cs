@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class CameraMovement : MonoBehaviour
 {
     public Transform[] tTarget;
     public Transform tCar;
     private GameObject tp;
     private GameObject UIMenu;
+    public GameObject GUITag;
+    private GameObject m_goPlayerpos;
+    private GameObject m_goPlayMusic;
 
     private Vector3 m_vMenuPos;
     private Vector3 m_vGamepos;
@@ -19,12 +23,24 @@ public class CameraMovement : MonoBehaviour
     private void Awake()
     {
         transform.LookAt(tCar);
+
         m_vMenuPos = transform.position;
-        m_vGamepos = new Vector3(0f, 0.38f, -11.5f);
+        m_vGamepos = new Vector3(0f, 0.38f, -21.05f);
+
+        m_goPlayerpos = GameObject.FindWithTag("Player");
+        m_goPlayMusic = GameObject.FindWithTag("PlayMusic");
+
+    }
+
+    private void DelayedAudio()
+    {
+        GetComponent<AudioSource>().Play();
     }
 
     public void StartGame()
     {
+        Invoke("DelayedAudio", 1);
+
         bStart = true;
         tp = GameObject.FindWithTag("tp");
         UIMenu = GameObject.FindWithTag("MenuTag");
@@ -36,12 +52,21 @@ public class CameraMovement : MonoBehaviour
         {
            if (Vector3.Distance(transform.position, tTarget[nCurrent].position) > 0.1f)
            {
-               transform.position = Vector3.MoveTowards(transform.position, tTarget[nCurrent].position, fSpeed * Time.deltaTime);
-               transform.LookAt(tCar);
+                
+                transform.position = Vector3.MoveTowards(transform.position, tTarget[nCurrent].position, fSpeed * Time.deltaTime);
+                transform.LookAt(tCar);
+                
+                GUITag.SetActive(true);
 
-               Destroy(tp);
-               Destroy(UIMenu);
+                m_goPlayerpos.transform.position = m_vGamepos;
 
+
+                m_goPlayMusic.SetActive(true);
+
+                
+
+                Destroy(tp);
+                Destroy(UIMenu);
             }
            else
            {
@@ -56,6 +81,18 @@ public class CameraMovement : MonoBehaviour
 
 	}
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(bStart)
+        {
+            if (gameObject.tag == "PlayMusic")
+            {
+                 other.isTrigger = true;
+            }
+        }
 
-    
+    }
+
+
+
 }
