@@ -11,10 +11,11 @@ public class CameraMovement : MonoBehaviour
     private GameObject UIMenu;
     public GameObject GUITag;
     private GameObject m_goPlayerpos;
-    private GameObject m_goPlayMusic;
 
     private Vector3 m_vMenuPos;
     private Vector3 m_vGamepos;
+
+	public int m_nMusicDelay = 1;
 
     public float fSpeed;
     private int nCurrent;
@@ -28,7 +29,6 @@ public class CameraMovement : MonoBehaviour
         m_vGamepos = new Vector3(0f, 0.38f, -21.05f);
 
         m_goPlayerpos = GameObject.FindWithTag("Player");
-        m_goPlayMusic = GameObject.FindWithTag("PlayMusic");
 
     }
 
@@ -39,7 +39,7 @@ public class CameraMovement : MonoBehaviour
 
     public void StartGame()
     {
-        Invoke("DelayedAudio", 1);
+		Invoke("DelayedAudio", m_nMusicDelay);
 
         bStart = true;
         tp = GameObject.FindWithTag("tp");
@@ -51,8 +51,7 @@ public class CameraMovement : MonoBehaviour
         if(bStart)
         {
            if (Vector3.Distance(transform.position, tTarget[nCurrent].position) > 0.1f)
-           {
-                
+           {              
                 transform.position = Vector3.MoveTowards(transform.position, tTarget[nCurrent].position, fSpeed * Time.deltaTime);
                 transform.LookAt(tCar);
                 
@@ -60,14 +59,11 @@ public class CameraMovement : MonoBehaviour
 
                 m_goPlayerpos.transform.position = m_vGamepos;
 
-
-                m_goPlayMusic.SetActive(true);
-
-                
-
                 Destroy(tp);
                 Destroy(UIMenu);
             }
+
+
            else
            {
                transform.position = tTarget[nCurrent].position;

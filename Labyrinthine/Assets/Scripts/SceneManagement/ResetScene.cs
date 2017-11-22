@@ -8,14 +8,14 @@ using UnityEngine.SceneManagement;
 public class ResetScene : MonoBehaviour
 {
     //public string that allows Designers to change the scene name 
-    private string SceneName = "Rad_City_Built";
+    private int SceneName = 0;
 
     //Apon Key "R" the scene will reset and load the selected scene name
 	void Update()
     {
         if(Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene(SceneName);
+			SceneManager.LoadScene(SceneName);
         }
             
 	}
