@@ -15,27 +15,36 @@ public class Note : MonoBehaviour
     {
         collected = false;
     }
+    private void Update()
+    {
+        if(collected)
+        {
+            this.GetComponent<MeshRenderer>().enabled = false;
+            //Enables the particle emission of the note
+            var emission = particles.emission;
+            if (particles.isPlaying == false)
+            {
+                emission.enabled = true;
+                particles.Play(true);
+            }
+            else
+            {
+                timer += Time.deltaTime;
+                if (timer >= 2.0f)
+                {
+                    particles.gameObject.SetActive(false);
+                    collected = false;
+                    //emission.enabled = false;
+                    //particles.Play(false);
+                }
+            }
+            
+        }
+    }
 
     //Called from Player Script when the note has been hit
     public void Collected()
     {
-        this.GetComponent<MeshRenderer>().enabled = false;
-        //Enables the particle emission of the note
-        var emission = particles.emission;
-        if (particles.isPlaying == false)
-        {
-            emission.enabled = true;
-            particles.Play(true);
-        }
-        else
-        {
-            timer += Time.deltaTime;
-            if (timer >= 2.0f)
-            {
-                emission.enabled = false;
-                particles.Play(false);
-            }
-        }
         collected = true;
     }
 }

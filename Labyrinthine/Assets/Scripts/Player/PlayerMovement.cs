@@ -285,8 +285,9 @@ public class PlayerMovement : MonoBehaviour
             {
                 transform.Translate(Vector3.down * UpwardsSpeed * Time.fixedDeltaTime);
             }
-            if(transform.position.y == playerOrignalPosition.y && !isGrounded)
+            if(transform.position.y <= playerOrignalPosition.y && !isGrounded)
             {
+                transform.position = new Vector3(transform.position.x, playerOrignalPosition.y, transform.position.z);
                 isGrounded = true;
             }
             if(isGrounded && !allowedToJump)

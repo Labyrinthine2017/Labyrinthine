@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     float globalTime;
     float scoreTimer;
     bool showInfo = false;
+    bool allowScoring = true;
 
     //Values for restart
     Transform playerTransformSave;
@@ -90,8 +91,11 @@ public class GameManager : MonoBehaviour
                 //Every half second you get a point
                 if (scoreTimer >= 0.5f)
                 {
-                    gameScore++;
-                    scoreTimer = 0.0f;
+                    if (allowScoring)
+                    {
+                        gameScore++;
+                        scoreTimer = 0.0f;
+                    }
                 }
             }
             if (playerEngine.engineHeatAmount >= 100.0f)
@@ -264,6 +268,16 @@ public class GameManager : MonoBehaviour
     public Player GetPlayer()
     {
         return player;
+    }
+
+    public void ResetScore()
+    {
+        gameScore = 0.0f;
+    }
+
+    public void StopScore()
+    {
+
     }
 
 }

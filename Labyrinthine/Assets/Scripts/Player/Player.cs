@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
     [SerializeField] FadeImage coolant;
     [SerializeField] FadeImage hazard;
     [SerializeField] GameObject nuke;
+    [SerializeField] GameObject gui;
     // Update is called once per frame
     void Start()
     {
@@ -65,11 +66,25 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            if(Input.GetKeyDown(KeyCode.J))
+            {
+                this.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 1000.0f);
+                engine.CoolEngineByAmount(50.0f);
+            }            
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "END")
         {
             movement.finished = true;
+            gui.SetActive(false);
+            manager.StopScore();
             shake.transform.parent = null;
         }
         if(other.tag == "Nuke")

@@ -35,6 +35,7 @@ public class ScreenShake : MonoBehaviour
 
     void Update()
     {
+        //transform.localPosition = new Vector3(transform.localPosition.x, 4.36f, transform.localPosition.z);
         if (shake)
         {
             if (shakeDuration > 0)

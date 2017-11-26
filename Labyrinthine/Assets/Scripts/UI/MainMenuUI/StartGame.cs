@@ -21,4 +21,9 @@ public class StartGame : MonoBehaviour
     {
         
     }
+
+    public void StartSettings()
+    {
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().ResetScore();
+    }
 }
