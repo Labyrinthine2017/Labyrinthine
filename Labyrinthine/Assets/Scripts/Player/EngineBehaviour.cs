@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class EngineBehaviour : MonoBehaviour
 {
@@ -26,6 +28,9 @@ public class EngineBehaviour : MonoBehaviour
         {
             engineHeatAmount = 100.0f;
             gameObject.GetComponent<PlayerMovement>().enabled = false;
+
+            Invoke("GameOver", 3);
+
 			gameObject.GetComponent<Player> ().isDead = true;
             if (soundPlayed == false)
             {
@@ -69,5 +74,11 @@ public class EngineBehaviour : MonoBehaviour
         {
             engineHeatAmount = 0.0f;
         }
+    }
+
+    public void GameOver()
+    {
+        SceneManager.LoadScene(2);
+
     }
 }

@@ -98,7 +98,7 @@ public class Player : MonoBehaviour
         if(other.tag == "Nuke")
         {
             nuke.SetActive(true);
-            Invoke("WinGame", 7);
+            Invoke("WinGame", 7.5f);
         }
         if(other.tag == "Hazard")
         {
