@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     private float timerForInDanger;
     public bool finished = false;
 	public bool isDead = false;
+    public float rotationAngle = -17.0f;
 
     [SerializeField] float shieldTimer;
     [SerializeField] float timeInDangerToTakeDamage;
@@ -97,6 +98,8 @@ public class Player : MonoBehaviour
             gui.SetActive(false);
             //Stops adding score
             manager.StopScore();
+            shake.gameObject.transform.parent = null;
+            shake.gameObject.transform.rotation = Quaternion.Euler(new Vector3(rotationAngle, 0.0f, 0.0f));
         }
         if(other.tag == "Nuke")
         {
