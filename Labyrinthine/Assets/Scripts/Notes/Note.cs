@@ -22,7 +22,7 @@ public class Note : MonoBehaviour
             this.GetComponent<MeshRenderer>().enabled = false;
             //Enables the particle emission of the note
             var emission = particles.emission;
-            if (particles.isPlaying == false)
+            if (emission.enabled == false)
             {
                 emission.enabled = true;
                 particles.Play(true);

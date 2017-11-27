@@ -8,6 +8,6 @@ public class CameraProperties : MonoBehaviour
 	void Update ()
     {
         //Keeps the camera's y level at a constant value.
-        this.transform.position = new Vector3(transform.position.x, 4.36f, transform.position.z);
+        //this.transform.position = new Vector3(transform.position.x, 4.36f, transform.position.z);
 	}
 }

@@ -10,11 +10,13 @@ public class FadeImage : MonoBehaviour
     public float fadeOutAmount = 0.08f;
     float fadeAmount;
     public bool flash = false;
+    Color original;
 	// Use this for initialization
 	void Start ()
     {
         image = GetComponent<Image>();
         image.color = new Color(image.color.r, image.color.g, image.color.b, 0.0f);
+        original = new Color(image.color.r, image.color.g, image.color.b, 0.0f);
         fadeAmount = fadeInAmount;
         fadeOutAmount = -fadeOutAmount;
     }
@@ -37,4 +39,15 @@ public class FadeImage : MonoBehaviour
             }            
         }
 	}
+
+    public void ResetValues()
+    {
+        image.color = original;
+        fadeAmount = fadeInAmount;
+        if (fadeOutAmount > 0)
+        {
+            fadeOutAmount = -fadeOutAmount;
+        }
+        flash = false;
+    }
 }

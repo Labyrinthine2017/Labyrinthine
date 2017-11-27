@@ -110,6 +110,7 @@ public class Player : MonoBehaviour
         }
         if(other.tag == "Note")
         {
+            coolant.ResetValues();
             //Adds to the combo counter
             manager.comboScore += 1;
             //Adds to the total score
