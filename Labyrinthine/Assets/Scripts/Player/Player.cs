@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using XInputDotNetPure;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -97,6 +98,7 @@ public class Player : MonoBehaviour
         if(other.tag == "Nuke")
         {
             nuke.SetActive(true);
+            Invoke("WinGame", 7);
         }
         if(other.tag == "Hazard")
         {
@@ -150,5 +152,10 @@ public class Player : MonoBehaviour
         jetSoundLeft.loop = true;
         jetSoundRight.Play();
         jetSoundRight.loop = true;
+    }
+
+    public void WinGame()
+    {
+        SceneManager.LoadScene(1);
     }
 }

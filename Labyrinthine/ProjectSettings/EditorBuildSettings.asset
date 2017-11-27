@@ -8,3 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RAD_City_Gold.unity
     guid: bacffc53f7746274d913f59d3fb721da
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/Win_Scene.unity
+    guid: 7fd5e32f74abc8b41b11cab5934683f7
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/GameOver.unity
+    guid: 473a030f4f1a1b04784eaf275bd05f79

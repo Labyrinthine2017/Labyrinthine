@@ -23,8 +23,6 @@ GameObject:
   - component: {fileID: 65374546114199370}
   - component: {fileID: 23347980317357982}
   - component: {fileID: 54207932951279860}
-  - component: {fileID: 114832630715104286}
-  - component: {fileID: 114211573658776698}
   m_Layer: 8
   m_Name: Damage Zone
   m_TagString: Untagged
@@ -111,25 +109,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114211573658776698
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1274608853480928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ba51a248acc6ee49af3e7e85ba2bde6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114832630715104286
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1274608853480928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ba51a248acc6ee49af3e7e85ba2bde6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

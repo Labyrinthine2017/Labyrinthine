@@ -246,7 +246,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01d7fcfc7892c404f8a2c2624c5ecdb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: Rad_City_023
 --- !u!114 &470121219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -565,7 +564,7 @@ RectTransform:
   m_GameObject: {fileID: 1128286550}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 11.95765, y: 5.95856, z: 5.469989}
+  m_LocalScale: {x: 14.371248, y: 7.801559, z: 6.574084}
   m_Children: []
   m_Father: {fileID: 1596394434}
   m_RootOrder: 0
