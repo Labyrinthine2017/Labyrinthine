@@ -26,6 +26,7 @@ public class EngineBehaviour : MonoBehaviour
         {
             engineHeatAmount = 100.0f;
             gameObject.GetComponent<PlayerMovement>().enabled = false;
+			gameObject.GetComponent<Player> ().isDead = true;
             if (soundPlayed == false)
             {
                 boomSound.Play();

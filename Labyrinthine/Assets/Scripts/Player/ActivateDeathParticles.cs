@@ -8,6 +8,7 @@ public class ActivateDeathParticles : MonoBehaviour
     [SerializeField]ParticleSystem myParticle;
     EngineBehaviour myEngine;
     float timer = 0.0f;
+	bool played = false;
     private void Awake()
     {
         myEngine = GetComponent<EngineBehaviour>();
@@ -19,12 +20,22 @@ public class ActivateDeathParticles : MonoBehaviour
         {
             var emission = myParticle.emission;
             
-            if (myParticle.isPlaying == false)
+			if (myParticle.isPlaying == false && !played)
             {                
                 emission.enabled = true;
                 myParticle.Play(true);
+				played = true;
+
+				for (int i = 0; i < transform.childCount; i++)
+				{
+					if (transform.GetChild(i).tag == "Vechicle")
+					{
+						transform.GetChild(i).gameObject.SetActive(false);
+					}
+				}
             }
-            else
+            /*
+			else
             {
                 timer += Time.deltaTime;
                 if(timer >= 1.0f)
@@ -43,7 +54,7 @@ public class ActivateDeathParticles : MonoBehaviour
                     myParticle.Play(false);
                     
                 }
-            }
+            }*/
         }
     }
 }

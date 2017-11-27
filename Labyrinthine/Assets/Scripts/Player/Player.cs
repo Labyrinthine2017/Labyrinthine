@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     private bool startInTimer;
     private float timerForInDanger;
     public bool finished = false;
+	public bool isDead = false;
 
     [SerializeField] float shieldTimer;
     [SerializeField] float timeInDangerToTakeDamage;
@@ -51,22 +52,25 @@ public class Player : MonoBehaviour
                 timerForInDanger = 0;
             }
         }
-        if (takenDamage)
-        {
-            //Shield ability that keeps you from taking damage
-            shieldTimer -= Time.deltaTime;
-            if (shieldTimer <= 0.0f)
-            {
-                takenDamage = false;
-                shieldTimer = timeStorage;
-            }
-            //Mimiks the flashing effect of the player, after being hit
-            vehicle.gameObject.SetActive(!vehicle.activeSelf);
-        }
-        if (!takenDamage && vehicle.gameObject.activeSelf == false)
-        {
-            vehicle.gameObject.SetActive(true);
-        }
+		if (takenDamage) 
+		{
+			if (!isDead) 
+			{
+				//Shield ability that keeps you from taking damage
+				shieldTimer -= Time.deltaTime;
+				if (shieldTimer <= 0.0f) 
+				{
+					takenDamage = false;
+					shieldTimer = timeStorage;
+				}
+				//Mimiks the flashing effect of the player, after being hit
+				vehicle.gameObject.SetActive (!vehicle.activeSelf);
+			}
+			if (!takenDamage && vehicle.gameObject.activeSelf == false)
+			{
+				vehicle.gameObject.SetActive (true);
+			}
+		}
     }
 
     private void Update()
