@@ -25,6 +25,9 @@ public class Player : MonoBehaviour
     [SerializeField] FadeImage hazard;
     [SerializeField] GameObject nuke;
     [SerializeField] GameObject gui;
+    [SerializeField] AudioSource hitSound;
+    [SerializeField] AudioSource jetSoundLeft;
+    [SerializeField] AudioSource jetSoundRight;
     // Update is called once per frame
     void Start()
     {
@@ -95,6 +98,7 @@ public class Player : MonoBehaviour
         {
             if (!takenDamage)
             {
+                hitSound.Play();
                 //Adds the heat to the engine
                 engine.engineHeatAmount += hazardHeatDamage;
                 //Shakes your screen
@@ -134,5 +138,12 @@ public class Player : MonoBehaviour
             //Resets the timer
             timerForInDanger = 0.0f;
         }
+    }
+    public void StartSounds()
+    {
+        jetSoundLeft.Play();
+        jetSoundLeft.loop = true;
+        jetSoundRight.Play();
+        jetSoundRight.loop = true;
     }
 }

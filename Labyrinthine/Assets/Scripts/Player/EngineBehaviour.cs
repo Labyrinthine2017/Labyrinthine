@@ -5,8 +5,10 @@ using UnityEngine;
 public class EngineBehaviour : MonoBehaviour
 {
     public float engineHeatAmount { get; set; }
+    bool soundPlayed = false;
     [SerializeField] GameObject blast;
     [SerializeField] float heatIncreaseAmount = 1.0f;
+    [SerializeField] AudioSource boomSound;
     float timer = 0.0f;
     // Update is called once per frame
 
@@ -24,11 +26,17 @@ public class EngineBehaviour : MonoBehaviour
         {
             engineHeatAmount = 100.0f;
             gameObject.GetComponent<PlayerMovement>().enabled = false;
+            if (soundPlayed == false)
+            {
+                boomSound.Play();
+                soundPlayed = true;
+            }
             var emission = blast.GetComponent<ParticleSystem>().emission;
             if (emission.enabled == false)
             {
                 emission.enabled = true;
             }
+            //this.enabled = false;
         }
         else
         {
