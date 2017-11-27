@@ -32,6 +32,7 @@ TagManager:
   - MenuTag
   - GUI_Tag
   - PlayMusic
+  - Nuke
   layers:
   - Default
   - TransparentFX
