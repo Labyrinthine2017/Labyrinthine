@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
     [SerializeField] AudioSource hitSound;
     [SerializeField] AudioSource jetSoundLeft;
     [SerializeField] AudioSource jetSoundRight;
+    [SerializeField] ParticleSystem jetstreamParticles;
     // Update is called once per frame
     void Start()
     {
@@ -90,20 +91,26 @@ public class Player : MonoBehaviour
     {
         if(other.tag == "END")
         {
+            //Stops the movement
             movement.finished = true;
+            //Hides the GUI
             gui.SetActive(false);
+            //Stops adding score
             manager.StopScore();
-            shake.transform.parent = null;
         }
         if(other.tag == "Nuke")
         {
+            //Sets off the nuclear detination
             nuke.SetActive(true);
             Invoke("WinGame", 7.5f);
         }
         if(other.tag == "Hazard")
         {
+            //If you have not taken damage recently.
             if (!takenDamage)
             {
+                //Resets the values to restart the flashing effect
+                hazard.ResetValues();
                 hitSound.Play();
                 //Adds the heat to the engine
                 engine.engineHeatAmount += hazardHeatDamage;
@@ -116,6 +123,7 @@ public class Player : MonoBehaviour
         }
         if(other.tag == "Note")
         {
+            //Resets the values to restart the flashing effect
             coolant.ResetValues();
             //Adds to the combo counter
             manager.comboScore += 1;
@@ -130,12 +138,10 @@ public class Player : MonoBehaviour
         }
         if(other.tag == "DangerZone")
         {
-                //Starts a timer for the duration that you are inside the danger zone
-                startInTimer = true;
-            
+            //Starts a timer for the duration that you are inside the danger zone
+            startInTimer = true;            
         }
     }
-
     private void OnTriggerExit(Collider other)
     {
         if(other.tag == "DangerZone")
@@ -153,9 +159,12 @@ public class Player : MonoBehaviour
         jetSoundRight.Play();
         jetSoundRight.loop = true;
     }
-
     public void WinGame()
     {
         SceneManager.LoadScene(1);
+    }
+    public void ActivateParticleSystem()
+    {
+        jetstreamParticles.Play();
     }
 }

@@ -26,5 +26,6 @@ public class StartGame : MonoBehaviour
     {
         GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().ResetScore();
         GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().StartSounds();
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().ActivateParticleSystem();
     }
 }

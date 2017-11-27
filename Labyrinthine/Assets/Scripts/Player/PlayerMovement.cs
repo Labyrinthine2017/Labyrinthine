@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     bool inLeftLane = false;
     bool inMidLane = true;
     bool inRightLane = false;
+    bool xciMoving = false;
 
     float timer = 0.0f;
     float refreshJumpTimer = 0.0f;
@@ -89,6 +90,19 @@ public class PlayerMovement : MonoBehaviour
                     if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow))
                     {
                         tireSound.Play();
+                    }
+                    if(XCI.GetAxisRaw(XboxAxis.LeftStickX) > 0 || XCI.GetAxisRaw(XboxAxis.LeftStickX) < 0)
+                    {
+                        if(xciMoving != true)
+                        {
+                            tireSound.Play();
+                            xciMoving = true;
+                        }
+                    }
+                    if(XCI.GetAxisRaw(XboxAxis.LeftStickX) == 0.0f && xciMoving == true)
+                    {
+                        tireSound.Play();
+                        xciMoving = false;
                     }
                     //Left Movement
                     if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
