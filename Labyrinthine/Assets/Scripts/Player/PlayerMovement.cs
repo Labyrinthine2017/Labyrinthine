@@ -30,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
     bool inMidLane = true;
     bool inRightLane = false;
     bool xciMoving = false;
+    bool bIsOnMenu = true;
 
     float timer = 0.0f;
     float refreshJumpTimer = 0.0f;
@@ -55,6 +56,11 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
+        if (bIsOnMenu)
+        {
+            return;
+        }
+
         if (!finished)
         {
             if ((Input.GetKeyDown(KeyCode.Space) || XCI.GetButtonDown(XboxButton.A)) && allowedToJump)
@@ -122,6 +128,7 @@ public class PlayerMovement : MonoBehaviour
                     {
                         movingRight = false;
                     }
+                        
                 }
                 
 
@@ -332,5 +339,10 @@ public class PlayerMovement : MonoBehaviour
                 refreshJumpTimer = 0.0f;
             }
         }
+    }
+
+    public void MenuEnd()
+    {
+        bIsOnMenu = false;
     }
 }

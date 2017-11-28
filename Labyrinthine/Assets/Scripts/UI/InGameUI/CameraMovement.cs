@@ -42,7 +42,7 @@ public class CameraMovement : MonoBehaviour
     public void StartGame()
     {
 		Invoke("DelayedAudio", m_nMusicDelay);
-
+        transform.parent.SendMessage("MenuEnd", SendMessageOptions.DontRequireReceiver);
         bStart = true;
         tp = GameObject.FindWithTag("tp");
         UIMenu = GameObject.FindWithTag("MenuTag");
