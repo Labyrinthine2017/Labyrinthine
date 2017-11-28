@@ -115,7 +115,7 @@ public class Player : MonoBehaviour
         {
             //Sets off the nuclear detination
             nuke.SetActive(true);
-            Invoke("WinGame", 7.5f);
+            Invoke("WinGame", 7.0f);
         }
         if (!godMode)
         {
