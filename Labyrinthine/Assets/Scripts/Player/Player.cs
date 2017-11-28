@@ -83,14 +83,7 @@ public class Player : MonoBehaviour
     private void Update()
     {
         CheatCodes();
-        if(Input.GetKey(KeyCode.LeftShift))
-        {
-            if(Input.GetKeyDown(KeyCode.J))
-            {
-                this.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 1000.0f);
-                engine.CoolEngineByAmount(50.0f);
-            }            
-        }
+       
         if(city.transform.position.z >= 11037.0f)
         {
             city.transform.parent = null;
@@ -197,5 +190,13 @@ public class Player : MonoBehaviour
         {
             movement.ForwardMovementSpeed *= 10.0f;
         }
+
+        //HardMode
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.H))
+        {
+            movement.ForwardMovementSpeed = 150.0f;
+            movement.UpwardsSpeed = 20f;
+        }
+
     }
 }
