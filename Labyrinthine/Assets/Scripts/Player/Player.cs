@@ -190,7 +190,7 @@ public class Player : MonoBehaviour
         //God Mode
         if(Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.G))
         {
-            godMode = !godMode;
+            godMode = true;
         }
         //LightSpeed
         if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.L))
