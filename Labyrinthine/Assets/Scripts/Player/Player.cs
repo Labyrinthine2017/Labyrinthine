@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
 	public bool isDead = false;
     public float rotationAngle = -17.0f;
 
+    bool godMode = false;
+
     [SerializeField] float shieldTimer;
     [SerializeField] float timeInDangerToTakeDamage;
     [SerializeField] private float hazardHeatDamage = 5.0f;
@@ -32,6 +34,8 @@ public class Player : MonoBehaviour
     [SerializeField] AudioSource jetSoundLeft;
     [SerializeField] AudioSource jetSoundRight;
     [SerializeField] ParticleSystem jetstreamParticles;
+    [SerializeField] GameObject city;
+    [SerializeField] GameObject alienMotherShip;
     // Update is called once per frame
     void Start()
     {
@@ -78,6 +82,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        CheatCodes();
         if(Input.GetKey(KeyCode.LeftShift))
         {
             if(Input.GetKeyDown(KeyCode.J))
@@ -85,6 +90,11 @@ public class Player : MonoBehaviour
                 this.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 1000.0f);
                 engine.CoolEngineByAmount(50.0f);
             }            
+        }
+        if(city.transform.position.z >= 11037.0f)
+        {
+            city.transform.parent = null;
+            city.transform.position = new Vector3(city.transform.position.x, city.transform.position.y, 11037.0f);
         }
     }
 
@@ -107,21 +117,29 @@ public class Player : MonoBehaviour
             nuke.SetActive(true);
             Invoke("WinGame", 7.5f);
         }
-        if(other.tag == "Hazard")
+        if (!godMode)
         {
-            //If you have not taken damage recently.
-            if (!takenDamage)
+            if (other.tag == "Hazard")
             {
-                //Resets the values to restart the flashing effect
-                hazard.ResetValues();
-                hitSound.Play();
-                //Adds the heat to the engine
-                engine.engineHeatAmount += hazardHeatDamage;
-                //Shakes your screen
-                shake.StartShake();
-                //Enables a little shield
-                takenDamage = true;
-				hazard.flash = true;
+                //If you have not taken damage recently.
+                if (!takenDamage)
+                {
+                    //Resets the values to restart the flashing effect
+                    hazard.ResetValues();
+                    hitSound.Play();
+                    //Adds the heat to the engine
+                    engine.engineHeatAmount += hazardHeatDamage;
+                    //Shakes your screen
+                    shake.StartShake();
+                    //Enables a little shield
+                    takenDamage = true;
+                    hazard.flash = true;
+                }
+            }
+            if (other.tag == "DangerZone")
+            {
+                //Starts a timer for the duration that you are inside the danger zone
+                startInTimer = true;
             }
         }
         if(other.tag == "Note")
@@ -139,11 +157,7 @@ public class Player : MonoBehaviour
             //Starts the animation for the note collection
             other.GetComponent<Note>().Collected();
         }
-        if(other.tag == "DangerZone")
-        {
-            //Starts a timer for the duration that you are inside the danger zone
-            startInTimer = true;            
-        }
+
     }
     private void OnTriggerExit(Collider other)
     {
@@ -169,5 +183,19 @@ public class Player : MonoBehaviour
     public void ActivateParticleSystem()
     {
         jetstreamParticles.Play();
+    }
+
+    public void CheatCodes()
+    {
+        //God Mode
+        if(Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.G))
+        {
+            godMode = !godMode;
+        }
+        //LightSpeed
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.L))
+        {
+            movement.ForwardMovementSpeed *= 10.0f;
+        }
     }
 }

@@ -34,6 +34,7 @@ public class BlinkingImage : MonoBehaviour
             time = 0.0f;
             flashed = false;
         }
+       
     }
 
     void ToggleState()

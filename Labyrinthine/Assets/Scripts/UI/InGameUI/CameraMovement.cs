@@ -15,8 +15,6 @@ public class CameraMovement : MonoBehaviour
     private Vector3 m_vMenuPos;
     private Vector3 m_vGamepos;
 
-    public CameraProperties properties;
-
 	public int m_nMusicDelay = 1;
 
     public float fSpeed;
@@ -73,7 +71,6 @@ public class CameraMovement : MonoBehaviour
                nCurrent = (nCurrent + 1) % tTarget.Length;
 
                 m_vMenuPos = m_vGamepos;
-                properties.enabled = true;
                 this.enabled = false;
             }
         }     
