@@ -1,0 +1,864 @@
+fileFormatVersion: 2
+guid: eab88fb3ce394444d926782149fa20df
+timeCreated: 1511241301
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Axle
+    100004: Backpiece
+    100006: Base
+    100008: base
+    100010: Base 1
+    100012: base 1
+    100014: base 2
+    100016: base 3
+    100018: Bolt1
+    100020: bolt1
+    100022: Bolt2
+    100024: bolt2
+    100026: Bolt2 1
+    100028: Bolt3
+    100030: bolt3
+    100032: Bolt4
+    100034: Bolt4 1
+    100036: Bolt5
+    100038: Bolt6
+    100040: Bolts
+    100042: Brace
+    100044: Brace1
+    100046: Brace2
+    100048: Brace3
+    100050: Canopy
+    100052: Chassis
+    100054: Corepipes
+    100056: Deflector1
+    100058: Deflector2
+    100060: Deflector2 1
+    100062: Deflector3
+    100064: Deflector3 1
+    100066: Deflector4
+    100068: Deflector4 1
+    100070: Deflectordriver_L
+    100072: Deflectordriver_L 1
+    100074: Deflectors
+    100076: Deflectors 1
+    100078: group14
+    100080: group14 1
+    100082: group15
+    100084: group15 1
+    100086: group16
+    100088: group17
+    100090: Hinge_L
+    100092: Hinge_L 1
+    100094: Hollowheel_L
+    100096: Hollowheel_L 1
+    100098: HP1
+    100100: HP1 1
+    100102: HP2
+    100104: HP2 1
+    100106: HP3
+    100108: HP3 1
+    100110: HP4
+    100112: HP4 1
+    100114: HP5
+    100116: HP5 1
+    100118: HP6
+    100120: HP6 1
+    100122: HP7
+    100124: HP7 1
+    100126: HP8
+    100128: HP8 1
+    100130: Jet_body
+    100132: Jet_body 1
+    100134: Jet_Internals
+    100136: Jet_Internals 1
+    100138: Jet_Left
+    100140: Jet_Right
+    100142: Jetbase
+    100144: Jetbase 1
+    100146: Jetdriver_L
+    100148: Jetdriver_R
+    100150: JettiltdriverL
+    100152: JettiltdriverR
+    100154: Left_Wheels
+    100156: LeftExhaust
+    100158: light1
+    100160: light2
+    100162: light3
+    100164: light4
+    100166: Line1
+    100168: Line1 1
+    100170: Line2
+    100172: Line2 1
+    100174: Line3
+    100176: Line3 1
+    100178: Line4
+    100180: Line4 1
+    100182: Nuclear_Exhaust
+    100184: Nuclear_Exhaust2
+    100186: Nuclear_Exhaust2 1
+    100188: Nuclear_Exhaust2 2
+    100190: Nuclear_Exhaust2 3
+    100192: Numberplate
+    100194: pCube23
+    100196: pCube32
+    100198: pCube32 1
+    100200: pCube33
+    100202: pCube33 1
+    100204: pCube34
+    100206: pCube34 1
+    100208: pCube42
+    100210: pCube43
+    100212: pCube44
+    100214: pCube44 1
+    100216: pCube44 2
+    100218: pCube44 3
+    100220: pCube44 4
+    100222: pCube44 5
+    100224: pCube44 6
+    100226: Pipe_Type_1
+    100228: Pipe_Type_1 1
+    100230: Pipe_Type_2
+    100232: Pipe_Type_2 1
+    100234: Pipe_Type_3
+    100236: Pipe_Type_3 1
+    100238: PipeR
+    100240: PipeR1
+    100242: Pipes
+    100244: Pisotoninner
+    100246: Pisotoninner 1
+    100248: Pisotoninner1
+    100250: Pisotoninner1 1
+    100252: Piston2
+    100254: Piston2 1
+    100256: Piston3
+    100258: Piston3 1
+    100260: PistonInner
+    100262: PistonInner 1
+    100264: PistonOuter
+    100266: Pistonouter
+    100268: PistonOuter 1
+    100270: Pistonouter 1
+    100272: Pistonouter 2
+    100274: Pistonouter 3
+    100276: pPrism1
+    100278: pPrism1 1
+    100280: pPrism2
+    100282: pPrism2 1
+    100284: pPrism3
+    100286: pPrism3 1
+    100288: pPrism4
+    100290: pPrism4 1
+    100292: Reactor
+    100294: Reactor_Base
+    100296: Reactor_Core
+    100298: Reactor_Intake_Vents
+    100300: Rear_Fendor
+    100302: right_Wheels
+    100304: Rightexhast
+    100306: Spoiler
+    100308: Spoilerwing
+    100310: stack
+    100312: stack 1
+    100314: stack 2
+    100316: stack 3
+    100318: Steering_Mechanism_L
+    100320: Steering_Mechanism_R
+    100322: Steeringdriver
+    100324: strut1
+    100326: strut1 1
+    100328: strut2
+    100330: strut3
+    100332: Struts
+    100334: supportpipe1
+    100336: supportpipe2
+    100338: supportpipe3
+    100340: supportpipe4
+    100342: Suspensionhub1
+    100344: Suspensionhub1 1
+    100346: Suspensionhub2
+    100348: Suspensionhub2 1
+    100350: Tailights
+    100352: Thrst_Deflector_Hardpoints
+    100354: Thrst_Deflector_Hardpoints 1
+    100356: Wheel
+    100358: Wheel 1
+    100360: Wheelcap
+    100362: Wheelcap 1
+    100364: Wheelrear_L
+    100366: Wheelrear_L 1
+    100368: Wheelrunner_L
+    100370: Wheelrunner_L 1
+    100372: Wing
+    400000: //RootNode
+    400002: Axle
+    400004: Backpiece
+    400006: Base
+    400008: base
+    400010: Base 1
+    400012: base 1
+    400014: base 2
+    400016: base 3
+    400018: Bolt1
+    400020: bolt1
+    400022: Bolt2
+    400024: bolt2
+    400026: Bolt2 1
+    400028: Bolt3
+    400030: bolt3
+    400032: Bolt4
+    400034: Bolt4 1
+    400036: Bolt5
+    400038: Bolt6
+    400040: Bolts
+    400042: Brace
+    400044: Brace1
+    400046: Brace2
+    400048: Brace3
+    400050: Canopy
+    400052: Chassis
+    400054: Corepipes
+    400056: Deflector1
+    400058: Deflector2
+    400060: Deflector2 1
+    400062: Deflector3
+    400064: Deflector3 1
+    400066: Deflector4
+    400068: Deflector4 1
+    400070: Deflectordriver_L
+    400072: Deflectordriver_L 1
+    400074: Deflectors
+    400076: Deflectors 1
+    400078: group14
+    400080: group14 1
+    400082: group15
+    400084: group15 1
+    400086: group16
+    400088: group17
+    400090: Hinge_L
+    400092: Hinge_L 1
+    400094: Hollowheel_L
+    400096: Hollowheel_L 1
+    400098: HP1
+    400100: HP1 1
+    400102: HP2
+    400104: HP2 1
+    400106: HP3
+    400108: HP3 1
+    400110: HP4
+    400112: HP4 1
+    400114: HP5
+    400116: HP5 1
+    400118: HP6
+    400120: HP6 1
+    400122: HP7
+    400124: HP7 1
+    400126: HP8
+    400128: HP8 1
+    400130: Jet_body
+    400132: Jet_body 1
+    400134: Jet_Internals
+    400136: Jet_Internals 1
+    400138: Jet_Left
+    400140: Jet_Right
+    400142: Jetbase
+    400144: Jetbase 1
+    400146: Jetdriver_L
+    400148: Jetdriver_R
+    400150: JettiltdriverL
+    400152: JettiltdriverR
+    400154: Left_Wheels
+    400156: LeftExhaust
+    400158: light1
+    400160: light2
+    400162: light3
+    400164: light4
+    400166: Line1
+    400168: Line1 1
+    400170: Line2
+    400172: Line2 1
+    400174: Line3
+    400176: Line3 1
+    400178: Line4
+    400180: Line4 1
+    400182: Nuclear_Exhaust
+    400184: Nuclear_Exhaust2
+    400186: Nuclear_Exhaust2 1
+    400188: Nuclear_Exhaust2 2
+    400190: Nuclear_Exhaust2 3
+    400192: Numberplate
+    400194: pCube23
+    400196: pCube32
+    400198: pCube32 1
+    400200: pCube33
+    400202: pCube33 1
+    400204: pCube34
+    400206: pCube34 1
+    400208: pCube42
+    400210: pCube43
+    400212: pCube44
+    400214: pCube44 1
+    400216: pCube44 2
+    400218: pCube44 3
+    400220: pCube44 4
+    400222: pCube44 5
+    400224: pCube44 6
+    400226: Pipe_Type_1
+    400228: Pipe_Type_1 1
+    400230: Pipe_Type_2
+    400232: Pipe_Type_2 1
+    400234: Pipe_Type_3
+    400236: Pipe_Type_3 1
+    400238: PipeR
+    400240: PipeR1
+    400242: Pipes
+    400244: Pisotoninner
+    400246: Pisotoninner 1
+    400248: Pisotoninner1
+    400250: Pisotoninner1 1
+    400252: Piston2
+    400254: Piston2 1
+    400256: Piston3
+    400258: Piston3 1
+    400260: PistonInner
+    400262: PistonInner 1
+    400264: PistonOuter
+    400266: Pistonouter
+    400268: PistonOuter 1
+    400270: Pistonouter 1
+    400272: Pistonouter 2
+    400274: Pistonouter 3
+    400276: pPrism1
+    400278: pPrism1 1
+    400280: pPrism2
+    400282: pPrism2 1
+    400284: pPrism3
+    400286: pPrism3 1
+    400288: pPrism4
+    400290: pPrism4 1
+    400292: Reactor
+    400294: Reactor_Base
+    400296: Reactor_Core
+    400298: Reactor_Intake_Vents
+    400300: Rear_Fendor
+    400302: right_Wheels
+    400304: Rightexhast
+    400306: Spoiler
+    400308: Spoilerwing
+    400310: stack
+    400312: stack 1
+    400314: stack 2
+    400316: stack 3
+    400318: Steering_Mechanism_L
+    400320: Steering_Mechanism_R
+    400322: Steeringdriver
+    400324: strut1
+    400326: strut1 1
+    400328: strut2
+    400330: strut3
+    400332: Struts
+    400334: supportpipe1
+    400336: supportpipe2
+    400338: supportpipe3
+    400340: supportpipe4
+    400342: Suspensionhub1
+    400344: Suspensionhub1 1
+    400346: Suspensionhub2
+    400348: Suspensionhub2 1
+    400350: Tailights
+    400352: Thrst_Deflector_Hardpoints
+    400354: Thrst_Deflector_Hardpoints 1
+    400356: Wheel
+    400358: Wheel 1
+    400360: Wheelcap
+    400362: Wheelcap 1
+    400364: Wheelrear_L
+    400366: Wheelrear_L 1
+    400368: Wheelrunner_L
+    400370: Wheelrunner_L 1
+    400372: Wing
+    2300000: Axle
+    2300002: Base
+    2300004: base
+    2300006: Base 1
+    2300008: base 1
+    2300010: base 2
+    2300012: base 3
+    2300014: Bolt1
+    2300016: bolt1
+    2300018: Bolt2
+    2300020: bolt2
+    2300022: Bolt2 1
+    2300024: Bolt3
+    2300026: bolt3
+    2300028: Bolt4
+    2300030: Bolt4 1
+    2300032: Bolt5
+    2300034: Bolt6
+    2300036: Brace
+    2300038: Brace1
+    2300040: Brace2
+    2300042: Brace3
+    2300044: Canopy
+    2300046: Chassis
+    2300048: Deflector1
+    2300050: Deflector2
+    2300052: Deflector2 1
+    2300054: Deflector3
+    2300056: Deflector3 1
+    2300058: Deflector4
+    2300060: Deflector4 1
+    2300062: Hinge_L
+    2300064: Hinge_L 1
+    2300066: Hollowheel_L
+    2300068: Hollowheel_L 1
+    2300070: HP1
+    2300072: HP1 1
+    2300074: HP2
+    2300076: HP2 1
+    2300078: HP3
+    2300080: HP3 1
+    2300082: HP4
+    2300084: HP4 1
+    2300086: HP5
+    2300088: HP5 1
+    2300090: HP6
+    2300092: HP6 1
+    2300094: HP7
+    2300096: HP7 1
+    2300098: HP8
+    2300100: HP8 1
+    2300102: Jetbase
+    2300104: Jetbase 1
+    2300106: light1
+    2300108: light2
+    2300110: light3
+    2300112: light4
+    2300114: Numberplate
+    2300116: pCube23
+    2300118: pCube32
+    2300120: pCube32 1
+    2300122: pCube33
+    2300124: pCube33 1
+    2300126: pCube34
+    2300128: pCube34 1
+    2300130: pCube42
+    2300132: pCube43
+    2300134: pCube44
+    2300136: pCube44 1
+    2300138: pCube44 2
+    2300140: pCube44 3
+    2300142: pCube44 4
+    2300144: pCube44 5
+    2300146: pCube44 6
+    2300148: Pipe_Type_1
+    2300150: Pipe_Type_1 1
+    2300152: Pipe_Type_2
+    2300154: Pipe_Type_2 1
+    2300156: Pipe_Type_3
+    2300158: Pipe_Type_3 1
+    2300160: Pisotoninner
+    2300162: Pisotoninner 1
+    2300164: Pisotoninner1
+    2300166: Pisotoninner1 1
+    2300168: PistonInner
+    2300170: PistonInner 1
+    2300172: PistonOuter
+    2300174: Pistonouter
+    2300176: PistonOuter 1
+    2300178: Pistonouter 1
+    2300180: Pistonouter 2
+    2300182: Pistonouter 3
+    2300184: pPrism1
+    2300186: pPrism1 1
+    2300188: pPrism2
+    2300190: pPrism2 1
+    2300192: pPrism3
+    2300194: pPrism3 1
+    2300196: pPrism4
+    2300198: pPrism4 1
+    2300200: Reactor_Base
+    2300202: Reactor_Core
+    2300204: Rear_Fendor
+    2300206: Spoilerwing
+    2300208: stack
+    2300210: stack 1
+    2300212: stack 2
+    2300214: stack 3
+    2300216: strut1
+    2300218: strut1 1
+    2300220: strut2
+    2300222: strut3
+    2300224: supportpipe1
+    2300226: supportpipe2
+    2300228: supportpipe3
+    2300230: supportpipe4
+    2300232: Suspensionhub1
+    2300234: Suspensionhub1 1
+    2300236: Suspensionhub2
+    2300238: Suspensionhub2 1
+    2300240: Wheelcap
+    2300242: Wheelcap 1
+    2300244: Wheelrear_L
+    2300246: Wheelrear_L 1
+    2300248: Wheelrunner_L
+    2300250: Wheelrunner_L 1
+    3300000: Axle
+    3300002: Base
+    3300004: base
+    3300006: Base 1
+    3300008: base 1
+    3300010: base 2
+    3300012: base 3
+    3300014: Bolt1
+    3300016: bolt1
+    3300018: Bolt2
+    3300020: bolt2
+    3300022: Bolt2 1
+    3300024: Bolt3
+    3300026: bolt3
+    3300028: Bolt4
+    3300030: Bolt4 1
+    3300032: Bolt5
+    3300034: Bolt6
+    3300036: Brace
+    3300038: Brace1
+    3300040: Brace2
+    3300042: Brace3
+    3300044: Canopy
+    3300046: Chassis
+    3300048: Deflector1
+    3300050: Deflector2
+    3300052: Deflector2 1
+    3300054: Deflector3
+    3300056: Deflector3 1
+    3300058: Deflector4
+    3300060: Deflector4 1
+    3300062: Hinge_L
+    3300064: Hinge_L 1
+    3300066: Hollowheel_L
+    3300068: Hollowheel_L 1
+    3300070: HP1
+    3300072: HP1 1
+    3300074: HP2
+    3300076: HP2 1
+    3300078: HP3
+    3300080: HP3 1
+    3300082: HP4
+    3300084: HP4 1
+    3300086: HP5
+    3300088: HP5 1
+    3300090: HP6
+    3300092: HP6 1
+    3300094: HP7
+    3300096: HP7 1
+    3300098: HP8
+    3300100: HP8 1
+    3300102: Jetbase
+    3300104: Jetbase 1
+    3300106: light1
+    3300108: light2
+    3300110: light3
+    3300112: light4
+    3300114: Numberplate
+    3300116: pCube23
+    3300118: pCube32
+    3300120: pCube32 1
+    3300122: pCube33
+    3300124: pCube33 1
+    3300126: pCube34
+    3300128: pCube34 1
+    3300130: pCube42
+    3300132: pCube43
+    3300134: pCube44
+    3300136: pCube44 1
+    3300138: pCube44 2
+    3300140: pCube44 3
+    3300142: pCube44 4
+    3300144: pCube44 5
+    3300146: pCube44 6
+    3300148: Pipe_Type_1
+    3300150: Pipe_Type_1 1
+    3300152: Pipe_Type_2
+    3300154: Pipe_Type_2 1
+    3300156: Pipe_Type_3
+    3300158: Pipe_Type_3 1
+    3300160: Pisotoninner
+    3300162: Pisotoninner 1
+    3300164: Pisotoninner1
+    3300166: Pisotoninner1 1
+    3300168: PistonInner
+    3300170: PistonInner 1
+    3300172: PistonOuter
+    3300174: Pistonouter
+    3300176: PistonOuter 1
+    3300178: Pistonouter 1
+    3300180: Pistonouter 2
+    3300182: Pistonouter 3
+    3300184: pPrism1
+    3300186: pPrism1 1
+    3300188: pPrism2
+    3300190: pPrism2 1
+    3300192: pPrism3
+    3300194: pPrism3 1
+    3300196: pPrism4
+    3300198: pPrism4 1
+    3300200: Reactor_Base
+    3300202: Reactor_Core
+    3300204: Rear_Fendor
+    3300206: Spoilerwing
+    3300208: stack
+    3300210: stack 1
+    3300212: stack 2
+    3300214: stack 3
+    3300216: strut1
+    3300218: strut1 1
+    3300220: strut2
+    3300222: strut3
+    3300224: supportpipe1
+    3300226: supportpipe2
+    3300228: supportpipe3
+    3300230: supportpipe4
+    3300232: Suspensionhub1
+    3300234: Suspensionhub1 1
+    3300236: Suspensionhub2
+    3300238: Suspensionhub2 1
+    3300240: Wheelcap
+    3300242: Wheelcap 1
+    3300244: Wheelrear_L
+    3300246: Wheelrear_L 1
+    3300248: Wheelrunner_L
+    3300250: Wheelrunner_L 1
+    4300000: Canopy
+    4300002: Chassis
+    4300004: Bolt1
+    4300006: Bolt3
+    4300008: Bolt5
+    4300010: Bolt6
+    4300012: Wheelrear_L
+    4300014: Wheelcap
+    4300016: Hinge_L
+    4300018: Base
+    4300020: Suspensionhub2
+    4300022: PistonOuter
+    4300024: Pistonouter
+    4300026: Pistonouter
+    4300028: Wheelrunner_L
+    4300030: Hollowheel_L
+    4300032: Pisotoninner
+    4300034: Pisotoninner1
+    4300036: Rear_Fendor
+    4300038: light1
+    4300040: light2
+    4300042: light3
+    4300044: light4
+    4300046: Numberplate
+    4300048: pCube32
+    4300050: pCube33
+    4300052: pCube34
+    4300054: pPrism1
+    4300056: pPrism2
+    4300058: pPrism3
+    4300060: pPrism4
+    4300062: Jetbase
+    4300064: Suspensionhub1
+    4300066: PistonInner
+    4300068: Bolt2
+    4300070: Bolt4
+    4300072: HP1
+    4300074: HP2
+    4300076: HP3
+    4300078: HP4
+    4300080: HP5
+    4300082: HP6
+    4300084: HP7
+    4300086: HP8
+    4300088: Deflector2
+    4300090: pCube44
+    4300092: Deflector3
+    4300094: pCube44
+    4300096: Deflector4
+    4300098: pCube44
+    4300100: Axle
+    4300102: Reactor_Base
+    4300104: Pipe_Type_1
+    4300106: Pipe_Type_2
+    4300108: Pipe_Type_3
+    4300110: Pipe_Type_1
+    4300112: Pipe_Type_2
+    4300114: Pipe_Type_3
+    4300116: bolt1
+    4300118: bolt2
+    4300120: bolt3
+    4300122: stack
+    4300124: base
+    4300126: stack
+    4300128: base
+    4300130: stack
+    4300132: base
+    4300134: stack
+    4300136: base
+    4300138: pCube23
+    4300140: pCube42
+    4300142: pCube43
+    4300144: Reactor_Core
+    4300146: supportpipe1
+    4300148: supportpipe2
+    4300150: supportpipe3
+    4300152: supportpipe4
+    4300154: strut1
+    4300156: strut2
+    4300158: strut1
+    4300160: strut3
+    4300162: Spoilerwing
+    4300164: Wheelrear_L
+    4300166: Wheelcap
+    4300168: Brace1
+    4300170: Brace
+    4300172: pCube32
+    4300174: pCube33
+    4300176: pCube34
+    4300178: pPrism1
+    4300180: pPrism2
+    4300182: pPrism3
+    4300184: pPrism4
+    4300186: Jetbase
+    4300188: Suspensionhub1
+    4300190: PistonInner
+    4300192: Bolt2
+    4300194: Bolt4
+    4300196: HP1
+    4300198: HP2
+    4300200: HP3
+    4300202: HP4
+    4300204: HP5
+    4300206: HP6
+    4300208: HP7
+    4300210: HP8
+    4300212: Deflector1
+    4300214: pCube44
+    4300216: Deflector2
+    4300218: pCube44
+    4300220: Deflector3
+    4300222: pCube44
+    4300224: Deflector4
+    4300226: pCube44
+    4300228: Hinge_L
+    4300230: Base
+    4300232: Suspensionhub2
+    4300234: PistonOuter
+    4300236: Pistonouter
+    4300238: Pistonouter
+    4300240: Wheelrunner_L
+    4300242: Hollowheel_L
+    4300244: Pisotoninner
+    4300246: Pisotoninner1
+    4300248: Brace2
+    4300250: Brace3
+    7400000: Idle
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Idle
+      firstFrame: 1
+      lastFrame: 150
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
