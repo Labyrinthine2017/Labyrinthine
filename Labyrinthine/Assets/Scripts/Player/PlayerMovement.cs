@@ -38,7 +38,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] bool magnatise = false;
     [SerializeField] float timeInAir = 0.3f;
     [SerializeField] float timeBetweenJumps = 0.2f;
-    [SerializeField] AudioSource tireSound;
 
     //For Xbox360 controller
     public XboxController controller { get; set; }
@@ -80,36 +79,6 @@ public class PlayerMovement : MonoBehaviour
                 }
                 else
                 {
-                    //Checks for sounds
-                    if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
-                    {
-                        tireSound.Play();
-                    }
-                    if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow))
-                    {
-                        tireSound.Play();
-                    }
-                    if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
-                    {
-                        tireSound.Play();
-                    }
-                    if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow))
-                    {
-                        tireSound.Play();
-                    }
-                    if(XCI.GetAxisRaw(XboxAxis.LeftStickX) > 0 || XCI.GetAxisRaw(XboxAxis.LeftStickX) < 0)
-                    {
-                        if(xciMoving != true)
-                        {
-                            tireSound.Play();
-                            xciMoving = true;
-                        }
-                    }
-                    if(XCI.GetAxisRaw(XboxAxis.LeftStickX) == 0.0f && xciMoving == true)
-                    {
-                        tireSound.Play();
-                        xciMoving = false;
-                    }
                     //Left Movement
                     if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
                     {
