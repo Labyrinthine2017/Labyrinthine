@@ -1,9 +1,12 @@
-﻿using System.Collections;
+﻿//=======================================================
+//  File Author:     Mark Sturtz
+//
+//  File Name:       ResetScene
+//=======================================================
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-//using SceneManagement
-
 
 public class ResetScene : MonoBehaviour
 {
@@ -16,10 +19,9 @@ public class ResetScene : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.R))
         {
 			SceneManager.LoadScene(SceneName);
-        }
-            
+        }   
 	}
-
+    //Reset function for onclick event button
     public void ResetGame()
     {
         SceneManager.LoadScene(SceneName);

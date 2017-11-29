@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿//=======================================================
+//  File Author:     Brent Kingma 
+//
+//  File Name:       GameManager
+//=======================================================
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,10 +11,11 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public int combo2Score = 5, combo3Score = 12, combo4Score = 23;
-    float gameScore { get; set; }
-    public int comboScore { get; set; }
-    int comboValue { get; set; }
-    public bool controller { get; set; }
+
+    float gameScore             { get; set; }
+    public int comboScore       { get; set; }
+    public int comboValue       { get; set; }
+    public bool controller      { get; set; }
     float globalTime;
     float scoreTimer;
     bool showInfo = false;
@@ -20,19 +26,12 @@ public class GameManager : MonoBehaviour
 
 
     [SerializeField] float distanceBetweenObjects = 250.0f;
-    //[SerializeField] GameObject roadParent;
-    //[SerializeField] GameObject hazardParent;
-    //[SerializeField] GameObject noteParent;
-    //[SerializeField] GameObject groundParent;
-    //[SerializeField] GameObject mountiansParnet;
-    //[SerializeField] GameObject buildingsParnet;
-    //[SerializeField] GameObject propsParent;
-    //[SerializeField] GameObject mesaParent;
     public GameObject[] parentArray;
 
     GameObject[] allObjects;
 
     //For UI -----------------------------------------------------------
+    // instantiates the text that shows for the UI
     bool startedWarningSt1Blink = false;
     bool startedWarningSt2Blink = false;
     bool showedStreak = false;
@@ -59,12 +58,13 @@ public class GameManager : MonoBehaviour
 
     //------------------------------------------------------------------
 
-
+    //creates instance of the player & player engine 
     Player player;
     EngineBehaviour playerEngine;
 
     void Start()
     {
+        //sets the variables for the start of the game menu 
         Application.targetFrameRate = 60;
         comboValue = 1;
         globalTime = 0.0f;
@@ -76,10 +76,15 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+        //instantiates the engine and player 
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         playerEngine = GameObject.FindGameObjectWithTag("Player").GetComponent<EngineBehaviour>();
     }
-
+    //======================================================
+    // on update, the timers are set to deltaTime 
+    // Checks if the player is dead
+    // Adds the combo scores together if notes are hit
+    //======================================================
     void Update()
     {
         if (!player.finished)
@@ -143,15 +148,19 @@ public class GameManager : MonoBehaviour
         UpdateUI();
     }
 
+    //adds the score and combo values together 
     public void AddScore(float a_score)
     {
         gameScore += a_score * comboValue;
-
     }
+    
+    //subtracts the score if the combo is broken
     public void SubtractScore(float a_score)
     {
         gameScore -= a_score;
     }
+
+    //resets the combo to the basic values
     public void ResetCombo()
     {
         comboValue = 1;
@@ -262,7 +271,6 @@ public class GameManager : MonoBehaviour
             WarningSt1.enabled = false;
             WarningSt2.SwitchOff();
         }
-
     }
 
     public Player GetPlayer()
@@ -279,5 +287,4 @@ public class GameManager : MonoBehaviour
     {
 
     }
-
 }

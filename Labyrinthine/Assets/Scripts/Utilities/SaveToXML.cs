@@ -88,10 +88,5 @@ public static class UnityXMLSerializer
         using (var readFile = File.OpenRead(readPath))
             return (T)serializer.Deserialize(readFile);
     }
-
-
-
-
-
 }
 

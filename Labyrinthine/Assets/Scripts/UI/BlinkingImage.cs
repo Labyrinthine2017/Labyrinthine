@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿//=======================================================
+//  File Author:     Brent Kingma 
+//
+//  File Name:       BlinkingImage
+//=======================================================
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,11 +12,11 @@ public class BlinkingImage : MonoBehaviour
 {
     Image myImage;
     public float delayTime;
-    float time;
     public float waitTimeBetweenFlashes;
+    float time;
     bool flashed = false;
 
-    // Use this for initialization
+    // Use this for initialization to get component of myImage
     void Awake ()
     {
         myImage = gameObject.GetComponent<Image>();
@@ -37,11 +42,14 @@ public class BlinkingImage : MonoBehaviour
        
     }
 
+    //togles the blinking effect 
     void ToggleState()
     {
         if (myImage)
             myImage.enabled = !myImage.enabled;
     }
+
+    //switches the blinking effect off 
     public void SwitchOff()
     {
         if(myImage)

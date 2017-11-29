@@ -1,9 +1,15 @@
-﻿using System.Collections;
+﻿//=======================================================
+//  File Author:     Mark Sturtz 
+//
+//  File Name:       InGameOption
+//=======================================================
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+//Continue option variables for ingame button 
 [System.Serializable]
 public class ContinueOption
 {
@@ -16,7 +22,7 @@ public class ContinueOption
     public float Height;
 };
 
-
+//Option option variables for ingame button
 [System.Serializable]
 public class OptionsOption
 {
@@ -29,6 +35,7 @@ public class OptionsOption
     public float Height;
 };
 
+//MainMenu option variables for ingame button
 [System.Serializable]
 public class MainMenuOption
 {
@@ -41,9 +48,9 @@ public class MainMenuOption
     public float Height;
 };
 
-
 public class InGameOption : MonoBehaviour
 {
+    //calling all the previous classes  & setting a paused boolean
     private bool bPaused = false;
 
     public ContinueOption Continue;
@@ -52,6 +59,12 @@ public class InGameOption : MonoBehaviour
 
     private void Awake()
     {
+        //===========================================
+        // setting all of the values of each coordinate 
+        // to the centre screen
+        //
+        // names are given for each GUI button
+        //===========================================
         Continue.X_Value = 440.0f;
         Continue.Y_Value = 170.0f;
         Continue.Width = 200.0f;
@@ -74,6 +87,7 @@ public class InGameOption : MonoBehaviour
 
     void Update()
     {
+        //toggles the pause by passing a function
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             bPaused = TogglePause();
@@ -82,7 +96,13 @@ public class InGameOption : MonoBehaviour
 
     private void OnGUI()
     {
-        if(bPaused)
+        //===========================================
+        //  if bPaused = true, 
+        //  
+        //  creates the boxes for each option available
+        //  being menu, continue & exit
+        //===========================================
+        if (bPaused)
         {
             GUILayout.Label("Game is Paused");
 
@@ -91,10 +111,7 @@ public class InGameOption : MonoBehaviour
                 bPaused = TogglePause();
             }
 
-            if(GUI.Button(new Rect(Option.X_Value, Option.Y_Value, Option.Width, Option.Height), Option.sOptions))
-            {
-
-            }
+            if(GUI.Button(new Rect(Option.X_Value, Option.Y_Value, Option.Width, Option.Height), Option.sOptions)){}
 
             if (GUI.Button(new Rect(MainMenu.X_Value, MainMenu.Y_Value, MainMenu.Width, MainMenu.Height), MainMenu.sMainMenu))
             {
@@ -103,8 +120,7 @@ public class InGameOption : MonoBehaviour
             }
         }
     }
-
-
+    //function acts as a toggle for the timescale in-game GUI/pause menu
     public bool TogglePause()
     {
         if(Time.timeScale == 0)
@@ -112,7 +128,6 @@ public class InGameOption : MonoBehaviour
             Time.timeScale = 1;
             return false;
         }
-
         else
         {
             Time.timeScale = 0;

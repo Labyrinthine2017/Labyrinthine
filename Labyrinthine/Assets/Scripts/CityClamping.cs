@@ -1,11 +1,15 @@
-﻿using System.Collections;
+﻿//=======================================================
+//  File Author:     Brent Kingma 
+//
+//  File Name:       CityClamping
+//=======================================================
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CityClamping : MonoBehaviour
 {
-	//11061
-	// Update is called once per frame
+	// During update, sets the parent to null and clamps the city
 	void Update ()
     {
         Debug.Log(transform.TransformPoint(transform.localPosition).z);

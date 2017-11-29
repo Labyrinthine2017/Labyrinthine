@@ -34,14 +34,10 @@ public class Note : MonoBehaviour
                 {
                     particles.gameObject.SetActive(false);
                     collected = false;
-                    //emission.enabled = false;
-                    //particles.Play(false);
                 }
-            }
-            
+            }          
         }
     }
-
     //Called from Player Script when the note has been hit
     public void Collected()
     {
